@@ -7,15 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AFCF14E80D1976F1F5EC5F9 /* Pods_DoctorAppointmentBookingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5188B86694E39644387694A8 /* Pods_DoctorAppointmentBookingApp.framework */; };
+		C21AF513280839550001A8C0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AF512280839550001A8C0 /* Error.swift */; };
+		C27D9CAC27F9FE2E00511C4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C27D9CAB27F9FE2E00511C4B /* GoogleService-Info.plist */; };
+		C27D9CAF27FA08C400511C4B /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CAE27FA08C400511C4B /* Doctor.swift */; };
+		C27D9CB227FA097D00511C4B /* DoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CB127FA097D00511C4B /* DoctorViewModel.swift */; };
+		C27D9CB427FA215A00511C4B /* DoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CB327FA215A00511C4B /* DoctorProfileViewController.swift */; };
+		C296DE78280BFDB300019B14 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE77280BFDB300019B14 /* Patient.swift */; };
+		C296DE7A280BFFE200019B14 /* PatientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE79280BFFE200019B14 /* PatientViewModel.swift */; };
+		C296DE7D280C1FA100019B14 /* PatientHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE7C280C1FA100019B14 /* PatientHomePageViewController.swift */; };
+		C296DE7F280C202700019B14 /* PatientProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE7E280C202700019B14 /* PatientProfileNavigationController.swift */; };
+		C296DE81280C205700019B14 /* PatientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE80280C205700019B14 /* PatientProfileViewController.swift */; };
+		C296DE83280C328400019B14 /* PatientAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE82280C328400019B14 /* PatientAppointmentsViewController.swift */; };
+		C296DE85280C330200019B14 /* PatientAppointmentsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE84280C330200019B14 /* PatientAppointmentsNavigationController.swift */; };
+		C296DE88280D917F00019B14 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE87280D917F00019B14 /* UserStorage.swift */; };
+		C2BD6B5A2802B6CA00DBC642 /* DoctorAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B592802B6CA00DBC642 /* DoctorAppointmentsViewController.swift */; };
+		C2BD6B5D2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B5C2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift */; };
+		C2BD6B5F2802D07900DBC642 /* DoctorProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B5E2802D07900DBC642 /* DoctorProfileNavigationController.swift */; };
+		C2BD6B632804219900DBC642 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B622804219900DBC642 /* Appointment.swift */; };
+		C2BD6B65280424D100DBC642 /* AppointmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B64280424D100DBC642 /* AppointmentViewModel.swift */; };
 		C2C58C1127F9F08200B637C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C1027F9F08200B637C6 /* AppDelegate.swift */; };
 		C2C58C1327F9F08200B637C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C1227F9F08200B637C6 /* SceneDelegate.swift */; };
 		C2C58C1527F9F08200B637C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C1427F9F08200B637C6 /* ViewController.swift */; };
 		C2C58C1827F9F08200B637C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C58C1627F9F08200B637C6 /* Main.storyboard */; };
 		C2C58C1A27F9F08400B637C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C58C1927F9F08400B637C6 /* Assets.xcassets */; };
 		C2C58C1D27F9F08400B637C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C58C1B27F9F08400B637C6 /* LaunchScreen.storyboard */; };
+		C2C58C2527F9F10900B637C6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2427F9F10900B637C6 /* SignUpViewController.swift */; };
+		C2C58C2727F9F11500B637C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2627F9F11500B637C6 /* LoginViewController.swift */; };
+		C2C58C2927F9F12C00B637C6 /* DoctorHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2827F9F12C00B637C6 /* DoctorHomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B85CBFA689930B4A66E9E9D /* Pods-DoctorAppointmentBookingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorAppointmentBookingApp.release.xcconfig"; path = "Target Support Files/Pods-DoctorAppointmentBookingApp/Pods-DoctorAppointmentBookingApp.release.xcconfig"; sourceTree = "<group>"; };
+		5188B86694E39644387694A8 /* Pods_DoctorAppointmentBookingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorAppointmentBookingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		950B60C20D251BEA216B9B0B /* Pods-DoctorAppointmentBookingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorAppointmentBookingApp.debug.xcconfig"; path = "Target Support Files/Pods-DoctorAppointmentBookingApp/Pods-DoctorAppointmentBookingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C21AF512280839550001A8C0 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		C27D9CAB27F9FE2E00511C4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C27D9CAE27FA08C400511C4B /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		C27D9CB127FA097D00511C4B /* DoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewModel.swift; sourceTree = "<group>"; };
+		C27D9CB327FA215A00511C4B /* DoctorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfileViewController.swift; sourceTree = "<group>"; };
+		C296DE77280BFDB300019B14 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		C296DE79280BFFE200019B14 /* PatientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewModel.swift; sourceTree = "<group>"; };
+		C296DE7C280C1FA100019B14 /* PatientHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHomePageViewController.swift; sourceTree = "<group>"; };
+		C296DE7E280C202700019B14 /* PatientProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProfileNavigationController.swift; sourceTree = "<group>"; };
+		C296DE80280C205700019B14 /* PatientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProfileViewController.swift; sourceTree = "<group>"; };
+		C296DE82280C328400019B14 /* PatientAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientAppointmentsViewController.swift; sourceTree = "<group>"; };
+		C296DE84280C330200019B14 /* PatientAppointmentsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientAppointmentsNavigationController.swift; sourceTree = "<group>"; };
+		C296DE87280D917F00019B14 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		C2BD6B592802B6CA00DBC642 /* DoctorAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppointmentsViewController.swift; sourceTree = "<group>"; };
+		C2BD6B5C2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppointmentsNavigationController.swift; sourceTree = "<group>"; };
+		C2BD6B5E2802D07900DBC642 /* DoctorProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfileNavigationController.swift; sourceTree = "<group>"; };
+		C2BD6B622804219900DBC642 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		C2BD6B64280424D100DBC642 /* AppointmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewModel.swift; sourceTree = "<group>"; };
 		C2C58C0D27F9F08200B637C6 /* DoctorAppointmentBookingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorAppointmentBookingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C58C1027F9F08200B637C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2C58C1227F9F08200B637C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +67,9 @@
 		C2C58C1927F9F08400B637C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2C58C1C27F9F08400B637C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2C58C1E27F9F08400B637C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C58C2427F9F10900B637C6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C2C58C2627F9F11500B637C6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C2C58C2827F9F12C00B637C6 /* DoctorHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorHomePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +77,90 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFCF14E80D1976F1F5EC5F9 /* Pods_DoctorAppointmentBookingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14D4DEBA103DA50EA8BAAC3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				950B60C20D251BEA216B9B0B /* Pods-DoctorAppointmentBookingApp.debug.xcconfig */,
+				0B85CBFA689930B4A66E9E9D /* Pods-DoctorAppointmentBookingApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2B3CEEEB688A6D17D410D155 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5188B86694E39644387694A8 /* Pods_DoctorAppointmentBookingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C27D9CAD27FA08B300511C4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C27D9CAE27FA08C400511C4B /* Doctor.swift */,
+				C2BD6B622804219900DBC642 /* Appointment.swift */,
+				C21AF512280839550001A8C0 /* Error.swift */,
+				C296DE77280BFDB300019B14 /* Patient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C27D9CB027FA096800511C4B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				C27D9CB127FA097D00511C4B /* DoctorViewModel.swift */,
+				C2BD6B64280424D100DBC642 /* AppointmentViewModel.swift */,
+				C296DE79280BFFE200019B14 /* PatientViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		C296DE7B280C0B9100019B14 /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				C296DE7C280C1FA100019B14 /* PatientHomePageViewController.swift */,
+				C296DE7E280C202700019B14 /* PatientProfileNavigationController.swift */,
+				C296DE80280C205700019B14 /* PatientProfileViewController.swift */,
+				C296DE84280C330200019B14 /* PatientAppointmentsNavigationController.swift */,
+				C296DE82280C328400019B14 /* PatientAppointmentsViewController.swift */,
+			);
+			path = Patient;
+			sourceTree = "<group>";
+		};
+		C296DE86280D915800019B14 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				C296DE87280D917F00019B14 /* UserStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		C2BD6B5B2802B78E00DBC642 /* Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				C2C58C2827F9F12C00B637C6 /* DoctorHomePageViewController.swift */,
+				C2BD6B5E2802D07900DBC642 /* DoctorProfileNavigationController.swift */,
+				C27D9CB327FA215A00511C4B /* DoctorProfileViewController.swift */,
+				C2BD6B5C2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift */,
+				C2BD6B592802B6CA00DBC642 /* DoctorAppointmentsViewController.swift */,
+			);
+			path = Doctor;
+			sourceTree = "<group>";
+		};
 		C2C58C0427F9F08200B637C6 = {
 			isa = PBXGroup;
 			children = (
 				C2C58C0F27F9F08200B637C6 /* DoctorAppointmentBookingApp */,
 				C2C58C0E27F9F08200B637C6 /* Products */,
+				14D4DEBA103DA50EA8BAAC3B /* Pods */,
+				2B3CEEEB688A6D17D410D155 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +175,31 @@
 		C2C58C0F27F9F08200B637C6 /* DoctorAppointmentBookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				C296DE86280D915800019B14 /* Storage */,
+				C27D9CB027FA096800511C4B /* View Model */,
+				C27D9CAD27FA08B300511C4B /* Model */,
+				C2C58C2A27F9F13C00B637C6 /* View Controllers */,
 				C2C58C1027F9F08200B637C6 /* AppDelegate.swift */,
 				C2C58C1227F9F08200B637C6 /* SceneDelegate.swift */,
 				C2C58C1427F9F08200B637C6 /* ViewController.swift */,
 				C2C58C1627F9F08200B637C6 /* Main.storyboard */,
 				C2C58C1927F9F08400B637C6 /* Assets.xcassets */,
 				C2C58C1B27F9F08400B637C6 /* LaunchScreen.storyboard */,
+				C27D9CAB27F9FE2E00511C4B /* GoogleService-Info.plist */,
 				C2C58C1E27F9F08400B637C6 /* Info.plist */,
 			);
 			path = DoctorAppointmentBookingApp;
+			sourceTree = "<group>";
+		};
+		C2C58C2A27F9F13C00B637C6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2C58C2427F9F10900B637C6 /* SignUpViewController.swift */,
+				C2C58C2627F9F11500B637C6 /* LoginViewController.swift */,
+				C2BD6B5B2802B78E00DBC642 /* Doctor */,
+				C296DE7B280C0B9100019B14 /* Patient */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2C58C2127F9F08400B637C6 /* Build configuration list for PBXNativeTarget "DoctorAppointmentBookingApp" */;
 			buildPhases = (
+				4821D4343BA1E8C5EE4406B3 /* [CP] Check Pods Manifest.lock */,
 				C2C58C0927F9F08200B637C6 /* Sources */,
 				C2C58C0A27F9F08200B637C6 /* Frameworks */,
 				C2C58C0B27F9F08200B637C6 /* Resources */,
+				2E156FB80F838FF362AE20C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C58C1D27F9F08400B637C6 /* LaunchScreen.storyboard in Resources */,
+				C27D9CAC27F9FE2E00511C4B /* GoogleService-Info.plist in Resources */,
 				C2C58C1A27F9F08400B637C6 /* Assets.xcassets in Resources */,
 				C2C58C1827F9F08200B637C6 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +271,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E156FB80F838FF362AE20C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoctorAppointmentBookingApp/Pods-DoctorAppointmentBookingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoctorAppointmentBookingApp/Pods-DoctorAppointmentBookingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoctorAppointmentBookingApp/Pods-DoctorAppointmentBookingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4821D4343BA1E8C5EE4406B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoctorAppointmentBookingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C2C58C0927F9F08200B637C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BD6B65280424D100DBC642 /* AppointmentViewModel.swift in Sources */,
+				C2BD6B632804219900DBC642 /* Appointment.swift in Sources */,
 				C2C58C1527F9F08200B637C6 /* ViewController.swift in Sources */,
+				C296DE83280C328400019B14 /* PatientAppointmentsViewController.swift in Sources */,
+				C2BD6B5F2802D07900DBC642 /* DoctorProfileNavigationController.swift in Sources */,
+				C2BD6B5D2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift in Sources */,
 				C2C58C1127F9F08200B637C6 /* AppDelegate.swift in Sources */,
+				C296DE81280C205700019B14 /* PatientProfileViewController.swift in Sources */,
+				C2C58C2527F9F10900B637C6 /* SignUpViewController.swift in Sources */,
+				C2C58C2927F9F12C00B637C6 /* DoctorHomePageViewController.swift in Sources */,
+				C296DE7F280C202700019B14 /* PatientProfileNavigationController.swift in Sources */,
+				C296DE7D280C1FA100019B14 /* PatientHomePageViewController.swift in Sources */,
+				C2C58C2727F9F11500B637C6 /* LoginViewController.swift in Sources */,
+				C296DE85280C330200019B14 /* PatientAppointmentsNavigationController.swift in Sources */,
+				C2BD6B5A2802B6CA00DBC642 /* DoctorAppointmentsViewController.swift in Sources */,
+				C27D9CB427FA215A00511C4B /* DoctorProfileViewController.swift in Sources */,
 				C2C58C1327F9F08200B637C6 /* SceneDelegate.swift in Sources */,
+				C27D9CAF27FA08C400511C4B /* Doctor.swift in Sources */,
+				C296DE78280BFDB300019B14 /* Patient.swift in Sources */,
+				C21AF513280839550001A8C0 /* Error.swift in Sources */,
+				C296DE7A280BFFE200019B14 /* PatientViewModel.swift in Sources */,
+				C27D9CB227FA097D00511C4B /* DoctorViewModel.swift in Sources */,
+				C296DE88280D917F00019B14 /* UserStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +482,7 @@
 		};
 		C2C58C2227F9F08400B637C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 950B60C20D251BEA216B9B0B /* Pods-DoctorAppointmentBookingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +511,7 @@
 		};
 		C2C58C2327F9F08400B637C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B85CBFA689930B4A66E9E9D /* Pods-DoctorAppointmentBookingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
