@@ -106,7 +106,7 @@ class SignUpViewController: UIViewController {
                 doctorViewModel.createUser(doctor: doctor) {[weak self] (errorCode) in
                     guard let `self` = self else { return }
                     if let err = errorCode {
-                        self.errorLabel.text = "There was an error."
+                        self.errorLabel.text = "\(errorCode)"
 //                        switch err {
 //                        case .invalidEmail:
 //                            self.errorLabel.text = "Invalid email"
