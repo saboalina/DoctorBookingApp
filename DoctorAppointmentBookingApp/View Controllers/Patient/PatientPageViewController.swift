@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PatientHomePageViewController: UITabBarController, UITabBarControllerDelegate {
+class PatientPageViewController: UITabBarController, UITabBarControllerDelegate {
     
     var patient: Patient?
     

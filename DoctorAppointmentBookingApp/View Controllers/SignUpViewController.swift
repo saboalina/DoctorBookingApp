@@ -113,13 +113,13 @@ class SignUpViewController: UIViewController {
 //                        }
                         
                     } else {
-//                        self.performSegue(withIdentifier: "loadLoginPage", sender: self)
+                        self.performSegue(withIdentifier: "loadLoginPage", sender: self)
                                               //print("success")
-                          self.errorLabel.text = "success"
-                          self.emailTextField.text = ""
-                          self.nameTextField.text = ""
-                          self.phoneNumberTextField.text = ""
-                          self.passwordTextField.text = ""
+//                          self.errorLabel.text = "success"
+//                          self.emailTextField.text = ""
+//                          self.nameTextField.text = ""
+//                          self.phoneNumberTextField.text = ""
+//                          self.passwordTextField.text = ""
                     }
                 }
             }

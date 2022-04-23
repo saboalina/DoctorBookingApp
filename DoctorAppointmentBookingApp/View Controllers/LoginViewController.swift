@@ -113,7 +113,7 @@ class LoginViewController: UIViewController {
 
     
     func navigateToDoctorPage(doctor: Doctor) {
-        let doctorPage = storyboard?.instantiateViewController(withIdentifier: "DoctorHomePage") as? DoctorHomePageViewController
+        let doctorPage = storyboard?.instantiateViewController(withIdentifier: "DoctorPage") as? DoctorPageViewController
         
         doctorPage?.doctor = doctor
      
@@ -122,7 +122,7 @@ class LoginViewController: UIViewController {
     }
     
     func navigateToPatientPage(pacient: Patient) {
-        let patientPage = storyboard?.instantiateViewController(withIdentifier: "PatientHomePage") as? PatientHomePageViewController
+        let patientPage = storyboard?.instantiateViewController(withIdentifier: "PatientPage") as? PatientPageViewController
         
         patientPage?.patient = patient
      

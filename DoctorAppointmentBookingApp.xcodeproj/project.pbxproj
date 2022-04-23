@@ -15,7 +15,7 @@
 		C27D9CB427FA215A00511C4B /* DoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CB327FA215A00511C4B /* DoctorProfileViewController.swift */; };
 		C296DE78280BFDB300019B14 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE77280BFDB300019B14 /* Patient.swift */; };
 		C296DE7A280BFFE200019B14 /* PatientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE79280BFFE200019B14 /* PatientViewModel.swift */; };
-		C296DE7D280C1FA100019B14 /* PatientHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE7C280C1FA100019B14 /* PatientHomePageViewController.swift */; };
+		C296DE7D280C1FA100019B14 /* PatientPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE7C280C1FA100019B14 /* PatientPageViewController.swift */; };
 		C296DE7F280C202700019B14 /* PatientProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE7E280C202700019B14 /* PatientProfileNavigationController.swift */; };
 		C296DE81280C205700019B14 /* PatientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE80280C205700019B14 /* PatientProfileViewController.swift */; };
 		C296DE83280C328400019B14 /* PatientAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE82280C328400019B14 /* PatientAppointmentsViewController.swift */; };
@@ -34,7 +34,7 @@
 		C2C58C1D27F9F08400B637C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C58C1B27F9F08400B637C6 /* LaunchScreen.storyboard */; };
 		C2C58C2527F9F10900B637C6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2427F9F10900B637C6 /* SignUpViewController.swift */; };
 		C2C58C2727F9F11500B637C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2627F9F11500B637C6 /* LoginViewController.swift */; };
-		C2C58C2927F9F12C00B637C6 /* DoctorHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2827F9F12C00B637C6 /* DoctorHomePageViewController.swift */; };
+		C2C58C2927F9F12C00B637C6 /* DoctorPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2827F9F12C00B637C6 /* DoctorPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +48,7 @@
 		C27D9CB327FA215A00511C4B /* DoctorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfileViewController.swift; sourceTree = "<group>"; };
 		C296DE77280BFDB300019B14 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		C296DE79280BFFE200019B14 /* PatientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewModel.swift; sourceTree = "<group>"; };
-		C296DE7C280C1FA100019B14 /* PatientHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHomePageViewController.swift; sourceTree = "<group>"; };
+		C296DE7C280C1FA100019B14 /* PatientPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientPageViewController.swift; sourceTree = "<group>"; };
 		C296DE7E280C202700019B14 /* PatientProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProfileNavigationController.swift; sourceTree = "<group>"; };
 		C296DE80280C205700019B14 /* PatientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProfileViewController.swift; sourceTree = "<group>"; };
 		C296DE82280C328400019B14 /* PatientAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientAppointmentsViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		C2C58C1E27F9F08400B637C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C58C2427F9F10900B637C6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C2C58C2627F9F11500B637C6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C2C58C2827F9F12C00B637C6 /* DoctorHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorHomePageViewController.swift; sourceTree = "<group>"; };
+		C2C58C2827F9F12C00B637C6 /* DoctorPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +125,7 @@
 		C296DE7B280C0B9100019B14 /* Patient */ = {
 			isa = PBXGroup;
 			children = (
-				C296DE7C280C1FA100019B14 /* PatientHomePageViewController.swift */,
+				C296DE7C280C1FA100019B14 /* PatientPageViewController.swift */,
 				C296DE7E280C202700019B14 /* PatientProfileNavigationController.swift */,
 				C296DE80280C205700019B14 /* PatientProfileViewController.swift */,
 				C296DE84280C330200019B14 /* PatientAppointmentsNavigationController.swift */,
@@ -145,7 +145,7 @@
 		C2BD6B5B2802B78E00DBC642 /* Doctor */ = {
 			isa = PBXGroup;
 			children = (
-				C2C58C2827F9F12C00B637C6 /* DoctorHomePageViewController.swift */,
+				C2C58C2827F9F12C00B637C6 /* DoctorPageViewController.swift */,
 				C2BD6B5E2802D07900DBC642 /* DoctorProfileNavigationController.swift */,
 				C27D9CB327FA215A00511C4B /* DoctorProfileViewController.swift */,
 				C2BD6B5C2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift */,
@@ -327,9 +327,9 @@
 				C2C58C1127F9F08200B637C6 /* AppDelegate.swift in Sources */,
 				C296DE81280C205700019B14 /* PatientProfileViewController.swift in Sources */,
 				C2C58C2527F9F10900B637C6 /* SignUpViewController.swift in Sources */,
-				C2C58C2927F9F12C00B637C6 /* DoctorHomePageViewController.swift in Sources */,
+				C2C58C2927F9F12C00B637C6 /* DoctorPageViewController.swift in Sources */,
 				C296DE7F280C202700019B14 /* PatientProfileNavigationController.swift in Sources */,
-				C296DE7D280C1FA100019B14 /* PatientHomePageViewController.swift in Sources */,
+				C296DE7D280C1FA100019B14 /* PatientPageViewController.swift in Sources */,
 				C2C58C2727F9F11500B637C6 /* LoginViewController.swift in Sources */,
 				C296DE85280C330200019B14 /* PatientAppointmentsNavigationController.swift in Sources */,
 				C2BD6B5A2802B6CA00DBC642 /* DoctorAppointmentsViewController.swift in Sources */,
