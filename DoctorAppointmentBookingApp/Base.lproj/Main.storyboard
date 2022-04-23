@@ -557,12 +557,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vZf-4Z-7ev">
-                                <rect key="frame" x="0.0" y="65" width="428" height="51"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="WLE-Xn-oPv">
+                                <rect key="frame" x="0.0" y="99" width="428" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k3-Pn-jyL">
+                                <rect key="frame" x="20" y="170" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PGs-7Q-3tB">
-                                <rect key="frame" x="20" y="130" width="388" height="200"/>
+                                <rect key="frame" x="20" y="191" width="388" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="DR9-xh-80m"/>
@@ -583,14 +589,14 @@
                         <viewLayoutGuide key="safeArea" id="bQJ-bZ-mXn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="top" secondItem="vZf-4Z-7ev" secondAttribute="bottom" constant="14" id="60b-kZ-M5M"/>
-                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="centerX" secondItem="vZf-4Z-7ev" secondAttribute="centerX" id="JaR-74-qQx"/>
-                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" constant="20" id="Tlq-EY-kYM"/>
-                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="trailing" secondItem="PGs-7Q-3tB" secondAttribute="trailing" constant="20" id="Tv4-9z-Qts"/>
-                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="trailing" secondItem="PGs-7Q-3tB" secondAttribute="trailing" constant="20" id="bKc-al-MSc"/>
-                            <constraint firstItem="vZf-4Z-7ev" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" id="pHt-BU-GDM"/>
-                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" constant="20" id="vWy-7J-iOY"/>
-                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="bottom" secondItem="PGs-7Q-3tB" secondAttribute="bottom" constant="513" id="wWk-hk-yFv"/>
+                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="leading" secondItem="15R-A2-1dx" secondAttribute="leadingMargin" id="6jK-Hp-LQ5"/>
+                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="bottom" secondItem="PGs-7Q-3tB" secondAttribute="bottom" constant="452" id="9fi-US-YTc"/>
+                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="top" secondItem="7k3-Pn-jyL" secondAttribute="bottom" id="AaA-09-veH"/>
+                            <constraint firstItem="WLE-Xn-oPv" firstAttribute="centerX" secondItem="PGs-7Q-3tB" secondAttribute="centerX" id="Acq-JM-37G"/>
+                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="leading" secondItem="7k3-Pn-jyL" secondAttribute="leading" id="G1G-GR-qKa"/>
+                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="trailing" secondItem="15R-A2-1dx" secondAttribute="trailingMargin" id="NVK-tT-UiP"/>
+                            <constraint firstItem="7k3-Pn-jyL" firstAttribute="top" secondItem="WLE-Xn-oPv" secondAttribute="bottom" constant="20" id="foZ-hW-bFz"/>
+                            <constraint firstItem="WLE-Xn-oPv" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" id="wAt-eJ-BTH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tfz-nc-yOg"/>
