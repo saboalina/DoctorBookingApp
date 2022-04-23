@@ -549,28 +549,58 @@
             </objects>
             <point key="canvasLocation" x="3327" y="656"/>
         </scene>
-        <!--View Controller-->
+        <!--Patient Home View Controller-->
         <scene sceneID="dCv-1r-RI4">
             <objects>
-                <viewController id="rum-1L-0km" sceneMemberID="viewController">
+                <viewController id="rum-1L-0km" customClass="PatientHomeViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="15R-A2-1dx">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZf-4Z-7ev">
-                                <rect key="frame" x="0.0" y="97" width="428" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vZf-4Z-7ev">
+                                <rect key="frame" x="0.0" y="65" width="428" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PGs-7Q-3tB">
+                                <rect key="frame" x="20" y="130" width="388" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="DR9-xh-80m"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="aH1-sK-w5x">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rum-1L-0km" id="4F9-Ww-SYy"/>
+                                    <outlet property="delegate" destination="rum-1L-0km" id="vTC-Jw-DpW"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bQJ-bZ-mXn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="top" secondItem="vZf-4Z-7ev" secondAttribute="bottom" constant="14" id="60b-kZ-M5M"/>
+                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="centerX" secondItem="vZf-4Z-7ev" secondAttribute="centerX" id="JaR-74-qQx"/>
+                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" constant="20" id="Tlq-EY-kYM"/>
+                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="trailing" secondItem="PGs-7Q-3tB" secondAttribute="trailing" constant="20" id="Tv4-9z-Qts"/>
+                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="trailing" secondItem="PGs-7Q-3tB" secondAttribute="trailing" constant="20" id="bKc-al-MSc"/>
+                            <constraint firstItem="vZf-4Z-7ev" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" id="pHt-BU-GDM"/>
+                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" constant="20" id="vWy-7J-iOY"/>
+                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="bottom" secondItem="PGs-7Q-3tB" secondAttribute="bottom" constant="513" id="wWk-hk-yFv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tfz-nc-yOg"/>
+                    <connections>
+                        <outlet property="doctorCollectionView" destination="PGs-7Q-3tB" id="gwz-Z4-zG3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9em-bh-zIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6088" y="-11"/>
+            <point key="canvasLocation" x="6086.9158878504668" y="-11.015118790496761"/>
         </scene>
         <!--Item-->
         <scene sceneID="K9X-R5-fDs">

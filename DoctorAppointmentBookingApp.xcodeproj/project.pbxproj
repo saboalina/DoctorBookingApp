@@ -21,6 +21,11 @@
 		C296DE83280C328400019B14 /* PatientAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE82280C328400019B14 /* PatientAppointmentsViewController.swift */; };
 		C296DE85280C330200019B14 /* PatientAppointmentsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE84280C330200019B14 /* PatientAppointmentsNavigationController.swift */; };
 		C296DE88280D917F00019B14 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE87280D917F00019B14 /* UserStorage.swift */; };
+		C296DE8A281409DB00019B14 /* PatientHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE89281409DB00019B14 /* PatientHomeViewController.swift */; };
+		C296DE8C281409F700019B14 /* PatientHomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE8B281409F700019B14 /* PatientHomeNavigationController.swift */; };
+		C296DE912814123B00019B14 /* DoctorHorizontalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE8F2814123B00019B14 /* DoctorHorizontalViewCell.swift */; };
+		C296DE922814123B00019B14 /* DoctorHorizontalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C296DE902814123B00019B14 /* DoctorHorizontalViewCell.xib */; };
+		C296DE9528143FB700019B14 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE9428143FB700019B14 /* CardView.swift */; };
 		C2BD6B5A2802B6CA00DBC642 /* DoctorAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B592802B6CA00DBC642 /* DoctorAppointmentsViewController.swift */; };
 		C2BD6B5D2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B5C2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift */; };
 		C2BD6B5F2802D07900DBC642 /* DoctorProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B5E2802D07900DBC642 /* DoctorProfileNavigationController.swift */; };
@@ -54,6 +59,11 @@
 		C296DE82280C328400019B14 /* PatientAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientAppointmentsViewController.swift; sourceTree = "<group>"; };
 		C296DE84280C330200019B14 /* PatientAppointmentsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientAppointmentsNavigationController.swift; sourceTree = "<group>"; };
 		C296DE87280D917F00019B14 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		C296DE89281409DB00019B14 /* PatientHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHomeViewController.swift; sourceTree = "<group>"; };
+		C296DE8B281409F700019B14 /* PatientHomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHomeNavigationController.swift; sourceTree = "<group>"; };
+		C296DE8F2814123B00019B14 /* DoctorHorizontalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorHorizontalViewCell.swift; sourceTree = "<group>"; };
+		C296DE902814123B00019B14 /* DoctorHorizontalViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoctorHorizontalViewCell.xib; sourceTree = "<group>"; };
+		C296DE9428143FB700019B14 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C2BD6B592802B6CA00DBC642 /* DoctorAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppointmentsViewController.swift; sourceTree = "<group>"; };
 		C2BD6B5C2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppointmentsNavigationController.swift; sourceTree = "<group>"; };
 		C2BD6B5E2802D07900DBC642 /* DoctorProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfileNavigationController.swift; sourceTree = "<group>"; };
@@ -130,6 +140,8 @@
 				C296DE80280C205700019B14 /* PatientProfileViewController.swift */,
 				C296DE84280C330200019B14 /* PatientAppointmentsNavigationController.swift */,
 				C296DE82280C328400019B14 /* PatientAppointmentsViewController.swift */,
+				C296DE8B281409F700019B14 /* PatientHomeNavigationController.swift */,
+				C296DE89281409DB00019B14 /* PatientHomeViewController.swift */,
 			);
 			path = Patient;
 			sourceTree = "<group>";
@@ -140,6 +152,32 @@
 				C296DE87280D917F00019B14 /* UserStorage.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		C296DE8D281411B200019B14 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C296DE9328143F9D00019B14 /* CardView */,
+				C296DE8E281411CD00019B14 /* DoctorHViewCell */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		C296DE8E281411CD00019B14 /* DoctorHViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C296DE8F2814123B00019B14 /* DoctorHorizontalViewCell.swift */,
+				C296DE902814123B00019B14 /* DoctorHorizontalViewCell.xib */,
+			);
+			path = DoctorHViewCell;
+			sourceTree = "<group>";
+		};
+		C296DE9328143F9D00019B14 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				C296DE9428143FB700019B14 /* CardView.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		C2BD6B5B2802B78E00DBC642 /* Doctor */ = {
@@ -175,6 +213,7 @@
 		C2C58C0F27F9F08200B637C6 /* DoctorAppointmentBookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				C296DE8D281411B200019B14 /* ViewCells */,
 				C296DE86280D915800019B14 /* Storage */,
 				C27D9CB027FA096800511C4B /* View Model */,
 				C27D9CAD27FA08B300511C4B /* Model */,
@@ -264,6 +303,7 @@
 			files = (
 				C2C58C1D27F9F08400B637C6 /* LaunchScreen.storyboard in Resources */,
 				C27D9CAC27F9FE2E00511C4B /* GoogleService-Info.plist in Resources */,
+				C296DE922814123B00019B14 /* DoctorHorizontalViewCell.xib in Resources */,
 				C2C58C1A27F9F08400B637C6 /* Assets.xcassets in Resources */,
 				C2C58C1827F9F08200B637C6 /* Main.storyboard in Resources */,
 			);
@@ -319,10 +359,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2BD6B65280424D100DBC642 /* AppointmentViewModel.swift in Sources */,
+				C296DE9528143FB700019B14 /* CardView.swift in Sources */,
 				C2BD6B632804219900DBC642 /* Appointment.swift in Sources */,
 				C2C58C1527F9F08200B637C6 /* ViewController.swift in Sources */,
 				C296DE83280C328400019B14 /* PatientAppointmentsViewController.swift in Sources */,
 				C2BD6B5F2802D07900DBC642 /* DoctorProfileNavigationController.swift in Sources */,
+				C296DE912814123B00019B14 /* DoctorHorizontalViewCell.swift in Sources */,
 				C2BD6B5D2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift in Sources */,
 				C2C58C1127F9F08200B637C6 /* AppDelegate.swift in Sources */,
 				C296DE81280C205700019B14 /* PatientProfileViewController.swift in Sources */,
@@ -333,11 +375,13 @@
 				C2C58C2727F9F11500B637C6 /* LoginViewController.swift in Sources */,
 				C296DE85280C330200019B14 /* PatientAppointmentsNavigationController.swift in Sources */,
 				C2BD6B5A2802B6CA00DBC642 /* DoctorAppointmentsViewController.swift in Sources */,
+				C296DE8A281409DB00019B14 /* PatientHomeViewController.swift in Sources */,
 				C27D9CB427FA215A00511C4B /* DoctorProfileViewController.swift in Sources */,
 				C2C58C1327F9F08200B637C6 /* SceneDelegate.swift in Sources */,
 				C27D9CAF27FA08C400511C4B /* Doctor.swift in Sources */,
 				C296DE78280BFDB300019B14 /* Patient.swift in Sources */,
 				C21AF513280839550001A8C0 /* Error.swift in Sources */,
+				C296DE8C281409F700019B14 /* PatientHomeNavigationController.swift in Sources */,
 				C296DE7A280BFFE200019B14 /* PatientViewModel.swift in Sources */,
 				C27D9CB227FA097D00511C4B /* DoctorViewModel.swift in Sources */,
 				C296DE88280D917F00019B14 /* UserStorage.swift in Sources */,
