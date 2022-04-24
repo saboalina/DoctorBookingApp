@@ -12,8 +12,10 @@ class PatientHomeViewController: UIViewController {
     
     
     @IBOutlet weak var doctorCollectionView: UICollectionView!
+    @IBOutlet weak var medicalCenterCollectionView: UICollectionView!
     
     var doctorViewModel = DoctorViewModel()
+    var medicalCenterViewModel = MedicalCenterViewModel()
     
     private var allDoctors = [Doctor]() {
         didSet {
@@ -33,6 +35,24 @@ class PatientHomeViewController: UIViewController {
         }
     }
     
+    private var allMedicalCenters = [MedicalCenter]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.medicalCenters = self.allMedicalCenters
+                print("3==> \(self.medicalCenters)")
+            }
+        }
+    }
+
+    var medicalCenters = [MedicalCenter]() {
+        didSet {
+            DispatchQueue.main.async {
+                //self.medicalCenterCollectionView.reloadData()
+                print("4==> \(self.medicalCenters)")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -44,6 +64,10 @@ class PatientHomeViewController: UIViewController {
                 self.doctors = doctors
         }
         print("2==> \(doctors)")
+        
+        medicalCenterViewModel.getAllMedicalCenters(collectionID: "medicalCenters") { medicalCenters in
+                self.medicalCenters = medicalCenters
+        }
 
     }
     
