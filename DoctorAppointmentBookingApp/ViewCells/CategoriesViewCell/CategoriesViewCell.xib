@@ -11,20 +11,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoriesViewCell" id="gTV-IL-0wX" customClass="CategoriesViewCell" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rF0-65-T9c" customClass="CardView" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGS-DZ-1nh">
-                                <rect key="frame" x="20" y="10" width="60" height="57"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OGS-DZ-1nh">
+                                <rect key="frame" x="19" y="13" width="75" height="65"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kO-9f-ABk">
-                                <rect key="frame" x="10" y="72" width="80" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kO-9f-ABk">
+                                <rect key="frame" x="0.0" y="89" width="120" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,13 +32,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="BAf-1H-PoZ"/>
                             <constraint firstItem="5kO-9f-ABk" firstAttribute="top" secondItem="OGS-DZ-1nh" secondAttribute="bottom" constant="5" id="CtX-so-8OH"/>
                             <constraint firstAttribute="bottom" secondItem="5kO-9f-ABk" secondAttribute="bottom" constant="10" id="Edc-jr-79L"/>
                             <constraint firstItem="5kO-9f-ABk" firstAttribute="leading" secondItem="rF0-65-T9c" secondAttribute="leading" constant="10" id="Esj-4h-QCU"/>
                             <constraint firstAttribute="trailing" secondItem="5kO-9f-ABk" secondAttribute="trailing" constant="10" id="HSa-rg-vkt"/>
-                            <constraint firstItem="OGS-DZ-1nh" firstAttribute="top" secondItem="rF0-65-T9c" secondAttribute="top" constant="10" id="SJv-BH-QWd"/>
-                            <constraint firstAttribute="width" constant="100" id="dph-s8-bXt"/>
+                            <constraint firstAttribute="width" constant="120" id="KMk-0O-CVk"/>
+                            <constraint firstItem="OGS-DZ-1nh" firstAttribute="top" secondItem="rF0-65-T9c" secondAttribute="top" constant="20" id="SJv-BH-QWd"/>
+                            <constraint firstAttribute="height" constant="120" id="TSz-Rs-N4r"/>
                             <constraint firstAttribute="trailing" secondItem="OGS-DZ-1nh" secondAttribute="trailing" constant="20" id="ecM-sh-q8M"/>
                             <constraint firstItem="OGS-DZ-1nh" firstAttribute="leading" secondItem="rF0-65-T9c" secondAttribute="leading" constant="20" id="hcY-Yp-8SV"/>
                         </constraints>
@@ -52,11 +52,11 @@
                 <constraint firstItem="rF0-65-T9c" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Us8-76-EYr"/>
                 <constraint firstItem="rF0-65-T9c" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kxP-nq-IPI"/>
             </constraints>
-            <size key="customSize" width="176" height="156"/>
+            <size key="customSize" width="228" height="210"/>
             <connections>
                 <outlet property="categoryNameLabel" destination="5kO-9f-ABk" id="B4O-xj-Bfm"/>
             </connections>
-            <point key="canvasLocation" x="189.85507246376812" y="132.58928571428572"/>
+            <point key="canvasLocation" x="227.536231884058" y="150.66964285714286"/>
         </collectionViewCell>
     </objects>
     <resources>
