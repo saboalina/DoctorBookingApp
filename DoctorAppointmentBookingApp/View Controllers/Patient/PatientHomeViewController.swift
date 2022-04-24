@@ -12,7 +12,13 @@ class PatientHomeViewController: UIViewController {
     
     
     @IBOutlet weak var doctorCollectionView: UICollectionView!
+    
+    
+    @IBOutlet weak var categoriesCollectionView: UICollectionView!
+    
+    
     @IBOutlet weak var medicalCenterCollectionView: UICollectionView!
+    
     
     var doctorViewModel = DoctorViewModel()
     var medicalCenterViewModel = MedicalCenterViewModel()
@@ -53,6 +59,9 @@ class PatientHomeViewController: UIViewController {
         }
     }
     
+    let categories = ["Dermathology", "Endocrinology", "Ultrasound", "Dermathology", "Psychology", "Plastic surgery",
+                      "Nutrition", "Cardiology", "Ophthalmology", "Neurology", "Paediatrics", "Psychiatry"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -75,9 +84,16 @@ class PatientHomeViewController: UIViewController {
         doctorCollectionView.register(
             UINib(nibName: DoctorHorizontalViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DoctorHorizontalViewCell.identifier)
         
+        categoriesCollectionView.register(
+            UINib(nibName: CategoriesViewCell.identifier, bundle: nil), forCellWithReuseIdentifier:
+                CategoriesViewCell.identifier)
+        
+        
         medicalCenterCollectionView.register(
             UINib(nibName: MedicalCenterHorizontalViewCell.identifier, bundle: nil), forCellWithReuseIdentifier:
                 MedicalCenterHorizontalViewCell.identifier)
+        
+        
     }
 }
 
@@ -86,6 +102,9 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
         if collectionView == self.doctorCollectionView {
             return doctors.count
         }
+        if collectionView == self.categoriesCollectionView {
+            return categories.count
+        }
         return medicalCenters.count
     }
     
@@ -93,6 +112,11 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
         if collectionView == self.doctorCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DoctorHorizontalViewCell.identifier, for: indexPath) as! DoctorHorizontalViewCell
             cell.setup(doctor: doctors[indexPath.row])
+            return cell
+        }
+        if collectionView == self.categoriesCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesViewCell.identifier, for: indexPath) as! CategoriesViewCell
+            cell.setup(category: categories[indexPath.row])
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MedicalCenterHorizontalViewCell.identifier, for: indexPath) as! MedicalCenterHorizontalViewCell
