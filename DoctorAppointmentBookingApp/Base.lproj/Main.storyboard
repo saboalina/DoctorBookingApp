@@ -567,8 +567,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aic-KJ-3Pr">
+                                <rect key="frame" x="0.0" y="535" width="428" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9gg-0z-hnF"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="qKI-LM-Fy8">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rum-1L-0km" id="RtL-4B-u8A"/>
+                                    <outlet property="delegate" destination="rum-1L-0km" id="e08-up-CCj"/>
+                                </connections>
+                            </collectionView>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PGs-7Q-3tB">
-                                <rect key="frame" x="20" y="191" width="388" height="200"/>
+                                <rect key="frame" x="0.0" y="191" width="428" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="DR9-xh-80m"/>
@@ -589,19 +607,23 @@
                         <viewLayoutGuide key="safeArea" id="bQJ-bZ-mXn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="leading" secondItem="15R-A2-1dx" secondAttribute="leadingMargin" id="6jK-Hp-LQ5"/>
                             <constraint firstItem="bQJ-bZ-mXn" firstAttribute="bottom" secondItem="PGs-7Q-3tB" secondAttribute="bottom" constant="452" id="9fi-US-YTc"/>
                             <constraint firstItem="PGs-7Q-3tB" firstAttribute="top" secondItem="7k3-Pn-jyL" secondAttribute="bottom" id="AaA-09-veH"/>
-                            <constraint firstItem="WLE-Xn-oPv" firstAttribute="centerX" secondItem="PGs-7Q-3tB" secondAttribute="centerX" id="Acq-JM-37G"/>
-                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="leading" secondItem="7k3-Pn-jyL" secondAttribute="leading" id="G1G-GR-qKa"/>
-                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="trailing" secondItem="15R-A2-1dx" secondAttribute="trailingMargin" id="NVK-tT-UiP"/>
+                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="trailing" secondItem="aic-KJ-3Pr" secondAttribute="trailing" id="EXz-4Z-mPM"/>
+                            <constraint firstItem="7k3-Pn-jyL" firstAttribute="leading" secondItem="15R-A2-1dx" secondAttribute="leadingMargin" id="OoY-Yq-I59"/>
+                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" id="PnX-L5-szB"/>
                             <constraint firstItem="7k3-Pn-jyL" firstAttribute="top" secondItem="WLE-Xn-oPv" secondAttribute="bottom" constant="20" id="foZ-hW-bFz"/>
+                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="bottom" secondItem="aic-KJ-3Pr" secondAttribute="bottom" constant="108" id="js9-Fg-zFU"/>
+                            <constraint firstItem="WLE-Xn-oPv" firstAttribute="centerX" secondItem="PGs-7Q-3tB" secondAttribute="centerX" id="te3-I9-RIT"/>
+                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="trailing" secondItem="bQJ-bZ-mXn" secondAttribute="trailing" id="uSV-86-p9q"/>
+                            <constraint firstItem="aic-KJ-3Pr" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" id="vzO-6R-ihh"/>
                             <constraint firstItem="WLE-Xn-oPv" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" id="wAt-eJ-BTH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tfz-nc-yOg"/>
                     <connections>
                         <outlet property="doctorCollectionView" destination="PGs-7Q-3tB" id="gwz-Z4-zG3"/>
+                        <outlet property="medicalCenterCollectionView" destination="aic-KJ-3Pr" id="G5S-lQ-Z2Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9em-bh-zIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

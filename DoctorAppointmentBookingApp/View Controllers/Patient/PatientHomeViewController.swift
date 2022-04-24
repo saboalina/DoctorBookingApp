@@ -47,7 +47,7 @@ class PatientHomeViewController: UIViewController {
     var medicalCenters = [MedicalCenter]() {
         didSet {
             DispatchQueue.main.async {
-                //self.medicalCenterCollectionView.reloadData()
+                self.medicalCenterCollectionView.reloadData()
                 print("4==> \(self.medicalCenters)")
             }
         }
@@ -74,17 +74,29 @@ class PatientHomeViewController: UIViewController {
     private func registerCell() {
         doctorCollectionView.register(
             UINib(nibName: DoctorHorizontalViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DoctorHorizontalViewCell.identifier)
+        
+        medicalCenterCollectionView.register(
+            UINib(nibName: MedicalCenterHorizontalViewCell.identifier, bundle: nil), forCellWithReuseIdentifier:
+                MedicalCenterHorizontalViewCell.identifier)
     }
 }
 
 extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return doctors.count
+        if collectionView == self.doctorCollectionView {
+            return doctors.count
+        }
+        return medicalCenters.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DoctorHorizontalViewCell.identifier, for: indexPath) as! DoctorHorizontalViewCell
-        cell.setup(doctor: doctors[indexPath.row])
+        if collectionView == self.doctorCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DoctorHorizontalViewCell.identifier, for: indexPath) as! DoctorHorizontalViewCell
+            cell.setup(doctor: doctors[indexPath.row])
+            return cell
+        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MedicalCenterHorizontalViewCell.identifier, for: indexPath) as! MedicalCenterHorizontalViewCell
+        cell.setup(medicalCenter: medicalCenters[indexPath.row])
         return cell
     }
     
