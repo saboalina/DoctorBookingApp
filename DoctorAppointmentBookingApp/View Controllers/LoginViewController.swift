@@ -84,8 +84,11 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginButtonTapped(_ sender: Any) {
         
-        let email = self.emailTextField.text!
-        let password = self.passwordTextField.text!
+//        let email = self.emailTextField.text!
+//        let password = self.passwordTextField.text!
+        
+        let email = "alina@yahoo.com"
+        let password = "alina1999"
         
         let userType = verifyUser(email: email)
         

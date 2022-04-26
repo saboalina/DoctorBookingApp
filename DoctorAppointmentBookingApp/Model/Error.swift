@@ -16,3 +16,7 @@ enum PatientError: Error {
      
     case UserNotFound
 }
+
+enum AppointmentError: Error {
+    case AppointmentNotFound
+}
