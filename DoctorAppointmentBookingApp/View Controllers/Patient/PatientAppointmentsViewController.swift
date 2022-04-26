@@ -106,12 +106,11 @@ extension PatientAppointmentsViewController: UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     {
-        let verticalPadding: CGFloat = 8
 
         let maskLayer = CALayer()
         maskLayer.cornerRadius = 10    //if you want round edges
         maskLayer.backgroundColor = UIColor.black.cgColor
-        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 20, dy: verticalPadding)
+        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 20, dy: 10)
         cell.layer.mask = maskLayer
     }
     
@@ -121,8 +120,6 @@ extension PatientAppointmentsViewController: UITableViewDataSource, UITableViewD
         //do something
         print(rowIndex)
         print(appointments[rowIndex].doctorId)
-//        let patientId = appointments[rowIndex].patientId
-//        let doctorId = appointments[rowIndex].doctorId
         
         appointmentViewModel.deleteAppointment(appointment: appointments[rowIndex]) { [weak self] (success) in
             guard let `self` = self else { return }

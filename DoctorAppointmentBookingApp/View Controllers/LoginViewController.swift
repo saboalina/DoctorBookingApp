@@ -100,21 +100,6 @@ class LoginViewController: UIViewController {
         
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if (segue.identifier == "loadDoctorHomePage") {
-//           if let doctorHomePage = segue.destination as? DoctorHomePageViewController {
-//               doctorHomePage.doctor = self.doctor
-//           }
-//       }
-//
-//        if (segue.identifier == "loadPatientHomePage") {
-//            if let patientHomePage = segue.destination as? PatientHomePageViewController {
-//                patientHomePage.patient = self.patient
-//            }
-//        }
-//    }
-
-    
     func navigateToDoctorPage(doctor: Doctor) {
         let doctorPage = storyboard?.instantiateViewController(withIdentifier: "DoctorPage") as? DoctorPageViewController
         
