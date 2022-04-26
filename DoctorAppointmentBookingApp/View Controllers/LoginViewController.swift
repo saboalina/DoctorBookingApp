@@ -21,14 +21,6 @@ class LoginViewController: UIViewController {
     func verifyUser(email: String) -> String {
         var user = ""
 
-//        if email.contains("@yahoo.com"){
-//            print("exists")
-//            user = "is a patient"
-//        } else {
-//            user = "is a doctor"
-//        }
-
-        // alternative: not case sensitive
         if email.lowercased().contains("@yahoo.com") {
             print("exists")
             user = "is a patient"
@@ -48,7 +40,6 @@ class LoginViewController: UIViewController {
                     switch res{
                     case .success(let doctor):
                         self.doctor = doctor
-//                        self.performSegue(withIdentifier: "loadDoctorHomePage", sender: self)
                         self.navigateToDoctorPage(doctor: doctor)
                     case .failure(let err):
                         print(err)
@@ -69,7 +60,6 @@ class LoginViewController: UIViewController {
                     switch res{
                     case .success(let patient):
                         self.patient = patient
-//                        self.performSegue(withIdentifier: "loadPatientHomePage", sender: self)
                         self.navigateToPatientPage(pacient: patient)
                     case .failure(let err):
                         print(err)

@@ -27,7 +27,6 @@ class PatientHomeViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.doctors = self.allDoctors
-                //print("3==> \(self.doctors)")
             }
         }
     }
@@ -36,7 +35,6 @@ class PatientHomeViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.doctorCollectionView.reloadData()
-                //print("4==> \(self.doctors)")
             }
         }
     }

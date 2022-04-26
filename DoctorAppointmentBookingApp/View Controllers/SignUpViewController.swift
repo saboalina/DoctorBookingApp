@@ -141,12 +141,4 @@ class SignUpViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//       if (segue.identifier == "loadLoginPage") {
-////           if let doctorHomePage = segue.destination as? DoctorHomePageViewController {
-////               doctorHomePage.doctor = self.doctor
-////           }
-//       }
-//    }
-
 }
