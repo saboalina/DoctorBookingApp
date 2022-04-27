@@ -73,7 +73,7 @@ class DoctorViewModel {
                 handler(Result.failure(err))
             } else {
                 if let data = querySnapshot?.documents.first?.data() {
-                    handler(Result.success(Doctor(document: data)))
+                    handler(Result.success(Doctor(document: data, id: querySnapshot?.documents.first?.documentID ?? "")))
                 } else {
                     handler(Result.failure(DoctorError.UserNotFound))
                 }

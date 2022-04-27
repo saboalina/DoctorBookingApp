@@ -101,7 +101,7 @@ class SignUpViewController: UIViewController {
                 
             } else {
                 
-                let doctor = Doctor(email: email, password: password, name: name, phoneNumber: phoneNumber, worksAt: "", numberOfPatients: "", experience: "", consultancyFee: "", service: "")
+                let doctor = Doctor(email: email, password: password, name: name, phoneNumber: phoneNumber, worksAt: "", numberOfPatients: "", experience: "", consultancyFee: "", service: "", id: "")
                 
                 doctorViewModel.createUser(doctor: doctor) {[weak self] (errorCode) in
                     guard let `self` = self else { return }

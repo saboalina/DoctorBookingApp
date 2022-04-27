@@ -10,15 +10,15 @@ import Firebase
 
 class DoctorProfileViewController: UIViewController {
 
-    
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
-    @IBOutlet weak var serviceTextField: UITextField!
-    @IBOutlet weak var worksAtTextField: UITextField!
-//    @IBOutlet weak var numberOfPatientsTextField: UITextField!
-//    @IBOutlet weak var experienceTextField: UITextField!
-//    @IBOutlet weak var consultancyFeeTextField: UITextField!
+
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var serviceLabel: UILabel!
+    @IBOutlet weak var servicesAtLabel: UITextField!
+    @IBOutlet weak var patientNumberLabel: UILabel!
+    @IBOutlet weak var experienceLabel: UILabel!
+    @IBOutlet weak var consultanceFeeLabel: UILabel!
     @IBOutlet weak var logoutButton: UIButton!
 
     
@@ -27,14 +27,15 @@ class DoctorProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameTextField.text = doctor.name
-        emailTextField.text = doctor.email
-        phoneTextField.text = doctor.phoneNumber
-        serviceTextField.text = doctor.service
-        worksAtTextField.text = doctor.worksAt
-//        numberOfPatientsTextField.text = doctor.numberOfPatients
-//        experienceTextField.text = doctor.experience
-//        consultancyFeeTextField.text = doctor.consultancyFee
+        nameLabel.text = doctor.name
+        emailLabel.text = doctor.email
+        phoneLabel.text = doctor.phoneNumber
+        serviceLabel.text = doctor.service
+        servicesAtLabel.text = doctor.worksAt
+        patientNumberLabel.text = doctor.numberOfPatients
+        experienceLabel.text = doctor.experience
+        consultanceFeeLabel.text = doctor.consultancyFee
+
         
     }
     
