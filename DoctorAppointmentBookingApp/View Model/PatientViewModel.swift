@@ -24,8 +24,7 @@ class PatientViewModel {
                             "name":patient.name,
                             "phoneNumber":patient.phoneNumber,
                             "password":patient.password,
-                            "history":patient.history,
-                            "uid":authResult!.user.uid
+                            "history":patient.history
                         ]) { (error) in
                             if error != nil {
                                 print("error saving user data")
@@ -81,12 +80,21 @@ class PatientViewModel {
                 handler(Result.failure(err))
             } else {
                 if let data = querySnapshot?.documents.first?.data() {
-                    handler(Result.success(Patient(document: data)))
+                    handler(Result.success(Patient(document: data, id: querySnapshot?.documents.first?.documentID ?? "")))
                 } else {
                     handler(Result.failure(PatientError.UserNotFound))
                 }
             }
         }
+    }
+    
+    
+    func updatePatient(patientId: String, name: String, phoneNumber: String, history: String) {
+        db.collection("patients").document(patientId).setData([
+            "name":         name,
+            "phoneNumber":  phoneNumber,
+            "history":      history
+        ], merge: true)
     }
     
 }

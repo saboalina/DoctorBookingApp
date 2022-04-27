@@ -39,23 +39,7 @@ class AppointmentViewModel {
                     }
                 }
         }
-    
-    
-//    func getAppointmentBy(patientEmail: String, doctorEmail: String, handler: @escaping (Result<Appointment, Error>) -> Void) {
-//        db.collection("appointments").whereField("patientId", isEqualTo: patientEmail).whereField("doctorId", isEqualTo: doctorEmail).getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//                handler(Result.failure(err))
-//            } else {
-//                if let data = querySnapshot?.documents.first?.data() {
-//                    handler(Result.success(Appointment(document: data)))
-//                } else {
-//                    handler(Result.failure(AppointmentError.AppointmentNotFound))
-//                }
-//            }
-//        }
-//    }
-//    
+      
     func deleteAppointment(appointment: Appointment, completionBlock: @escaping (_ success: Bool) -> Void) {
         
         db.collection("appointments").document(appointment.id).delete() { error in

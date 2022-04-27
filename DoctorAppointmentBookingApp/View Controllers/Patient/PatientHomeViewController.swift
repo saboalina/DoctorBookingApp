@@ -93,6 +93,15 @@ class PatientHomeViewController: UIViewController {
         
         
     }
+    
+    @IBAction func searchButtonTapped(_ sender: Any) {
+        let searchPage = storyboard?.instantiateViewController(withIdentifier: "SearchPage") as? PatientSearchViewController
+        
+        //patientPage?.patient = patient
+     
+        view.window?.rootViewController = searchPage
+        view.window?.makeKeyAndVisible()
+    }
 }
 
 extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {

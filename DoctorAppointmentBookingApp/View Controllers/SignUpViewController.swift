@@ -88,7 +88,7 @@ class SignUpViewController: UIViewController {
             
             if userType == "is a patient" {
                 
-                let patient = Patient(email: email, password: password, name: name, phoneNumber: phoneNumber, history: "")
+                let patient = Patient(email: email, password: password, name: name, phoneNumber: phoneNumber, history: "", id: "")
                 
                 patientViewModel.createUser(patient: patient) {[weak self] (success) in
                     guard let `self` = self else { return }

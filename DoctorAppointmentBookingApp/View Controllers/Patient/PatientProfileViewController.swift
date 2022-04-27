@@ -10,12 +10,9 @@ import Firebase
 
 class PatientProfileViewController: UIViewController {
     
-    
-    
-    
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var historyTextField: UITextField!
     
     var patient: Patient!
@@ -23,9 +20,9 @@ class PatientProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameTextField.text = patient.name
-        emailTextField.text = patient.email
-        phoneTextField.text = patient.phoneNumber
+        nameLabel.text = patient.name
+        emailLabel.text = patient.email
+        phoneLabel.text = patient.phoneNumber
         historyTextField.text = patient.history
 
     }
@@ -39,4 +36,22 @@ class PatientProfileViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
+    
+    @IBAction func editButtonTapped(_ sender: Any) {
+        let editProfilePage = storyboard?.instantiateViewController(withIdentifier: "editProfilePage") as? PatientEditProfileViewController
+        
+        editProfilePage?.patient = patient
+     
+        view.window?.rootViewController = editProfilePage
+        view.window?.makeKeyAndVisible()
+    }
+    
+//    func navigateToPatientPage(pacient: Patient) {
+//        let patientPage = storyboard?.instantiateViewController(withIdentifier: "PatientPage") as? PatientPageViewController
+//        
+//        patientPage?.patient = patient
+//     
+//        view.window?.rootViewController = patientPage
+//        view.window?.makeKeyAndVisible()
+//    }
 }

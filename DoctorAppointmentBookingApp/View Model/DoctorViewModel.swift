@@ -39,33 +39,7 @@ class DoctorViewModel {
                         }
                     }
                 }
-//                let errCode = AuthErrorCode(rawValue: error!._code)
-//
-//
-//                    if let user = authResult?.user {
-////                        print("-> \(user)")
-//                        //let db = Firestore.firestore()
-//                        self.db.collection("doctors").addDocument(data: [
-//                            "email":doctor.email,
-//                            "name":doctor.name,
-//                            "phoneNumber":doctor.phoneNumber,
-//                            "password":doctor.password,
-//                            "consultancyFee":doctor.consultancyFee,
-//                            "service":doctor.service,
-//                            "experience":doctor.experience,
-//                            "numberOfPatients":doctor.numberOfPatients,
-//                            "worksAt":doctor.worksAt
-//                        ]) { (error) in
-//                            if error != nil {
-//                                print("error saving user data")
-//                            }
-//
-//                        }
-//                        completionBlock(true)
-//                    } else {
-//                        completionBlock(false)
-//                    }
-                }
+            }
         }
     
     
@@ -91,18 +65,6 @@ class DoctorViewModel {
                     }
         }
     }
-    
-//    func getDoctor(collectionID: String, email: String, password: String, handler: @escaping ([Doctor]) -> Void) {
-//        db.collection("doctors").whereField("email", isEqualTo: email).whereField("password", isEqualTo: password)
-//                .addSnapshotListener { querySnapshot, err in
-//                    if let error = err {
-//                        print(error)
-//                        handler([])
-//                    } else {
-//                        handler(Doctor.build(from: querySnapshot?.documents ?? []))
-//                    }
-//        }
-//    }
     
     func getDoctorBy(email: String, handler: @escaping (Result<Doctor, Error>) -> Void) {
         db.collection("doctors").whereField("email", isEqualTo: email).getDocuments() { (querySnapshot, err) in
