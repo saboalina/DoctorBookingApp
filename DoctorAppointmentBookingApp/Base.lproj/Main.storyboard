@@ -986,6 +986,7 @@
                         <outlet property="categoriesCollectionView" destination="zyf-3X-Mg6" id="qs9-lX-jlA"/>
                         <outlet property="doctorCollectionView" destination="PGs-7Q-3tB" id="gwz-Z4-zG3"/>
                         <outlet property="medicalCenterCollectionView" destination="aic-KJ-3Pr" id="G5S-lQ-Z2Y"/>
+                        <segue destination="nRf-KV-Qim" kind="show" identifier="SearchPage" id="33c-0V-CQk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9em-bh-zIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -995,7 +996,7 @@
         <!--Patient Search View Controller-->
         <scene sceneID="5MF-uf-kS8">
             <objects>
-                <viewController storyboardIdentifier="SearchPage" id="nRf-KV-Qim" customClass="PatientSearchViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nRf-KV-Qim" customClass="PatientSearchViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TLi-Ez-59X">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1022,6 +1023,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Select Date"/>
+                                <connections>
+                                    <action selector="selectDateButtonTapped:" destination="nRf-KV-Qim" eventType="touchUpInside" id="Ayt-d6-AlO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rnu-35-gba"/>
@@ -1036,19 +1040,11 @@
         <!--Patient Select Date View Controller-->
         <scene sceneID="U0X-vn-C0R">
             <objects>
-                <viewController id="5fD-8D-FUm" customClass="PatientSelectDateViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectDateProfilePage" id="5fD-8D-FUm" customClass="PatientSelectDateViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Q8-DE-B7d" customClass="PatientSelectDateViewController">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="8ZE-fN-yR8">
-                                <rect key="frame" x="0.0" y="311" width="428" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="eYD-eN-D6X">
-                                <rect key="frame" x="0.0" y="576" width="428" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIN-34-Rmm">
                                 <rect key="frame" x="178" y="795" width="54" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1056,19 +1052,25 @@
                                 <buttonConfiguration key="configuration" style="plain" title="filter"/>
                                 <connections>
                                     <action selector="filterButtonTapped:" destination="5fD-8D-FUm" eventType="touchUpInside" id="Ctb-Hc-Cfg"/>
-                                    <action selector="filterButtonTapped:" destination="6Q8-DE-B7d" eventType="touchUpInside" id="exN-bU-wIz"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="d0W-gU-ahB">
+                                <rect key="frame" x="0.0" y="174" width="428" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-ZT-kff">
+                                <rect key="frame" x="-20" y="472" width="428" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a7a-GE-J4O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="endDatePicker" destination="eYD-eN-D6X" id="wNP-76-wKc"/>
-                            <outlet property="startDatePicker" destination="8ZE-fN-yR8" id="xj5-iN-Kcm"/>
-                        </connections>
                     </view>
                     <connections>
-                        <outlet property="startDatePicker" destination="8ZE-fN-yR8" id="dng-3s-ct6"/>
+                        <outlet property="endDatePicker" destination="6wS-ZT-kff" id="Zka-Ia-MxP"/>
+                        <outlet property="startDatePicker" destination="d0W-gU-ahB" id="YL0-YP-EHp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fp1-sw-I8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

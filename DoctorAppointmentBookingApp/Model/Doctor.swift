@@ -21,7 +21,15 @@ public class Doctor: NSObject {
     var service: String
     var id: String
     
-    init(email: String, password: String, name: String, phoneNumber: String, worksAt: String, numberOfPatients: String, experience: String, consultancyFee: String, service: String, id: String){
+    var sun: String
+    var mon: String
+    var tue: String
+    var wed: String
+    var thu: String
+    var fri: String
+    var sat: String
+    
+    init(email: String, password: String, name: String, phoneNumber: String, worksAt: String, numberOfPatients: String, experience: String, consultancyFee: String, service: String, id: String, sun: String, mon: String, tue: String, wed: String, thu: String, fri: String, sat: String){
         self.email = email
         self.password = password
         self.name = name
@@ -32,6 +40,14 @@ public class Doctor: NSObject {
         self.consultancyFee = consultancyFee
         self.service = service
         self.id = id
+        
+        self.sun = sun
+        self.mon = mon
+        self.tue = tue
+        self.wed = wed
+        self.thu = thu
+        self.fri = fri
+        self.sat = sat
     }
     
     init(document: [String:Any], id: String) {
@@ -45,6 +61,14 @@ public class Doctor: NSObject {
         consultancyFee =    document["consultancyFee"] as? String ?? ""
         service =           document["service"] as? String ?? ""
         self.id =               id
+        
+        sun =           document["Sun"] as? String ?? ""
+        mon =           document["Mon"] as? String ?? ""
+        tue =           document["Tue"] as? String ?? ""
+        wed =           document["Wed"] as? String ?? ""
+        thu =           document["Thu"] as? String ?? ""
+        fri =           document["Fri"] as? String ?? ""
+        sat =           document["Sat"] as? String ?? ""
     }
 
 }
@@ -62,7 +86,14 @@ extension Doctor {
                                 experience:         document["experience"] as? String ?? "",
                                 consultancyFee:     document["consultancyFee"] as? String ?? "",
                                 service:            document["service"] as? String ?? "",
-                                id:         document.documentID))
+                                id:         document.documentID,
+                                sun:           document["Sun"] as? String ?? "",
+                                mon:           document["Mon"] as? String ?? "",
+                                tue:           document["Tue"] as? String ?? "",
+                                wed:           document["Wed"] as? String ?? "",
+                                thu:           document["Thu"] as? String ?? "",
+                                fri:           document["Fri"] as? String ?? "",
+                                sat:           document["Sat"] as? String ?? ""))
         }
         return users
     }

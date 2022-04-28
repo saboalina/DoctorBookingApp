@@ -95,13 +95,21 @@ class PatientHomeViewController: UIViewController {
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
-        let searchPage = storyboard?.instantiateViewController(withIdentifier: "SearchPage") as? PatientSearchViewController
+//        let searchPage = storyboard?.instantiateViewController(withIdentifier: "SearchPage") as? PatientSearchViewController
+//
+//        //patientPage?.patient = patient
+//
+//        view.window?.rootViewController = searchPage
+//        view.window?.makeKeyAndVisible()
         
-        //patientPage?.patient = patient
-     
-        view.window?.rootViewController = searchPage
-        view.window?.makeKeyAndVisible()
+        self.performSegue(withIdentifier: "SearchPage", sender: nil)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "SearchPage" {
+//            let searchPage = segue.destination as! PatientSearchViewController
+//        }
+//    }
 }
 
 extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {

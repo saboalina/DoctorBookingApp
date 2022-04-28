@@ -11,23 +11,22 @@ class PatientSelectDateViewController: UIViewController {
 
     
     @IBOutlet weak var startDatePicker: UIDatePicker!
-    
     @IBOutlet weak var endDatePicker: UIDatePicker!
     
-    
+    var filterViewModel = FiltersViewModel.shared
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    
 
     @IBAction func filterButtonTapped(_ sender: Any) {
         
-        print("---> \(startDatePicker.date)")
-        print("---> \(endDatePicker.date)")
-        //startDatePicker.date
-        
+        let startDate = startDatePicker.date
+        let endDate = endDatePicker.date
+        filterViewModel.getWeekDaysList(startDate: startDate, endDate: endDate)
     }
+    
+    
     
 
 }

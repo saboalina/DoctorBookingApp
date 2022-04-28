@@ -25,6 +25,16 @@ class PatientSearchViewController: UIViewController {
     }
     
     
-
+    @IBAction func selectDateButtonTapped(_ sender: Any) {
+        let selectDateProfilePage = storyboard?.instantiateViewController(withIdentifier: "selectDateProfilePage") as? PatientSelectDateViewController
+        
+        //selectDateProfilePage?.doctor = doctor
+     
+//        view.window?.rootViewController = editDoctorProfilePage
+//        view.window?.makeKeyAndVisible()
+        
+        navigationController?.pushViewController(selectDateProfilePage!, animated: true)
+    }
+    
     
 }
