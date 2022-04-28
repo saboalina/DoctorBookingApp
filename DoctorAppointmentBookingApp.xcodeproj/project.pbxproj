@@ -11,6 +11,7 @@
 		C21AF513280839550001A8C0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AF512280839550001A8C0 /* Error.swift */; };
 		C2770C0528196870006F4EBF /* PatientSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2770C0428196870006F4EBF /* PatientSearchViewController.swift */; };
 		C2770C0B2819B8E6006F4EBF /* PatientEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2770C0A2819B8E6006F4EBF /* PatientEditProfileViewController.swift */; };
+		C2770C0D281A7ACF006F4EBF /* DoctorEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2770C0C281A7ACF006F4EBF /* DoctorEditProfileViewController.swift */; };
 		C27D9CAC27F9FE2E00511C4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C27D9CAB27F9FE2E00511C4B /* GoogleService-Info.plist */; };
 		C27D9CAF27FA08C400511C4B /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CAE27FA08C400511C4B /* Doctor.swift */; };
 		C27D9CB227FA097D00511C4B /* DoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CB127FA097D00511C4B /* DoctorViewModel.swift */; };
@@ -58,6 +59,7 @@
 		C21AF512280839550001A8C0 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		C2770C0428196870006F4EBF /* PatientSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSearchViewController.swift; sourceTree = "<group>"; };
 		C2770C0A2819B8E6006F4EBF /* PatientEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientEditProfileViewController.swift; sourceTree = "<group>"; };
+		C2770C0C281A7ACF006F4EBF /* DoctorEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DoctorEditProfileViewController.swift; path = "DoctorAppointmentBookingApp/View Controllers/Patient/DoctorEditProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
 		C27D9CAB27F9FE2E00511C4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C27D9CAE27FA08C400511C4B /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		C27D9CB127FA097D00511C4B /* DoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewModel.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				C27D9CB327FA215A00511C4B /* DoctorProfileViewController.swift */,
 				C2BD6B5C2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift */,
 				C2BD6B592802B6CA00DBC642 /* DoctorAppointmentsViewController.swift */,
+				C2770C0C281A7ACF006F4EBF /* DoctorEditProfileViewController.swift */,
 			);
 			path = Doctor;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				C296DE9E28158C2700019B14 /* MedicalCenterViewModel.swift in Sources */,
 				C290DA5A28187430007C3CB8 /* AppointmentDoctorViewCell.swift in Sources */,
 				C296DE7D280C1FA100019B14 /* PatientPageViewController.swift in Sources */,
+				C2770C0D281A7ACF006F4EBF /* DoctorEditProfileViewController.swift in Sources */,
 				C2C58C2727F9F11500B637C6 /* LoginViewController.swift in Sources */,
 				C290DA5728182EF3007C3CB8 /* AppointmentPatientViewCell.swift in Sources */,
 				C296DE85280C330200019B14 /* PatientAppointmentsNavigationController.swift in Sources */,

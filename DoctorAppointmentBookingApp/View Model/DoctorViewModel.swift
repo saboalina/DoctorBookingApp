@@ -81,4 +81,15 @@ class DoctorViewModel {
         }
     }
     
+    func updateDoctor(doctorId: String, name: String, phoneNumber: String, service: String, worksAt: String, experience: String, consultancyFee: String) {
+        db.collection("doctors").document(doctorId).setData([
+            "name":         name,
+            "phoneNumber":  phoneNumber,
+            "service":      service,
+            "worksAt":  worksAt,
+            "experience":      experience,
+            "consultancyFee":      consultancyFee,
+        ], merge: true)
+    }
+    
 }

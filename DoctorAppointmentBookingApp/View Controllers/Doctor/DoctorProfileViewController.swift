@@ -55,5 +55,14 @@ class DoctorProfileViewController: UIViewController {
         view.window?.rootViewController = firstPage
         view.window?.makeKeyAndVisible()
     }
-
+    
+    
+    @IBAction func editProfileButtonTapped(_ sender: Any) {
+        let editDoctorProfilePage = storyboard?.instantiateViewController(withIdentifier: "editDoctorProfilePage") as? DoctorEditProfileViewController
+        
+        editDoctorProfilePage?.doctor = doctor
+     
+        view.window?.rootViewController = editDoctorProfilePage
+        view.window?.makeKeyAndVisible()
+    }
 }
