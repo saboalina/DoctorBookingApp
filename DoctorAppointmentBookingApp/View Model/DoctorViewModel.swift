@@ -81,7 +81,7 @@ class DoctorViewModel {
         }
     }
     
-    func updateDoctor(doctorId: String, name: String, phoneNumber: String, service: String, worksAt: String, experience: String, consultancyFee: String) {
+    func updateDoctor(doctorId: String, name: String, phoneNumber: String, service: String, worksAt: String, experience: String, consultancyFee: String, handler: @escaping (Bool) -> Void ) {
         db.collection("doctors").document(doctorId).setData([
             "name":         name,
             "phoneNumber":  phoneNumber,
@@ -89,7 +89,13 @@ class DoctorViewModel {
             "worksAt":  worksAt,
             "experience":      experience,
             "consultancyFee":      consultancyFee,
-        ], merge: true)
+        ], merge: true) { err in
+            if let _ = err {
+                handler(false)
+            } else {
+                handler(true)
+            }
+        }
     }
     
 }

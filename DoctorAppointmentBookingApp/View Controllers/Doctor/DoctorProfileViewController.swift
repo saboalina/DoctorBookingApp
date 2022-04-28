@@ -21,12 +21,17 @@ class DoctorProfileViewController: UIViewController {
     @IBOutlet weak var consultanceFeeLabel: UILabel!
     @IBOutlet weak var logoutButton: UIButton!
 
-    
+    var doctorViewModel = DoctorViewModel()
     var doctor: Doctor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setLabels()
+        
+    }
+    
+    func setLabels() {
         nameLabel.text = doctor.name
         emailLabel.text = doctor.email
         phoneLabel.text = doctor.phoneNumber
@@ -36,6 +41,23 @@ class DoctorProfileViewController: UIViewController {
         experienceLabel.text = doctor.experience
         consultanceFeeLabel.text = doctor.consultancyFee
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.doctorViewModel.getDoctorBy(email: doctor!.email, handler: { res in
+            switch res{
+            case .success(let doctor):
+                self.doctor = doctor
+                //self.navigateToDoctorProfile(doctor: doctor)
+                self.setLabels()
+            case .failure(let err):
+                print(err)
+            }
+
+        })
+        
         
     }
     
@@ -62,7 +84,9 @@ class DoctorProfileViewController: UIViewController {
         
         editDoctorProfilePage?.doctor = doctor
      
-        view.window?.rootViewController = editDoctorProfilePage
-        view.window?.makeKeyAndVisible()
+//        view.window?.rootViewController = editDoctorProfilePage
+//        view.window?.makeKeyAndVisible()
+        
+        navigationController?.pushViewController(editDoctorProfilePage!, animated: true)
     }
 }

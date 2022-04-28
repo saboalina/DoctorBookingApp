@@ -39,32 +39,40 @@ class DoctorEditProfileViewController: UIViewController {
         let experience = experienceTextField.text!
         let consultancyFee = consultancyFeeTextField.text!
         
-        doctorViewModel.updateDoctor(doctorId: doctor!.id, name: name, phoneNumber: phoneNumber, service: service, worksAt: worksAt, experience: experience, consultancyFee: consultancyFee)
-        
-        self.doctorViewModel.getDoctorBy(email: doctor!.email, handler: { res in
-            switch res{
-            case .success(let doctor):
-                self.doctor = doctor
-                self.navigateToDoctorProfile(doctor: doctor)
-            case .failure(let err):
-                print(err)
+        doctorViewModel.updateDoctor(doctorId: doctor!.id, name: name, phoneNumber: phoneNumber, service: service, worksAt: worksAt, experience: experience, consultancyFee: consultancyFee) { success in
+            if success {
+                self.navigateToDoctorProfile()
+            } else {
+                print("eroare")
             }
+            
+        }
         
-        })
+//        self.doctorViewModel.getDoctorBy(email: doctor!.email, handler: { res in
+//            switch res{
+//            case .success(let doctor):
+//                self.doctor = doctor
+//                self.navigateToDoctorProfile(doctor: doctor)
+//            case .failure(let err):
+//                print(err)
+//            }
+//
+//        })
     }
     
-    func navigateToDoctorProfile(doctor: Doctor) {
-        let doctorProfilePage = storyboard?.instantiateViewController(withIdentifier: "doctorProfilePage") as? DoctorProfileViewController
-
-        doctorProfilePage?.doctor = doctor
-
-        view.window?.rootViewController = doctorProfilePage
-        view.window?.makeKeyAndVisible()
-        self.navigationController?.popToRootViewController(animated: true)
+    func navigateToDoctorProfile() {
+//        let doctorProfilePage = storyboard?.instantiateViewController(withIdentifier: "doctorProfilePage") as? DoctorProfileViewController
+//
+//        doctorProfilePage?.doctor = doctor
+//
+//        view.window?.rootViewController = doctorProfilePage
+//        view.window?.makeKeyAndVisible()
+        //self.navigationController?.popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
-        let doctor = self.doctor!
-        self.navigateToDoctorProfile(doctor: doctor)
+        //let doctor = self.doctor!
+        self.navigateToDoctorProfile()
     }
 }

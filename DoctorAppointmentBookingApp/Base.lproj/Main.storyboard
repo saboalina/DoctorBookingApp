@@ -1011,44 +1011,69 @@
                                     <action selector="didChangeSegment:" destination="nRf-KV-Qim" eventType="valueChanged" id="oQd-fg-U7B"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LNF-VO-Cnf">
-                                <rect key="frame" x="60" y="394" width="359" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V4T-Qo-4XD">
-                                <rect key="frame" x="60" y="481" width="335" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-29-MWr">
                                 <rect key="frame" x="122" y="555" width="130" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Select Area"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IsG-PH-Kgx">
-                                <rect key="frame" x="60" y="317" width="335" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9d-33-epO">
+                                <rect key="frame" x="122" y="669" width="130" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Select Date"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rnu-35-gba"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="hlS-18-3Zn"/>
-                    <connections>
-                        <outlet property="areaLabel" destination="IsG-PH-Kgx" id="UXH-kH-7tb"/>
-                        <outlet property="dateLabel" destination="V4T-Qo-4XD" id="pl1-Jt-0CT"/>
-                        <outlet property="nameLabel" destination="LNF-VO-Cnf" id="lPw-nC-LPb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVh-Mx-CeJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7073.8317757009345" y="8.4233261339092884"/>
+        </scene>
+        <!--Patient Select Date View Controller-->
+        <scene sceneID="U0X-vn-C0R">
+            <objects>
+                <viewController id="5fD-8D-FUm" customClass="PatientSelectDateViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Q8-DE-B7d" customClass="PatientSelectDateViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="8ZE-fN-yR8">
+                                <rect key="frame" x="0.0" y="311" width="428" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="eYD-eN-D6X">
+                                <rect key="frame" x="0.0" y="576" width="428" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIN-34-Rmm">
+                                <rect key="frame" x="178" y="795" width="54" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="filter"/>
+                                <connections>
+                                    <action selector="filterButtonTapped:" destination="5fD-8D-FUm" eventType="touchUpInside" id="Ctb-Hc-Cfg"/>
+                                    <action selector="filterButtonTapped:" destination="6Q8-DE-B7d" eventType="touchUpInside" id="exN-bU-wIz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a7a-GE-J4O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="endDatePicker" destination="eYD-eN-D6X" id="wNP-76-wKc"/>
+                            <outlet property="startDatePicker" destination="8ZE-fN-yR8" id="xj5-iN-Kcm"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="startDatePicker" destination="8ZE-fN-yR8" id="dng-3s-ct6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fp1-sw-I8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7940" y="17"/>
         </scene>
         <!--Item-->
         <scene sceneID="K9X-R5-fDs">

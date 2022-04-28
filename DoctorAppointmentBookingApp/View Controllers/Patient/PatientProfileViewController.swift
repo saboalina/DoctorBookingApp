@@ -15,16 +15,35 @@ class PatientProfileViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var historyTextField: UITextField!
     
+    var patientViewModel = PatientViewModel()
     var patient: Patient!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        self.patientViewModel.getPatientBy(email: patient!.email, handler: { res in
+            switch res{
+            case .success(let patient):
+                self.patient = patient
+                //self.navigateToDoctorProfile(doctor: doctor)
+                self.setLabels()
+            case .failure(let err):
+                print(err)
+            }
+
+        })
+    }
+    
+    func setLabels() {
         nameLabel.text = patient.name
         emailLabel.text = patient.email
         phoneLabel.text = patient.phoneNumber
         historyTextField.text = patient.history
-
     }
     
 
@@ -42,8 +61,7 @@ class PatientProfileViewController: UIViewController {
         
         editProfilePage?.patient = patient
      
-        view.window?.rootViewController = editProfilePage
-        view.window?.makeKeyAndVisible()
+        navigationController?.pushViewController(editProfilePage!, animated: true)
     }
     
 //    func navigateToPatientPage(pacient: Patient) {

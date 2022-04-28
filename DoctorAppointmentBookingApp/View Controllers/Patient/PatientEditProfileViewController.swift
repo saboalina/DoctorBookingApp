@@ -32,34 +32,43 @@ class PatientEditProfileViewController: UIViewController {
         let phoneNumber = phoneTextField.text!
         let history = historyTextField.text!
         
-        patientViewModel.updatePatient(patientId: patient!.id, name: name, phoneNumber: phoneNumber, history: history)
-        
-        self.patientViewModel.getPatientBy(email: patient!.email, handler: { res in
-            switch res{
-            case .success(let patient):
-                self.patient = patient
-                self.navigateToPatientProfile(pacient: patient)
-            case .failure(let err):
-                print(err)
+        patientViewModel.updatePatient(patientId: patient!.id, name: name, phoneNumber: phoneNumber, history: history) { success in
+            if success {
+                self.navigateToPatientProfile()
+            } else {
+                print("eroare")
             }
+            
+        }
         
-        })
+//        self.patientViewModel.getPatientBy(email: patient!.email, handler: { res in
+//            switch res{
+//            case .success(let patient):
+//                self.patient = patient
+//                self.navigateToPatientProfile(pacient: patient)
+//            case .failure(let err):
+//                print(err)
+//            }
+//
+//        })
     }
     
-    func navigateToPatientProfile(pacient: Patient) {
-        let patientProfilePage = storyboard?.instantiateViewController(withIdentifier: "patientProfilePage") as? PatientProfileViewController
-
-        patientProfilePage?.patient = patient
-
-        view.window?.rootViewController = patientProfilePage
-        view.window?.makeKeyAndVisible()
-        self.navigationController?.popToRootViewController(animated: true)
+    func navigateToPatientProfile() {
+//        let patientProfilePage = storyboard?.instantiateViewController(withIdentifier: "patientProfilePage") as? PatientProfileViewController
+//
+//        patientProfilePage?.patient = patient
+//
+//        view.window?.rootViewController = patientProfilePage
+//        view.window?.makeKeyAndVisible()
+//        self.navigationController?.popToRootViewController(animated: true)
+        
+        navigationController?.popViewController(animated: true)
     }
     
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
-        let patient = self.patient!
-        self.navigateToPatientProfile(pacient: patient)
+        //let patient = self.patient!
+        self.navigateToPatientProfile()
     }
     
 }

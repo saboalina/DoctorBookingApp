@@ -89,12 +89,18 @@ class PatientViewModel {
     }
     
     
-    func updatePatient(patientId: String, name: String, phoneNumber: String, history: String) {
+    func updatePatient(patientId: String, name: String, phoneNumber: String, history: String, handler: @escaping (Bool) -> Void) {
         db.collection("patients").document(patientId).setData([
             "name":         name,
             "phoneNumber":  phoneNumber,
             "history":      history
-        ], merge: true)
+        ], merge: true) { err in
+            if let _ = err {
+                handler(false)
+            } else {
+                handler(true)
+            }
+        }
     }
     
 }
