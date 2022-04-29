@@ -1309,10 +1309,10 @@
             </objects>
             <point key="canvasLocation" x="5006" y="732"/>
         </scene>
-        <!--View Controller-->
+        <!--Patient Map View Controller-->
         <scene sceneID="4E6-aS-fQ2">
             <objects>
-                <viewController id="tc0-3r-QCi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapPage" id="tc0-3r-QCi" customClass="PatientMapViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hz0-Nm-Qvq">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1331,6 +1331,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EP5-Rn-DF3"/>
+                    <connections>
+                        <outlet property="mapView" destination="ycK-dm-J1d" id="SSX-2W-PiT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IW-n6-ZhO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

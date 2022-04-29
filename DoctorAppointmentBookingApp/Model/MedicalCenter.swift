@@ -23,7 +23,10 @@ public class MedicalCenter: NSObject {
     var fri: String
     var sat: String
     
-    init(name: String, address: String, services: String, doctors: String, sun: String, mon: String, tue: String, wed: String, thu: String, fri: String, sat: String){
+    var latitude: String
+    var longitude: String
+    
+    init(name: String, address: String, services: String, doctors: String, sun: String, mon: String, tue: String, wed: String, thu: String, fri: String, sat: String, latitude: String, longitude: String){
         self.name = name
         self.address = address
         self.services = services
@@ -36,6 +39,9 @@ public class MedicalCenter: NSObject {
         self.thu = thu
         self.fri = fri
         self.sat = sat
+        
+        self.latitude = latitude
+        self.longitude = longitude
     }
 
 }
@@ -54,7 +60,9 @@ extension MedicalCenter {
                                                 wed:           document["Wed"] as? String ?? "",
                                                 thu:           document["Thu"] as? String ?? "",
                                                 fri:           document["Fri"] as? String ?? "",
-                                                sat:           document["Sat"] as? String ?? ""))
+                                                sat:           document["Sat"] as? String ?? "",
+                                                latitude:           document["latitude"] as? String ?? "",
+                                                longitude:           document["longitude"] as? String ?? ""))
         }
         return medicalCentres
     }

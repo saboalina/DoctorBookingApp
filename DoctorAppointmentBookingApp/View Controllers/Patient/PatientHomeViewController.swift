@@ -12,11 +12,7 @@ class PatientHomeViewController: UIViewController {
     
     
     @IBOutlet weak var doctorCollectionView: UICollectionView!
-    
-    
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
-    
-    
     @IBOutlet weak var medicalCenterCollectionView: UICollectionView!
     
     
@@ -57,8 +53,7 @@ class PatientHomeViewController: UIViewController {
         }
     }
     
-    let categories = ["Dermathology", "Endocrinology", "Ultrasound", "Dermathology", "Psychology", "Plastic surgery",
-                      "Nutrition", "Cardiology", "Ophthalmology", "Neurology", "Paediatrics", "Psychiatry"]
+    let categories = ["Dermathology", "Endocrinology", "Ultrasound", "Dermathology", "Psychology", "Plastic surgery", "Nutrition", "Cardiology", "Ophthalmology", "Neurology", "Paediatrics", "Psychiatry"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
