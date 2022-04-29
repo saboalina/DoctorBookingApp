@@ -13,9 +13,12 @@ class FiltersViewModel {
     var startDate: Date!
     var endDate: Date!
     
+    var doctorSearch = true
+    
     static let shared = FiltersViewModel()
     
     var doctorViewModel = DoctorViewModel()
+    var medicalCenterViewModel = MedicalCenterViewModel()
     
     private var allDoctors = [Doctor]() {
         didSet {
@@ -33,21 +36,37 @@ class FiltersViewModel {
         }
     }
     
+    private var allMedicalCenters = [MedicalCenter]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.medicalCenters = self.allMedicalCenters
+            }
+        }
+    }
+
+    var medicalCenters = [MedicalCenter]() {
+        didSet {
+            DispatchQueue.main.async {
+//                self.medicalCenterCollectionView.reloadData()
+//                print("4==> \(self.medicalCenters)")
+            }
+        }
+    }
+    
     let daysOfTheWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     
     private init() {
         loadData()
+        print("doctorSearch = \(doctorSearch)")
     }
     
     func loadData() {
         doctorViewModel.getAllDoctors(collectionID: "doctors") { doctors in
                 self.doctors = doctors
         }
-        //print("2==> \(doctors)")
-        
-//        medicalCenterViewModel.getAllMedicalCenters(collectionID: "medicalCenters") { medicalCenters in
-//                self.medicalCenters = medicalCenters
-//        }
+        medicalCenterViewModel.getAllMedicalCenters(collectionID: "medicalCenters") { medicalCenters in
+                self.medicalCenters = medicalCenters
+        }
 
     }
     
@@ -77,7 +96,13 @@ class FiltersViewModel {
         
         print(getUniqueValues(list: weekDays))
         let uniqueWeekDays = getUniqueValues(list: weekDays)
-        getAvailableDoctors(weekDays: uniqueWeekDays)
+        if doctorSearch == true {
+            getAvailableDoctors(weekDays: uniqueWeekDays)
+        } else {
+            //print("e cautare dupa centre medicale")
+            getAvailableMedicalCenters(weekDays: uniqueWeekDays)
+        }
+        
        // print(doctors.count)
     }
     
@@ -140,6 +165,66 @@ class FiltersViewModel {
         availableDoctors = Array(set1)
         print("----->>>>\(availableDoctors)")
         print(availableDoctors)
+    }
+    
+    func getAvailableMedicalCenters(weekDays: [String]) {
+        var availableMedicalCenters = medicalCenters
+        var availableMedicalCentersOnMon: [MedicalCenter] = []
+        var availableMedicalCentersOnTue: [MedicalCenter] = []
+        var availableMedicalCentersOnWed: [MedicalCenter] = []
+        var availableMedicalCentersOnThu: [MedicalCenter] = []
+        var availableMedicalCentersOnFri: [MedicalCenter] = []
+        var availableMedicalCentersOnSat: [MedicalCenter] = []
+        var availableMedicalCentersOnSun: [MedicalCenter] = []
+        
+
+        var set1 = Set(availableMedicalCenters)
+//
+//        print("aici set1 \(set1))")
+        
+        if weekDays.contains("Mon"){
+            availableMedicalCentersOnMon = getMedicalCentersAvailableOnMon()
+            let set2 = Set(availableMedicalCentersOnMon)
+            //print("aici set2 \(set2))")
+            set1 = set1.intersection(set2)
+        }
+        
+//        print("aici set1 \(set1)")
+//
+//
+        if weekDays.contains("Tue"){
+            availableMedicalCentersOnTue = getMedicalCentersAvailableOnTue()
+            let set2 = Set(availableMedicalCentersOnTue)
+            set1 = set1.intersection(set2)
+        }
+        if weekDays.contains("Wed"){
+            availableMedicalCentersOnWed = getMedicalCentersAvailableOnWed()
+            let set2 = Set(availableMedicalCentersOnWed)
+            set1 = set1.intersection(set2)
+        }
+        if weekDays.contains("Thu"){
+            availableMedicalCentersOnThu = getMedicalCentersAvailableOnThu()
+            let set2 = Set(availableMedicalCentersOnThu)
+            set1 = set1.intersection(set2)
+        }
+        if weekDays.contains("Fri"){
+            availableMedicalCentersOnFri = getMedicalCentersAvailableOnFri()
+            let set2 = Set(availableMedicalCentersOnFri)
+            set1 = set1.intersection(set2)
+        }
+        if weekDays.contains("Sat"){
+            availableMedicalCentersOnSat = getMedicalCentersAvailableOnSat()
+            let set2 = Set(availableMedicalCentersOnSat)
+            set1 = set1.intersection(set2)
+        }
+        if weekDays.contains("Sun"){
+            availableMedicalCentersOnSun = getMedicalCentersAvailableOnSun()
+            let set2 = Set(availableMedicalCentersOnSun)
+            set1 = set1.intersection(set2)
+        }
+        availableMedicalCenters = Array(set1)
+        print("MedicalCenters----->>>>\(availableMedicalCenters)")
+        print(availableMedicalCenters)
     }
     
     func getDoctorsAvailableOnMon() -> [Doctor] {
@@ -218,6 +303,85 @@ class FiltersViewModel {
         }
         
         return availableDoctorsOnSun
+    }
+    
+    
+    func getMedicalCentersAvailableOnMon() -> [MedicalCenter] {
+        var availableMedicalCentersOnMon: [MedicalCenter] = []
+        for medicalCenter in medicalCenters {
+            if medicalCenter.mon != "" {
+                availableMedicalCentersOnMon.append(medicalCenter)
+            }
+        }
+        
+        return availableMedicalCentersOnMon
+    }
+    
+    func getMedicalCentersAvailableOnTue() -> [MedicalCenter] {
+        var availableMedicalCentersOnTue: [MedicalCenter] = []
+        for medicalCenter in medicalCenters {
+            if medicalCenter.tue != "" {
+                availableMedicalCentersOnTue.append(medicalCenter)
+            }
+        }
+        
+        return availableMedicalCentersOnTue
+    }
+    
+    
+    func getMedicalCentersAvailableOnWed() -> [MedicalCenter] {
+        var availableMedicalCentersOnWed: [MedicalCenter] = []
+        for medicalCenter in medicalCenters {
+            if medicalCenter.wed != "" {
+                availableMedicalCentersOnWed.append(medicalCenter)
+            }
+        }
+        
+        return availableMedicalCentersOnWed
+    }
+    
+    func getMedicalCentersAvailableOnThu() -> [MedicalCenter] {
+        var availableMedicalCentersOnThu: [MedicalCenter] = []
+        for medicalCenter in medicalCenters {
+            if medicalCenter.thu != "" {
+                availableMedicalCentersOnThu.append(medicalCenter)
+            }
+        }
+        
+        return availableMedicalCentersOnThu
+    }
+    
+    func getMedicalCentersAvailableOnFri() -> [MedicalCenter] {
+        var availableMedicalCentersOnFri: [MedicalCenter] = []
+        for medicalCenter in medicalCenters {
+            if medicalCenter.fri != "" {
+                availableMedicalCentersOnFri.append(medicalCenter)
+            }
+        }
+        
+        return availableMedicalCentersOnFri
+    }
+    
+    func getMedicalCentersAvailableOnSat() -> [MedicalCenter] {
+        var availableMedicalCentersOnSat: [MedicalCenter] = []
+        for medicalCenter in medicalCenters {
+            if medicalCenter.sat != "" {
+                availableMedicalCentersOnSat.append(medicalCenter)
+            }
+        }
+        
+        return availableMedicalCentersOnSat
+    }
+    
+    func getMedicalCentersAvailableOnSun() -> [MedicalCenter] {
+        var availableMedicalCentersOnSun: [MedicalCenter] = []
+        for medicalCenter in medicalCenters {
+            if medicalCenter.sun != "" {
+                availableMedicalCentersOnSun.append(medicalCenter)
+            }
+        }
+        
+        return availableMedicalCentersOnSun
     }
     
 

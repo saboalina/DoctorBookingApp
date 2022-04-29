@@ -181,12 +181,12 @@
 				C296DE7C280C1FA100019B14 /* PatientPageViewController.swift */,
 				C296DE7E280C202700019B14 /* PatientProfileNavigationController.swift */,
 				C296DE80280C205700019B14 /* PatientProfileViewController.swift */,
+				C2770C0A2819B8E6006F4EBF /* PatientEditProfileViewController.swift */,
 				C296DE84280C330200019B14 /* PatientAppointmentsNavigationController.swift */,
 				C296DE82280C328400019B14 /* PatientAppointmentsViewController.swift */,
 				C296DE8B281409F700019B14 /* PatientHomeNavigationController.swift */,
 				C296DE89281409DB00019B14 /* PatientHomeViewController.swift */,
 				C2770C0428196870006F4EBF /* PatientSearchViewController.swift */,
-				C2770C0A2819B8E6006F4EBF /* PatientEditProfileViewController.swift */,
 				C2770C10281A9D44006F4EBF /* PatientSelectDateViewController.swift */,
 			);
 			path = Patient;

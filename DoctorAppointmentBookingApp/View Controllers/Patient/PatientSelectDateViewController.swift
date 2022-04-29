@@ -13,9 +13,12 @@ class PatientSelectDateViewController: UIViewController {
     @IBOutlet weak var startDatePicker: UIDatePicker!
     @IBOutlet weak var endDatePicker: UIDatePicker!
     
+    var doctorSearch: Bool!
+    
     var filterViewModel = FiltersViewModel.shared
     override func viewDidLoad() {
         super.viewDidLoad()
+        filterViewModel.doctorSearch = doctorSearch
     }
     
 

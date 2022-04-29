@@ -15,12 +15,27 @@ public class MedicalCenter: NSObject {
     var services: String
     var doctors: String
 
+    var sun: String
+    var mon: String
+    var tue: String
+    var wed: String
+    var thu: String
+    var fri: String
+    var sat: String
     
-    init(name: String, address: String, services: String, doctors: String){
+    init(name: String, address: String, services: String, doctors: String, sun: String, mon: String, tue: String, wed: String, thu: String, fri: String, sat: String){
         self.name = name
         self.address = address
         self.services = services
         self.doctors = doctors
+        
+        self.sun = sun
+        self.mon = mon
+        self.tue = tue
+        self.wed = wed
+        self.thu = thu
+        self.fri = fri
+        self.sat = sat
     }
 
 }
@@ -32,7 +47,14 @@ extension MedicalCenter {
             medicalCentres.append(MedicalCenter(name:       document["name"] as? String ?? "",
                                                 address:    document["address"] as? String ?? "",
                                                 services:   document["services"] as? String ?? "",
-                                                doctors:    document["doctors"] as? String ?? ""))
+                                                doctors:    document["doctors"] as? String ?? "",
+                                                sun:           document["Sun"] as? String ?? "",
+                                                mon:           document["Mon"] as? String ?? "",
+                                                tue:           document["Tue"] as? String ?? "",
+                                                wed:           document["Wed"] as? String ?? "",
+                                                thu:           document["Thu"] as? String ?? "",
+                                                fri:           document["Fri"] as? String ?? "",
+                                                sat:           document["Sat"] as? String ?? ""))
         }
         return medicalCentres
     }
