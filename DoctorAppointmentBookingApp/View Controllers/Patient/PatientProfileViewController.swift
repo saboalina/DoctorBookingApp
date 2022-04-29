@@ -13,7 +13,7 @@ class PatientProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var historyTextField: UITextField!
+    @IBOutlet weak var historyTextView: UITextView!
     
     var patientViewModel = PatientViewModel()
     var patient: Patient!
@@ -43,7 +43,7 @@ class PatientProfileViewController: UIViewController {
         nameLabel.text = patient.name
         emailLabel.text = patient.email
         phoneLabel.text = patient.phoneNumber
-        historyTextField.text = patient.history
+        historyTextView.text = patient.history
     }
     
 

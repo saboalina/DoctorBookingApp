@@ -77,8 +77,8 @@ class LoginViewController: UIViewController {
 //        let email = self.emailTextField.text!
 //        let password = self.passwordTextField.text!
         
-        let email = "maria@gmail.com"
-        let password = "maria1999"
+        let email = "alina@yahoo.com"
+        let password = "alina1999"
         
         let userType = verifyUser(email: email)
         
