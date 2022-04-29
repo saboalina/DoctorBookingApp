@@ -134,5 +134,34 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.doctorCollectionView {
+            let doctor = doctors[indexPath.row]
+            performSegue(withIdentifier: "showDoctorDetails", sender: doctor)
+
+        }
+        
+        if collectionView == self.medicalCenterCollectionView {
+            let medicalCenter = medicalCenters[indexPath.row]
+            performSegue(withIdentifier: "showMedicalCenterDetails", sender: medicalCenter)
+
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDoctorDetails" {
+            if let doctorDetailsViewConntroller = segue.destination as? PatientDoctorDetailsViewController {
+                doctorDetailsViewConntroller.doctor =  sender as! Doctor
+            }
+        }
+        
+        if segue.identifier == "showMedicalCenterDetails" {
+            if let medicalCenterDetailsViewConntroller = segue.destination as? PatientMedicalCenterDetailsViewController {
+                medicalCenterDetailsViewConntroller.medicalCenter =  sender as! MedicalCenter
+            }
+        }
+        
+    }
+    
     
 }
