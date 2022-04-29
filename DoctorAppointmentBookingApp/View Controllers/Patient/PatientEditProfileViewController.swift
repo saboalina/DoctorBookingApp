@@ -12,7 +12,8 @@ class PatientEditProfileViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
-    @IBOutlet weak var historyTextField: UITextField!
+    @IBOutlet weak var historyTextView: UITextView!
+    
     
     var patientViewModel = PatientViewModel()
     var patient: Patient?
@@ -23,14 +24,14 @@ class PatientEditProfileViewController: UIViewController {
         //print("aici e \(patientId)")
         nameTextField.text = patient?.name
         phoneTextField.text = patient?.phoneNumber
-        historyTextField.text = patient?.history
+        historyTextView.text = patient?.history
     }
     
 
     @IBAction func saveButtonTapped(_ sender: Any) {
         let name = nameTextField.text!
         let phoneNumber = phoneTextField.text!
-        let history = historyTextField.text!
+        let history = historyTextView.text!
         
         patientViewModel.updatePatient(patientId: patient!.id, name: name, phoneNumber: phoneNumber, history: history) { success in
             if success {
@@ -64,11 +65,6 @@ class PatientEditProfileViewController: UIViewController {
         
         navigationController?.popViewController(animated: true)
     }
-    
-    
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        //let patient = self.patient!
-        self.navigateToPatientProfile()
-    }
+
     
 }

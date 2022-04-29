@@ -76,7 +76,7 @@ class PatientMapViewController: UIViewController {
             let latitude = Double(medicalCenter.latitude)!
             let longitude = Double(medicalCenter.longitude)!
             let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            let medicalCenterForMap = MedicalCenterForMap(locationName: medicalCenter.name, coordinate: coordinates)
+            let medicalCenterForMap = MedicalCenterForMap(title:medicalCenter.name, coordinate: coordinates)
             //medicalCenterForMap.locationName = medicalCenter.name
             medicalCentersMapList.append(medicalCenterForMap)
             

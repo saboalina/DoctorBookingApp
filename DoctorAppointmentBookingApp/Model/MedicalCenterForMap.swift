@@ -10,17 +10,15 @@ import MapKit
 
 class MedicalCenterForMap: NSObject, MKAnnotation {
    
-    let locationName: String?
+    let title: String?
     let coordinate: CLLocationCoordinate2D
 
-    init(
-      locationName: String?,
-      coordinate: CLLocationCoordinate2D
-    ) {
+    init(title: String?, coordinate: CLLocationCoordinate2D) {
 
-      self.locationName = locationName
-      self.coordinate = coordinate
+        self.title = title
+        self.coordinate = coordinate
+        
 
-      super.init()
+        super.init()
     }
 }
