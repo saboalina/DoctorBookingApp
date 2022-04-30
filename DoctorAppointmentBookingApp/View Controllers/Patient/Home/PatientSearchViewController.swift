@@ -4,6 +4,7 @@ import UIKit
 class PatientSearchViewController: UIViewController {
     
     var doctorSearch = true
+    var patient: Patient!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class PatientSearchViewController: UIViewController {
         let selectDateProfilePage = storyboard?.instantiateViewController(withIdentifier: "selectDateProfilePage") as? PatientSelectDateViewController
         
         selectDateProfilePage?.doctorSearch = doctorSearch
+        selectDateProfilePage!.patient = patient
         navigationController?.pushViewController(selectDateProfilePage!, animated: true)
     }
     

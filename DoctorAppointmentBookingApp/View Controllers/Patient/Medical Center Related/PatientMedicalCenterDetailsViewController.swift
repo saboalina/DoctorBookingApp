@@ -16,6 +16,7 @@ class PatientMedicalCenterDetailsViewController: UIViewController {
     @IBOutlet weak var servicesTableView: UITableView!
     
     var medicalCenter: MedicalCenter!
+    var patient: Patient!
     var filterViewModel = FiltersViewModel.shared
     
     var services: [String] = []
@@ -26,6 +27,8 @@ class PatientMedicalCenterDetailsViewController: UIViewController {
         services = medicalCenter.services.components(separatedBy: ",")
         print("]]]]]]] \(services)")
         setLabels()
+        
+        print("in PatientMedicalCenterDetailsViewController \(patient)")
     }
     
     func setLabels() {
@@ -99,6 +102,7 @@ extension PatientMedicalCenterDetailsViewController: UITableViewDataSource, UITa
         if segue.identifier == "fromMedicalDetailsToDoctorsList" {
             if let fromMedicalDetailsToDoctorsList = segue.destination as? PatientDoctorsListViewController {
                 fromMedicalDetailsToDoctorsList.doctors =  sender as! [Doctor]
+                fromMedicalDetailsToDoctorsList.patient = patient
             }
         }
     }

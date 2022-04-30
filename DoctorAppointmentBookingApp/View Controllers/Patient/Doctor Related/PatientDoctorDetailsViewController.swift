@@ -15,11 +15,13 @@ class PatientDoctorDetailsViewController: UIViewController {
     
     
     var doctor: Doctor!
+    var patient: Patient!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setLabels()
+        print("in PatientDoctorDetailsViewController \(patient)")
     }
     
     func setLabels() {
@@ -33,5 +35,21 @@ class PatientDoctorDetailsViewController: UIViewController {
         consultanceFeeLabel.text = doctor.consultancyFee
 
     }
-
+    
+    
+    @IBAction func bookAnAppointmentButtonTapped(_ sender: Any) {
+        print("in booking \(patient)")
+        performSegue(withIdentifier: "fromDoctorDetailstoBookApp", sender: doctor)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "fromDoctorDetailstoBookApp" {
+            if let fromDoctorDetailstoBookApp = segue.destination as? PatientBookAnAppointmentViewController {
+                fromDoctorDetailstoBookApp.doctor =  sender as! Doctor
+                fromDoctorDetailstoBookApp.patient = patient
+            }
+        }
+        
+    }
+    
 }

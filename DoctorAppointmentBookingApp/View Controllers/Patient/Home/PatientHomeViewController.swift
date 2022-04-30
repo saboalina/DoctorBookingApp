@@ -14,6 +14,8 @@ class PatientHomeViewController: UIViewController {
     var medicalCenterViewModel = MedicalCenterViewModel()
     var filterViewModel = FiltersViewModel.shared
     
+    var patient: Patient!
+    
     private var allDoctors = [Doctor]() {
         didSet {
             DispatchQueue.main.async {
@@ -52,6 +54,8 @@ class PatientHomeViewController: UIViewController {
         super.viewDidLoad()
         loadData()
         registerCell()
+        
+        print("in PatientHomeViewController \(patient.name)")
     }
 
     func loadData() {
@@ -134,21 +138,31 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "SearchPage" {
+            if let searchPage = segue.destination as? PatientSearchViewController {
+                searchPage.patient = patient
+            }
+        }
+        
         if segue.identifier == "showDoctorDetails" {
             if let doctorDetailsViewConntroller = segue.destination as? PatientDoctorDetailsViewController {
                 doctorDetailsViewConntroller.doctor =  sender as! Doctor
+                doctorDetailsViewConntroller.patient = patient
             }
         }
         
         if segue.identifier == "showMedicalCenterDetails" {
             if let medicalCenterDetailsViewConntroller = segue.destination as? PatientMedicalCenterDetailsViewController {
                 medicalCenterDetailsViewConntroller.medicalCenter =  sender as! MedicalCenter
+                medicalCenterDetailsViewConntroller.patient = patient
             }
         }
         
         if segue.identifier == "fromHomeToMedicalCentersList" {
             if let fromSearchToMedicalCentersList = segue.destination as? PatientMedicalCentersListViewController {
                 fromSearchToMedicalCentersList.medicalCenters =  sender as! [MedicalCenter]
+                fromSearchToMedicalCentersList.patient = patient
             }
         }
         

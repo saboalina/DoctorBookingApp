@@ -9,7 +9,7 @@ import UIKit
 
 class DoctorPageViewController: UITabBarController, UITabBarControllerDelegate {
     
-    var doctor: Doctor?
+    var doctor: Doctor!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,11 +7,15 @@ class PatientSelectDateViewController: UIViewController {
     @IBOutlet weak var endDatePicker: UIDatePicker!
     
     var doctorSearch: Bool!
+    var patient: Patient!
     
     var filterViewModel = FiltersViewModel.shared
     override func viewDidLoad() {
         super.viewDidLoad()
         filterViewModel.doctorSearch = doctorSearch
+        startDatePicker.datePickerMode = UIDatePicker.Mode.date
+        endDatePicker.datePickerMode = UIDatePicker.Mode.date
+        
     }
     
 
@@ -34,12 +38,14 @@ class PatientSelectDateViewController: UIViewController {
         if segue.identifier == "fromSearchToDoctorsList" {
             if let fromMedicalDetailsToDoctorsList = segue.destination as? PatientDoctorsListViewController {
                 fromMedicalDetailsToDoctorsList.doctors =  sender as! [Doctor]
+                fromMedicalDetailsToDoctorsList.patient = patient
             }
         }
         
         if segue.identifier == "fromSearchToMedicalCentersList" {
             if let fromSearchToMedicalCentersList = segue.destination as? PatientMedicalCentersListViewController {
                 fromSearchToMedicalCentersList.medicalCenters =  sender as! [MedicalCenter]
+                fromSearchToMedicalCentersList.patient = patient
             }
         }
     }

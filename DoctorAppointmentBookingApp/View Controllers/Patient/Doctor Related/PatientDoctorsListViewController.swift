@@ -5,11 +5,13 @@ class PatientDoctorsListViewController: UIViewController {
     
     
     @IBOutlet weak var doctorsTableView: UITableView!
-    
+    var patient: Patient!
     var doctors: [Doctor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("in PatientDoctorsListViewController \(patient)")
     }
 
 }
@@ -37,6 +39,7 @@ extension PatientDoctorsListViewController: UITableViewDataSource, UITableViewDe
         if segue.identifier == "fromDoctorListToDoctorDetails" {
             if let doctorDetailsViewConntroller = segue.destination as? PatientDoctorDetailsViewController {
                 doctorDetailsViewConntroller.doctor =  sender as! Doctor
+                doctorDetailsViewConntroller.patient = patient
             }
         }
         

@@ -9,6 +9,8 @@ class PatientMapViewController: UIViewController {
     
     var medicalCenterViewModel = MedicalCenterViewModel()
     
+    var patient: Patient!
+    
     private var allMedicalCenters = [MedicalCenter]() {
         didSet {
             DispatchQueue.main.async {
@@ -38,6 +40,8 @@ class PatientMapViewController: UIViewController {
 
         let region = MKCoordinateRegion( center: initialPlace, latitudinalMeters: CLLocationDistance(exactly: 2000)!, longitudinalMeters: CLLocationDistance(exactly: 2000)!)
         mapView.setRegion(mapView.regionThatFits(region), animated: true)
+        
+        print("in PatientMapViewController \(patient.name)")
 
     }
     

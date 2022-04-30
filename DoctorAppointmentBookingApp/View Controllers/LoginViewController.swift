@@ -11,8 +11,8 @@ class LoginViewController: UIViewController {
     
     var doctorViewModel = DoctorViewModel()
     var patientViewModel = PatientViewModel()
-    var doctor : Doctor?
-    var patient: Patient?
+    var doctor : Doctor!
+    var patient: Patient!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +79,9 @@ class LoginViewController: UIViewController {
         
         let email = "alina@yahoo.com"
         let password = "alina1999"
+        
+//        let email = "maria@gmail.com"
+//        let password = "maria1999"
         
         let userType = verifyUser(email: email)
         

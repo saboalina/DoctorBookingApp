@@ -75,6 +75,9 @@ class FiltersViewModel {
         return weekDays
     }
     
+    func getDayOfTheWeekByDate(date: Date) -> String{
+        return daysOfTheWeek[Calendar.current.component(.weekday, from: date) - 1]
+    }
     
     
     
