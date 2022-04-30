@@ -1,10 +1,3 @@
-//
-//  PatientSelectDateViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 28.04.2022.
-//
-
 import UIKit
 
 class PatientSelectDateViewController: UIViewController {
@@ -32,7 +25,6 @@ class PatientSelectDateViewController: UIViewController {
         } else {
             let medicaCentersList = filterViewModel.getAvailableMedicalCenters(startDate: startDate, endDate: endDate)
             performSegue(withIdentifier: "fromSearchToMedicalCentersList", sender: medicaCentersList)
-            //print("se merge catre lista de centre medicale")
         }
 
     }

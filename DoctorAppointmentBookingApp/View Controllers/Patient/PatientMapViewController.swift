@@ -1,9 +1,3 @@
-//
-//  PatientMapViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 29.04.2022.
-//
 
 import UIKit
 import MapKit
@@ -27,8 +21,6 @@ class PatientMapViewController: UIViewController {
     var medicalCenters = [MedicalCenter]() {
         didSet {
             DispatchQueue.main.async {
-                //self.medicalCenterCollectionView.reloadData()
-                print("400==> \(self.medicalCenters)")
                 self.createMedicalCentersMapList(medicalCenters: self.medicalCenters)
                 self.showMedicalCentersOnMap()
             }
@@ -43,26 +35,13 @@ class PatientMapViewController: UIViewController {
         super.viewDidLoad()
         
         loadData()
-        
-//        let london = MKPointAnnotation()
-//        london.title = "Alina"
-//        london.coordinate = CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)
-//        mapView.addAnnotation(london)
-
-        
-        print("////// \(medicalCenters)")
-        
-//        mapView.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2DMake(initialPlace.latitude, initialPlace.longitude), span: <#MKCoordinateSpan#>), animated: true)
 
         let region = MKCoordinateRegion( center: initialPlace, latitudinalMeters: CLLocationDistance(exactly: 2000)!, longitudinalMeters: CLLocationDistance(exactly: 2000)!)
         mapView.setRegion(mapView.regionThatFits(region), animated: true)
 
     }
-//    
+    
     func loadData() {
-//        doctorViewModel.getAllDoctors(collectionID: "doctors") { doctors in
-//                self.doctors = doctors
-//        }
         medicalCenterViewModel.getAllMedicalCenters(collectionID: "medicalCenters") { medicalCenters in
                 self.medicalCenters = medicalCenters
         }
@@ -81,8 +60,6 @@ class PatientMapViewController: UIViewController {
             medicalCentersMapList.append(medicalCenterForMap)
             
         }
-        
-        print("yyyyyyy \(medicalCentersMapList)")
     }
     
     

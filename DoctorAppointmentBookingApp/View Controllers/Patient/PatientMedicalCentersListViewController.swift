@@ -1,10 +1,3 @@
-//
-//  PatientMedicalCentersListViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 30.04.2022.
-//
-
 import UIKit
 
 class PatientMedicalCentersListViewController: UIViewController {
@@ -16,8 +9,6 @@ class PatientMedicalCentersListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -33,19 +24,11 @@ extension PatientMedicalCentersListViewController: UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicalCenterVerticalViewCell") as! MedicalCenterVerticalViewCell
         cell.nameLabel.text = medicalCenters[indexPath.row].name
         cell.addressLabel.text = medicalCenters[indexPath.row].address
-        //cell.experienceLabel.text = "Experience: \(doctors[indexPath.row].experience)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let medicalCenter = medicalCenters[indexPath.row]
-        //var doctorsList = filterViewModel.getDoctorsBy(service: service)
-        //print("[][] \(service)")
-        //filterViewModel.getDoctorsBy(service: service)
-//        doctorViewModel.getDoctorsBy(service: service) { doctors in
-//            doctorsList = doctors
-//        }
-        
         performSegue(withIdentifier: "fromMCListToMCDetails", sender: medicalCenter)
     }
     

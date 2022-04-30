@@ -1,9 +1,3 @@
-//
-//  PatientSearchViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 27.04.2022.
-//
 
 import UIKit
 
@@ -28,12 +22,7 @@ class PatientSearchViewController: UIViewController {
     @IBAction func selectDateButtonTapped(_ sender: Any) {
         let selectDateProfilePage = storyboard?.instantiateViewController(withIdentifier: "selectDateProfilePage") as? PatientSelectDateViewController
         
-        
         selectDateProfilePage?.doctorSearch = doctorSearch
-     
-//        view.window?.rootViewController = editDoctorProfilePage
-//        view.window?.makeKeyAndVisible()
-        
         navigationController?.pushViewController(selectDateProfilePage!, animated: true)
     }
     

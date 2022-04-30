@@ -1,9 +1,3 @@
-//
-//  PatientDoctorsListViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 30.04.2022.
-//
 
 import UIKit
 
@@ -16,7 +10,6 @@ class PatientDoctorsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print("'''''' \(doctors)")
     }
 
 }
@@ -37,13 +30,6 @@ extension PatientDoctorsListViewController: UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let doctor = doctors[indexPath.row]
-        //var doctorsList = filterViewModel.getDoctorsBy(service: service)
-        //print("[][] \(service)")
-        //filterViewModel.getDoctorsBy(service: service)
-//        doctorViewModel.getDoctorsBy(service: service) { doctors in
-//            doctorsList = doctors
-//        }
-        
         performSegue(withIdentifier: "fromDoctorListToDoctorDetails", sender: doctor)
     }
     

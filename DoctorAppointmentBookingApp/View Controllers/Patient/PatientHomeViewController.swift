@@ -1,9 +1,3 @@
-//
-//  PatientHomeViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 23.04.2022.
-//
 
 import UIKit
 import Firebase
@@ -39,7 +33,6 @@ class PatientHomeViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.medicalCenters = self.allMedicalCenters
-                print("3==> \(self.medicalCenters)")
             }
         }
     }
@@ -48,7 +41,6 @@ class PatientHomeViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.medicalCenterCollectionView.reloadData()
-                print("4==> \(self.medicalCenters)")
             }
         }
     }
@@ -65,8 +57,7 @@ class PatientHomeViewController: UIViewController {
         doctorViewModel.getAllDoctors(collectionID: "doctors") { doctors in
                 self.doctors = doctors
         }
-        print("2==> \(doctors)")
-        
+
         medicalCenterViewModel.getAllMedicalCenters(collectionID: "medicalCenters") { medicalCenters in
                 self.medicalCenters = medicalCenters
         }
@@ -90,21 +81,8 @@ class PatientHomeViewController: UIViewController {
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
-//        let searchPage = storyboard?.instantiateViewController(withIdentifier: "SearchPage") as? PatientSearchViewController
-//
-//        //patientPage?.patient = patient
-//
-//        view.window?.rootViewController = searchPage
-//        view.window?.makeKeyAndVisible()
-        
         self.performSegue(withIdentifier: "SearchPage", sender: nil)
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "SearchPage" {
-//            let searchPage = segue.destination as! PatientSearchViewController
-//        }
-//    }
 }
 
 extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {

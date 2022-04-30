@@ -1,10 +1,3 @@
-//
-//  FiltersViewModel.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 28.04.2022.
-//
-
 import Foundation
 
 
@@ -28,13 +21,7 @@ class FiltersViewModel {
         }
     }
 
-    var doctors = [Doctor]() {
-        didSet {
-            DispatchQueue.main.async {
-//                self.doctorCollectionView.reloadData()
-            }
-        }
-    }
+    var doctors = [Doctor]() { didSet { DispatchQueue.main.async {} } }
     
     private var allMedicalCenters = [MedicalCenter]() {
         didSet {
@@ -44,14 +31,7 @@ class FiltersViewModel {
         }
     }
 
-    var medicalCenters = [MedicalCenter]() {
-        didSet {
-            DispatchQueue.main.async {
-//                self.medicalCenterCollectionView.reloadData()
-//                print("4==> \(self.medicalCenters)")
-            }
-        }
-    }
+    var medicalCenters = [MedicalCenter]() { didSet { DispatchQueue.main.async {} } }
     
     let daysOfTheWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     
@@ -88,24 +68,11 @@ class FiltersViewModel {
         
         while startDate.compare(endDate) != .orderedDescending {
             let index = Calendar.current.component(.weekday, from: startDate)
-            //print("----> \(daysOfTheWeek[index-1])")
             weekDays.append(daysOfTheWeek[index-1])
-            //print("----> \(weekDays)")
             startDate = Calendar.current.date(byAdding: .day, value: 1, to: startDate)!
         }
         
         return weekDays
-        
-//        print(getUniqueValues(list: weekDays))
-//        let uniqueWeekDays = getUniqueValues(list: weekDays)
-//        if doctorSearch == true {
-//            getAvailableDoctors(weekDays: uniqueWeekDays)
-//        } else {
-//            //print("e cautare dupa centre medicale")
-//            getAvailableMedicalCenters(weekDays: uniqueWeekDays)
-//        }
-        
-       // print(doctors.count)
     }
     
     
@@ -130,7 +97,6 @@ class FiltersViewModel {
         if uniqueWeekDays.contains("Mon"){
             availableDoctorsOnMon = getDoctorsAvailableOnMon()
             let set2 = Set(availableDoctorsOnMon)
-            //print("aici set2 \(set2))")
             set1 = set1.intersection(set2)
         }
 
@@ -165,9 +131,7 @@ class FiltersViewModel {
             set1 = set1.intersection(set2)
         }
         availableDoctors = Array(set1)
-        print("----->>>>\(availableDoctors)")
-        print(availableDoctors)
-        
+
         return availableDoctors
     }
     
@@ -190,7 +154,6 @@ class FiltersViewModel {
         if uniqueWeekDays.contains("Mon"){
             availableMedicalCentersOnMon = getMedicalCentersAvailableOnMon()
             let set2 = Set(availableMedicalCentersOnMon)
-            //print("aici set2 \(set2))")
             set1 = set1.intersection(set2)
         }
 
@@ -225,8 +188,6 @@ class FiltersViewModel {
             set1 = set1.intersection(set2)
         }
         availableMedicalCenters = Array(set1)
-        print("MedicalCenters----->>>>\(availableMedicalCenters)")
-        print(availableMedicalCenters)
         
         return availableMedicalCenters
     }
@@ -388,19 +349,6 @@ class FiltersViewModel {
         return availableMedicalCentersOnSun
     }
     
-//
-//    func getDoctorsBy(service: String) -> [Doctor] {
-//        var result: [Doctor] = []
-//        for doctor in doctors {
-//            if doctor.service == service {
-//                result.append(doctor)
-//            }
-//        }
-//
-//        print("[][][][]  \(result)")
-//        return result
-//    }
-    
     func getDoctorsByServiceWorkingAt(service: String, medicalCenterName: String) -> [Doctor] {
         var result: [Doctor] = []
         for doctor in doctors {
@@ -411,26 +359,9 @@ class FiltersViewModel {
                 }
             }
         }
-        
-        print("[][][][]  \(result)")
         return result
+        
     }
-    
-    
-//
-//    func getDoctorsWorkingAt(medicalCenterName: String) -> [Doctor] {
-//        var result: [Doctor] = []
-//        for doctor in doctors {
-//            let worksAt = doctor.worksAt.components(separatedBy: ",")
-//
-//            if worksAt.contains(medicalCenterName){
-//                result.append(doctor)
-//            }
-//        }
-//
-//        print("[][][][]  \(result)")
-//        return result
-//    }
 }
 
 

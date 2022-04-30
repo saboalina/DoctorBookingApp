@@ -1,9 +1,3 @@
-//
-//  PatientMedicalCentreDetailsViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 29.04.2022.
-//
 
 import UIKit
 
@@ -22,8 +16,6 @@ class PatientMedicalCenterDetailsViewController: UIViewController {
     @IBOutlet weak var servicesTableView: UITableView!
     
     var medicalCenter: MedicalCenter!
-    //var doctorViewModel = DoctorViewModel()
-    
     var filterViewModel = FiltersViewModel.shared
     
     var services: [String] = []
@@ -100,7 +92,6 @@ extension PatientMedicalCenterDetailsViewController: UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let service = services[indexPath.row]
         var doctorsList = filterViewModel.getDoctorsByServiceWorkingAt(service: service, medicalCenterName: medicalCenter.name)
-
         performSegue(withIdentifier: "fromMedicalDetailsToDoctorsList", sender: doctorsList)
     }
     
