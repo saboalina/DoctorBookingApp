@@ -43,6 +43,7 @@
 		C296DEA82815B04800019B14 /* CategoriesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C296DEA62815B04800019B14 /* CategoriesViewCell.xib */; };
 		C2A345C6281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */; };
 		C2A345C8281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */; };
+		C2A345CA281D120B00F5B3B7 /* CategoryOfMCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */; };
 		C2BD6B5A2802B6CA00DBC642 /* DoctorAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B592802B6CA00DBC642 /* DoctorAppointmentsViewController.swift */; };
 		C2BD6B5D2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B5C2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift */; };
 		C2BD6B5F2802D07900DBC642 /* DoctorProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B5E2802D07900DBC642 /* DoctorProfileNavigationController.swift */; };
@@ -98,6 +99,7 @@
 		C296DEA62815B04800019B14 /* CategoriesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewCell.xib; sourceTree = "<group>"; };
 		C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDoctorDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMedicalCenterDetailsViewController.swift; sourceTree = "<group>"; };
+		C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOfMCViewCell.swift; sourceTree = "<group>"; };
 		C2BD6B592802B6CA00DBC642 /* DoctorAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppointmentsViewController.swift; sourceTree = "<group>"; };
 		C2BD6B5C2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppointmentsNavigationController.swift; sourceTree = "<group>"; };
 		C2BD6B5E2802D07900DBC642 /* DoctorProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfileNavigationController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		C296DE8D281411B200019B14 /* ViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C2A345CB281D121C00F5B3B7 /* CategoryOfMCViewCell */,
 				C290DA5828187413007C3CB8 /* AppointmentDoctorViewCell */,
 				C290DA5528182E94007C3CB8 /* AppointmentPatientViewCell */,
 				C296DE9328143F9D00019B14 /* CardView */,
@@ -253,6 +256,14 @@
 				C296DEA62815B04800019B14 /* CategoriesViewCell.xib */,
 			);
 			path = CategoriesViewCell;
+			sourceTree = "<group>";
+		};
+		C2A345CB281D121C00F5B3B7 /* CategoryOfMCViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */,
+			);
+			path = CategoryOfMCViewCell;
 			sourceTree = "<group>";
 		};
 		C2BD6B5B2802B78E00DBC642 /* Doctor */ = {
@@ -473,6 +484,7 @@
 				C296DEA228159E7500019B14 /* MedicalCenterHorizontalViewCell.swift in Sources */,
 				C21AF513280839550001A8C0 /* Error.swift in Sources */,
 				C296DE8C281409F700019B14 /* PatientHomeNavigationController.swift in Sources */,
+				C2A345CA281D120B00F5B3B7 /* CategoryOfMCViewCell.swift in Sources */,
 				C296DE7A280BFFE200019B14 /* PatientViewModel.swift in Sources */,
 				C27D9CB227FA097D00511C4B /* DoctorViewModel.swift in Sources */,
 				C2770C0F281A9C90006F4EBF /* FiltersViewModel.swift in Sources */,
