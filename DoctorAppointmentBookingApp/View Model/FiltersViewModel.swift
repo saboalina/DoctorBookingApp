@@ -384,7 +384,49 @@ class FiltersViewModel {
         return availableMedicalCentersOnSun
     }
     
-
+//
+//    func getDoctorsBy(service: String) -> [Doctor] {
+//        var result: [Doctor] = []
+//        for doctor in doctors {
+//            if doctor.service == service {
+//                result.append(doctor)
+//            }
+//        }
+//
+//        print("[][][][]  \(result)")
+//        return result
+//    }
+    
+    func getDoctorsByServiceWorkingAt(service: String, medicalCenterName: String) -> [Doctor] {
+        var result: [Doctor] = []
+        for doctor in doctors {
+            let worksAt = doctor.worksAt.components(separatedBy: ",")
+            if worksAt.contains(medicalCenterName) {
+                if doctor.service == service {
+                    result.append(doctor)
+                }
+            }
+        }
+        
+        print("[][][][]  \(result)")
+        return result
+    }
+    
+    
+//
+//    func getDoctorsWorkingAt(medicalCenterName: String) -> [Doctor] {
+//        var result: [Doctor] = []
+//        for doctor in doctors {
+//            let worksAt = doctor.worksAt.components(separatedBy: ",")
+//
+//            if worksAt.contains(medicalCenterName){
+//                result.append(doctor)
+//            }
+//        }
+//
+//        print("[][][][]  \(result)")
+//        return result
+//    }
 }
 
 

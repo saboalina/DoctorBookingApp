@@ -22,11 +22,16 @@ class PatientMedicalCenterDetailsViewController: UIViewController {
     @IBOutlet weak var servicesTableView: UITableView!
     
     var medicalCenter: MedicalCenter!
+    //var doctorViewModel = DoctorViewModel()
+    
+    var filterViewModel = FiltersViewModel.shared
+    
+    var services: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let services = medicalCenter.services.components(separatedBy: ",")
+        services = medicalCenter.services.components(separatedBy: ",")
         print("]]]]]]] \(services)")
         setLabels()
     }
@@ -79,4 +84,43 @@ class PatientMedicalCenterDetailsViewController: UIViewController {
     }
 
 
+}
+
+extension PatientMedicalCenterDetailsViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return services.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryOfMCViewCell") as! CategoryOfMCViewCell
+        cell.serviceNameLabel.text = services[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let service = services[indexPath.row]
+        var doctorsList = filterViewModel.getDoctorsByServiceWorkingAt(service: service, medicalCenterName: medicalCenter.name)
+        //print("[][] \(service)")
+        //filterViewModel.getDoctorsBy(service: service)
+//        doctorViewModel.getDoctorsBy(service: service) { doctors in
+//            doctorsList = doctors
+//        }
+        
+        performSegue(withIdentifier: "fromMedicalDetailsToDoctorsList", sender: doctorsList)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "fromMedicalDetailsToDoctorsList" {
+            if let fromMedicalDetailsToDoctorsList = segue.destination as? PatientDoctorsListViewController {
+                fromMedicalDetailsToDoctorsList.doctors =  sender as! [Doctor]
+            }
+        }
+        
+//        if segue.identifier == "showMedicalCenterDetails" {
+//            if let medicalCenterDetailsViewConntroller = segue.destination as? PatientMedicalCenterDetailsViewController {
+//                medicalCenterDetailsViewConntroller.medicalCenter =  sender as! MedicalCenter
+//            }
+//        }
+        
+    }
 }

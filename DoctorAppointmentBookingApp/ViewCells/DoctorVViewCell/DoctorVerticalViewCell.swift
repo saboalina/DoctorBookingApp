@@ -1,5 +1,5 @@
 //
-//  CategoryOfMCViewCell.swift
+//  DoctorVerticalViewCell.swift
 //  DoctorAppointmentBookingApp
 //
 //  Created by Alina Sabo Brandus on 30.04.2022.
@@ -7,10 +7,12 @@
 
 import UIKit
 
-class CategoryOfMCViewCell: UITableViewCell {
+class DoctorVerticalViewCell: UITableViewCell {
     
     
-    @IBOutlet weak var serviceNameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var serviceLabel: UILabel!
+    @IBOutlet weak var experienceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
