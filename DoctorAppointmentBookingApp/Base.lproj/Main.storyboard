@@ -59,6 +59,33 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="121.875"/>
         </scene>
+        <!--Patient Doctors List View Controller-->
+        <scene sceneID="iwY-XG-0B5">
+            <objects>
+                <viewController id="0Vg-uW-z0g" customClass="PatientDoctorsListViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d6v-yJ-OYv">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AAJ-vA-f2P">
+                                <rect key="frame" x="0.0" y="144" width="428" height="648"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T5V-Ze-g79"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T5V-Ze-g79" firstAttribute="bottom" secondItem="AAJ-vA-f2P" secondAttribute="bottom" constant="100" id="5CC-ch-GIW"/>
+                            <constraint firstItem="T5V-Ze-g79" firstAttribute="trailing" secondItem="AAJ-vA-f2P" secondAttribute="trailing" id="J6g-R4-4Zu"/>
+                            <constraint firstItem="AAJ-vA-f2P" firstAttribute="leading" secondItem="T5V-Ze-g79" secondAttribute="leading" id="dFd-2T-fGi"/>
+                            <constraint firstItem="AAJ-vA-f2P" firstAttribute="top" secondItem="T5V-Ze-g79" secondAttribute="top" constant="100" id="fBC-hT-41m"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBN-kW-Ocz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10190" y="-90"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="eSF-QJ-D39">
             <objects>
@@ -1078,30 +1105,30 @@
                     <connections>
                         <outlet property="endDatePicker" destination="6wS-ZT-kff" id="Zka-Ia-MxP"/>
                         <outlet property="startDatePicker" destination="d0W-gU-ahB" id="YL0-YP-EHp"/>
+                        <segue destination="Gbd-C9-B6S" kind="show" identifier="fromMedicalDetailsToDoctorsList" id="FQf-R4-ffO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fp1-sw-I8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7940" y="17"/>
+            <point key="canvasLocation" x="8268" y="-384"/>
         </scene>
         <!--Patient Doctors List View Controller-->
         <scene sceneID="OGI-9o-Qlo">
             <objects>
                 <viewController id="Gbd-C9-B6S" customClass="PatientDoctorsListViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ykv-Rp-3ux">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fe4-rV-eU6">
-                                <rect key="frame" x="0.0" y="188" width="428" height="555"/>
+                                <rect key="frame" x="0.0" y="144" width="428" height="628"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DoctorVerticalViewCell" rowHeight="123" id="Jsn-dO-Hb4" customClass="DoctorVerticalViewCell" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jsn-dO-Hb4" id="R22-zd-yBz">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jsn-dO-Hb4" translatesAutoresizingMaskIntoConstraints="NO" id="R22-zd-yBz">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="123"/>
-                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4IJ-Bk-uN3">
                                                     <rect key="frame" x="20" y="14" width="106" height="96"/>
@@ -1129,6 +1156,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="150" id="Zik-4w-ae9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="experienceLabel" destination="3w1-MU-RW6" id="3tR-Ey-575"/>
@@ -1160,7 +1190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RL8-l4-VyU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9659" y="765"/>
+            <point key="canvasLocation" x="9813" y="803"/>
         </scene>
         <!--Item-->
         <scene sceneID="K9X-R5-fDs">
@@ -1380,18 +1410,18 @@
             <objects>
                 <viewController id="hw4-6i-2Kv" customClass="PatientDoctorDetailsViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v4c-1Y-LvY">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O9U-pg-fPn">
-                                <rect key="frame" x="50" y="113" width="328" height="170"/>
+                                <rect key="frame" x="50" y="142" width="328" height="170"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="VYg-7A-4uh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9e-vi-V1g">
-                                <rect key="frame" x="20" y="313" width="388" height="40"/>
+                                <rect key="frame" x="20" y="342" width="388" height="40"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="UIy-69-Zya"/>
@@ -1401,7 +1431,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY0-W7-kSa">
-                                <rect key="frame" x="20" y="353" width="388" height="30"/>
+                                <rect key="frame" x="20" y="382" width="388" height="30"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mkU-Th-nJn"/>
@@ -1411,7 +1441,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKN-bK-lLf">
-                                <rect key="frame" x="20" y="433" width="388" height="30"/>
+                                <rect key="frame" x="20" y="462" width="388" height="30"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="t7H-zN-6Yi"/>
@@ -1421,7 +1451,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Services at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIw-8v-uPH">
-                                <rect key="frame" x="20" y="503" width="388" height="30"/>
+                                <rect key="frame" x="20" y="532" width="388" height="30"/>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9eT-jS-h77"/>
@@ -1431,7 +1461,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultancy Fee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOP-qj-biX">
-                                <rect key="frame" x="240" y="703" width="168" height="30"/>
+                                <rect key="frame" x="240" y="732" width="168" height="30"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="x2H-NQ-5zf"/>
@@ -1441,7 +1471,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experience" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvT-GA-3U8">
-                                <rect key="frame" x="130" y="703" width="100" height="30"/>
+                                <rect key="frame" x="130" y="732" width="100" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="J7z-eh-Fgw"/>
@@ -1452,7 +1482,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZk-3F-7PG">
-                                <rect key="frame" x="20" y="533" width="388" height="150"/>
+                                <rect key="frame" x="20" y="562" width="388" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="abc-Hr-Y96"/>
                                 </constraints>
@@ -1460,7 +1490,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdC-U8-JAV">
-                                <rect key="frame" x="240" y="733" width="168" height="30"/>
+                                <rect key="frame" x="240" y="762" width="168" height="30"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jLW-KX-GYj"/>
@@ -1470,7 +1500,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxb-y3-IYl">
-                                <rect key="frame" x="130" y="733" width="100" height="30"/>
+                                <rect key="frame" x="130" y="762" width="100" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="2wc-Jb-0gB"/>
@@ -1481,7 +1511,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nda-8Q-jbb">
-                                <rect key="frame" x="20" y="383" width="388" height="30"/>
+                                <rect key="frame" x="20" y="412" width="388" height="30"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GyF-Mb-ylo"/>
@@ -1491,7 +1521,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8M-mp-7gk">
-                                <rect key="frame" x="20" y="703" width="100" height="30"/>
+                                <rect key="frame" x="20" y="732" width="100" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="KdL-BC-hrq"/>
@@ -1502,7 +1532,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bq-PH-Dgz">
-                                <rect key="frame" x="20" y="463" width="388" height="30"/>
+                                <rect key="frame" x="20" y="492" width="388" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qMd-df-Ydo"/>
                                 </constraints>
@@ -1511,7 +1541,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJh-Yh-KZa">
-                                <rect key="frame" x="20" y="733" width="100" height="30"/>
+                                <rect key="frame" x="20" y="762" width="100" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nFQ-7E-6GM"/>
@@ -1522,7 +1552,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfV-Oy-VSm">
-                                <rect key="frame" x="20" y="783" width="388" height="40"/>
+                                <rect key="frame" x="20" y="812" width="388" height="40"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="UFb-je-HGW"/>
@@ -2115,6 +2145,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="k4E-NV-tRH"/>
+        <segue reference="FQf-R4-ffO"/>
         <segue reference="Vfr-Bc-B3Q"/>
     </inferredMetricsTieBreakers>
     <resources>

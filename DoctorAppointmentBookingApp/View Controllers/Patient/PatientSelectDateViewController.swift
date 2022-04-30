@@ -26,10 +26,23 @@ class PatientSelectDateViewController: UIViewController {
         
         let startDate = startDatePicker.date
         let endDate = endDatePicker.date
-        filterViewModel.getWeekDaysList(startDate: startDate, endDate: endDate)
+        if doctorSearch == true {
+            let doctorsList = filterViewModel.getAvailableDoctors(startDate: startDate, endDate: endDate)
+            performSegue(withIdentifier: "fromMedicalDetailsToDoctorsList", sender: doctorsList)
+        } else {
+            print("se merge catre lista de centre medicale")
+        }
+
     }
     
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "fromMedicalDetailsToDoctorsList" {
+            if let fromMedicalDetailsToDoctorsList = segue.destination as? PatientDoctorsListViewController {
+                fromMedicalDetailsToDoctorsList.doctors =  sender as! [Doctor]
+            }
+        }
+    }
     
 
 }

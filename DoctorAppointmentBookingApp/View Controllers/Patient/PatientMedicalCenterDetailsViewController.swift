@@ -100,12 +100,7 @@ extension PatientMedicalCenterDetailsViewController: UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let service = services[indexPath.row]
         var doctorsList = filterViewModel.getDoctorsByServiceWorkingAt(service: service, medicalCenterName: medicalCenter.name)
-        //print("[][] \(service)")
-        //filterViewModel.getDoctorsBy(service: service)
-//        doctorViewModel.getDoctorsBy(service: service) { doctors in
-//            doctorsList = doctors
-//        }
-        
+
         performSegue(withIdentifier: "fromMedicalDetailsToDoctorsList", sender: doctorsList)
     }
     
@@ -115,12 +110,5 @@ extension PatientMedicalCenterDetailsViewController: UITableViewDataSource, UITa
                 fromMedicalDetailsToDoctorsList.doctors =  sender as! [Doctor]
             }
         }
-        
-//        if segue.identifier == "showMedicalCenterDetails" {
-//            if let medicalCenterDetailsViewConntroller = segue.destination as? PatientMedicalCenterDetailsViewController {
-//                medicalCenterDetailsViewConntroller.medicalCenter =  sender as! MedicalCenter
-//            }
-//        }
-        
     }
 }
