@@ -171,7 +171,11 @@ class FiltersViewModel {
         return availableDoctors
     }
     
-    func getAvailableMedicalCenters(weekDays: [String]) {
+    func getAvailableMedicalCenters(startDate: Date, endDate: Date) -> [MedicalCenter] {
+        
+        var weekDays = getWeekDaysList(startDate: startDate, endDate: endDate)
+        let uniqueWeekDays = getUniqueValues(list: weekDays)
+        
         var availableMedicalCenters = medicalCenters
         var availableMedicalCentersOnMon: [MedicalCenter] = []
         var availableMedicalCentersOnTue: [MedicalCenter] = []
@@ -181,47 +185,41 @@ class FiltersViewModel {
         var availableMedicalCentersOnSat: [MedicalCenter] = []
         var availableMedicalCentersOnSun: [MedicalCenter] = []
         
-
         var set1 = Set(availableMedicalCenters)
-//
-//        print("aici set1 \(set1))")
-        
-        if weekDays.contains("Mon"){
+
+        if uniqueWeekDays.contains("Mon"){
             availableMedicalCentersOnMon = getMedicalCentersAvailableOnMon()
             let set2 = Set(availableMedicalCentersOnMon)
             //print("aici set2 \(set2))")
             set1 = set1.intersection(set2)
         }
-        
-//        print("aici set1 \(set1)")
-//
-//
-        if weekDays.contains("Tue"){
+
+        if uniqueWeekDays.contains("Tue"){
             availableMedicalCentersOnTue = getMedicalCentersAvailableOnTue()
             let set2 = Set(availableMedicalCentersOnTue)
             set1 = set1.intersection(set2)
         }
-        if weekDays.contains("Wed"){
+        if uniqueWeekDays.contains("Wed"){
             availableMedicalCentersOnWed = getMedicalCentersAvailableOnWed()
             let set2 = Set(availableMedicalCentersOnWed)
             set1 = set1.intersection(set2)
         }
-        if weekDays.contains("Thu"){
+        if uniqueWeekDays.contains("Thu"){
             availableMedicalCentersOnThu = getMedicalCentersAvailableOnThu()
             let set2 = Set(availableMedicalCentersOnThu)
             set1 = set1.intersection(set2)
         }
-        if weekDays.contains("Fri"){
+        if uniqueWeekDays.contains("Fri"){
             availableMedicalCentersOnFri = getMedicalCentersAvailableOnFri()
             let set2 = Set(availableMedicalCentersOnFri)
             set1 = set1.intersection(set2)
         }
-        if weekDays.contains("Sat"){
+        if uniqueWeekDays.contains("Sat"){
             availableMedicalCentersOnSat = getMedicalCentersAvailableOnSat()
             let set2 = Set(availableMedicalCentersOnSat)
             set1 = set1.intersection(set2)
         }
-        if weekDays.contains("Sun"){
+        if uniqueWeekDays.contains("Sun"){
             availableMedicalCentersOnSun = getMedicalCentersAvailableOnSun()
             let set2 = Set(availableMedicalCentersOnSun)
             set1 = set1.intersection(set2)
@@ -229,6 +227,8 @@ class FiltersViewModel {
         availableMedicalCenters = Array(set1)
         print("MedicalCenters----->>>>\(availableMedicalCenters)")
         print(availableMedicalCenters)
+        
+        return availableMedicalCenters
     }
     
     func getDoctorsAvailableOnMon() -> [Doctor] {

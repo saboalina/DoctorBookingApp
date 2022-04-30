@@ -15,6 +15,7 @@
 		C26CCF72281D1AE500986E8E /* PatientDoctorsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26CCF71281D1AE500986E8E /* PatientDoctorsListViewController.swift */; };
 		C26CCF75281D1BBC00986E8E /* DoctorVerticalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26CCF74281D1BBC00986E8E /* DoctorVerticalViewCell.swift */; };
 		C26CCF77281D40FF00986E8E /* PatientMedicalCentersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26CCF76281D40FF00986E8E /* PatientMedicalCentersListViewController.swift */; };
+		C26CCF7A281D433100986E8E /* MedicalCenterVerticalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26CCF79281D433100986E8E /* MedicalCenterVerticalViewCell.swift */; };
 		C2770C0528196870006F4EBF /* PatientSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2770C0428196870006F4EBF /* PatientSearchViewController.swift */; };
 		C2770C0B2819B8E6006F4EBF /* PatientEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2770C0A2819B8E6006F4EBF /* PatientEditProfileViewController.swift */; };
 		C2770C0D281A7ACF006F4EBF /* DoctorEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2770C0C281A7ACF006F4EBF /* DoctorEditProfileViewController.swift */; };
@@ -74,6 +75,7 @@
 		C26CCF71281D1AE500986E8E /* PatientDoctorsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDoctorsListViewController.swift; sourceTree = "<group>"; };
 		C26CCF74281D1BBC00986E8E /* DoctorVerticalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorVerticalViewCell.swift; sourceTree = "<group>"; };
 		C26CCF76281D40FF00986E8E /* PatientMedicalCentersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMedicalCentersListViewController.swift; sourceTree = "<group>"; };
+		C26CCF79281D433100986E8E /* MedicalCenterVerticalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalCenterVerticalViewCell.swift; sourceTree = "<group>"; };
 		C2770C0428196870006F4EBF /* PatientSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSearchViewController.swift; sourceTree = "<group>"; };
 		C2770C0A2819B8E6006F4EBF /* PatientEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientEditProfileViewController.swift; sourceTree = "<group>"; };
 		C2770C0C281A7ACF006F4EBF /* DoctorEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DoctorEditProfileViewController.swift; path = "DoctorAppointmentBookingApp/View Controllers/Patient/DoctorEditProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -161,6 +163,14 @@
 			path = DoctorVViewCell;
 			sourceTree = "<group>";
 		};
+		C26CCF78281D42FD00986E8E /* MedicalCenterVViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C26CCF79281D433100986E8E /* MedicalCenterVerticalViewCell.swift */,
+			);
+			path = MedicalCenterVViewCell;
+			sourceTree = "<group>";
+		};
 		C27D9CAD27FA08B300511C4B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +238,7 @@
 		C296DE8D281411B200019B14 /* ViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C26CCF78281D42FD00986E8E /* MedicalCenterVViewCell */,
 				C26CCF73281D1B9100986E8E /* DoctorVViewCell */,
 				C2A345CB281D121C00F5B3B7 /* CategoryOfMCViewCell */,
 				C290DA5828187413007C3CB8 /* AppointmentDoctorViewCell */,
@@ -470,6 +481,7 @@
 				C296DE83280C328400019B14 /* PatientAppointmentsViewController.swift in Sources */,
 				C2BD6B5F2802D07900DBC642 /* DoctorProfileNavigationController.swift in Sources */,
 				C2770C0B2819B8E6006F4EBF /* PatientEditProfileViewController.swift in Sources */,
+				C26CCF7A281D433100986E8E /* MedicalCenterVerticalViewCell.swift in Sources */,
 				C2238EF0281C13C500571C08 /* Artwork.swift in Sources */,
 				C2238EEE281C10ED00571C08 /* PatientMapViewController.swift in Sources */,
 				C26CCF77281D40FF00986E8E /* PatientMedicalCentersListViewController.swift in Sources */,

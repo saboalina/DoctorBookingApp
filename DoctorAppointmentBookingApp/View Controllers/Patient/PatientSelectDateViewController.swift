@@ -28,18 +28,26 @@ class PatientSelectDateViewController: UIViewController {
         let endDate = endDatePicker.date
         if doctorSearch == true {
             let doctorsList = filterViewModel.getAvailableDoctors(startDate: startDate, endDate: endDate)
-            performSegue(withIdentifier: "fromMedicalDetailsToDoctorsList", sender: doctorsList)
+            performSegue(withIdentifier: "fromSearchToDoctorsList", sender: doctorsList)
         } else {
-            print("se merge catre lista de centre medicale")
+            let medicaCentersList = filterViewModel.getAvailableMedicalCenters(startDate: startDate, endDate: endDate)
+            performSegue(withIdentifier: "fromSearchToMedicalCentersList", sender: medicaCentersList)
+            //print("se merge catre lista de centre medicale")
         }
 
     }
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "fromMedicalDetailsToDoctorsList" {
+        if segue.identifier == "fromSearchToDoctorsList" {
             if let fromMedicalDetailsToDoctorsList = segue.destination as? PatientDoctorsListViewController {
                 fromMedicalDetailsToDoctorsList.doctors =  sender as! [Doctor]
+            }
+        }
+        
+        if segue.identifier == "fromSearchToMedicalCentersList" {
+            if let fromSearchToMedicalCentersList = segue.destination as? PatientMedicalCentersListViewController {
+                fromSearchToMedicalCentersList.medicalCenters =  sender as! [MedicalCenter]
             }
         }
     }
