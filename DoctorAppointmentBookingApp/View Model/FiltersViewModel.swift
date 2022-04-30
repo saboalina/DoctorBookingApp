@@ -362,6 +362,20 @@ class FiltersViewModel {
         return result
         
     }
+    
+    
+    func getMedicalCentersByService(service: String) -> [MedicalCenter] {
+        var result: [MedicalCenter] = []
+        for medicalCenter in medicalCenters {
+            let services = medicalCenter.services.components(separatedBy: ",")
+            if services.contains(service) {
+                result.append(medicalCenter)
+            }
+        }
+        
+        return result
+    }
+    
 }
 
 

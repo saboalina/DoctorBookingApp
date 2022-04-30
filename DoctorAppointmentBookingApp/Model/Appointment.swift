@@ -35,46 +35,6 @@ public class Appointment: NSObject {
         type =                  document["type"] as? String ?? ""
         self.id =               id
     }
-    
-    func getPatientId() -> String {
-        return patientId
-    }
-    
-    func setPatientId(patientId: String) {
-        self.patientId = patientId
-    }
-    
-    func getDoctorId() -> String {
-        return doctorId
-    }
-    
-    func setDoctorId(doctorId: String) {
-        self.doctorId = doctorId
-    }
-    
-    func getDate() -> String {
-        return date
-    }
-    
-    func setDate(date: String) {
-        self.date = date
-    }
-    
-    func getTime() -> String {
-        return time
-    }
-    
-    func setTime(time: String) {
-        self.time = time
-    }
-    
-    func getType() -> String {
-        return type
-    }
-    
-    func setType(type: String) {
-        self.type = type
-    }
 
 }
 

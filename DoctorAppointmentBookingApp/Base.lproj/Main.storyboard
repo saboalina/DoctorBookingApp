@@ -64,11 +64,11 @@
             <objects>
                 <viewController id="0Vg-uW-z0g" customClass="PatientMedicalCentersListViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d6v-yJ-OYv">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AAJ-vA-f2P">
-                                <rect key="frame" x="0.0" y="144" width="428" height="628"/>
+                                <rect key="frame" x="0.0" y="188" width="428" height="555"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MedicalCenterVerticalViewCell" rowHeight="165" id="W2m-eP-j0A" customClass="MedicalCenterVerticalViewCell" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
@@ -1079,6 +1079,7 @@
                         <segue destination="nRf-KV-Qim" kind="show" identifier="SearchPage" id="33c-0V-CQk"/>
                         <segue destination="hw4-6i-2Kv" kind="show" identifier="showDoctorDetails" id="7TJ-ij-TGH"/>
                         <segue destination="nzK-OK-L8H" kind="show" identifier="showMedicalCenterDetails" id="mYN-NY-0IO"/>
+                        <segue destination="0Vg-uW-z0g" kind="show" identifier="fromHomeToMedicalCentersList" id="gPg-6Z-Clk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9em-bh-zIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2204,9 +2205,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="mYN-NY-0IO"/>
-        <segue reference="k4E-NV-tRH"/>
+        <segue reference="7TJ-ij-TGH"/>
         <segue reference="tbD-sl-kvF"/>
         <segue reference="Vfr-Bc-B3Q"/>
+        <segue reference="gPg-6Z-Clk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">

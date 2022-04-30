@@ -12,6 +12,7 @@ class PatientHomeViewController: UIViewController {
     
     var doctorViewModel = DoctorViewModel()
     var medicalCenterViewModel = MedicalCenterViewModel()
+    var filterViewModel = FiltersViewModel.shared
     
     private var allDoctors = [Doctor]() {
         didSet {
@@ -119,6 +120,12 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
 
         }
         
+        if collectionView == self.categoriesCollectionView {
+            let service = categories[indexPath.row]
+            let medicaCentersList = filterViewModel.getMedicalCentersByService(service: service)
+            performSegue(withIdentifier: "fromHomeToMedicalCentersList", sender: medicaCentersList)
+        }
+        
         if collectionView == self.medicalCenterCollectionView {
             let medicalCenter = medicalCenters[indexPath.row]
             performSegue(withIdentifier: "showMedicalCenterDetails", sender: medicalCenter)
@@ -136,6 +143,12 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
         if segue.identifier == "showMedicalCenterDetails" {
             if let medicalCenterDetailsViewConntroller = segue.destination as? PatientMedicalCenterDetailsViewController {
                 medicalCenterDetailsViewConntroller.medicalCenter =  sender as! MedicalCenter
+            }
+        }
+        
+        if segue.identifier == "fromHomeToMedicalCentersList" {
+            if let fromSearchToMedicalCentersList = segue.destination as? PatientMedicalCentersListViewController {
+                fromSearchToMedicalCentersList.medicalCenters =  sender as! [MedicalCenter]
             }
         }
         
