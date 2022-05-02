@@ -31,15 +31,18 @@ class PatientMapViewController: UIViewController {
     
     var medicalCentersMapList = [MedicalCenterForMap]()
     
-    let initialPlace = CLLocationCoordinate2D(latitude: 46.753893594342465, longitude: 23.54748262695039)
+    //let initialPlace = CLLocationCoordinate2D(latitude: 46.753893594342465, longitude: 23.54748262695039)
+    
+    private let locationManager = CLLocationManager()
+    private var currentLocation: CLLocationCoordinate2D?
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureLocationServices()
         loadData()
 
-        let region = MKCoordinateRegion( center: initialPlace, latitudinalMeters: CLLocationDistance(exactly: 2000)!, longitudinalMeters: CLLocationDistance(exactly: 2000)!)
-        mapView.setRegion(mapView.regionThatFits(region), animated: true)
+//        let region = MKCoordinateRegion( center: initialPlace, latitudinalMeters: CLLocationDistance(exactly: 2000)!, longitudinalMeters: CLLocationDistance(exactly: 2000)!)
+//        mapView.setRegion(mapView.regionThatFits(region), animated: true)
         
         print("in PatientMapViewController \(patient.name)")
 
@@ -72,6 +75,52 @@ class PatientMapViewController: UIViewController {
             mapView.addAnnotation(medicalCenterMap)
         }
     }
+    
+    private func configureLocationServices() {
+        locationManager.delegate = self
+        
+        let status = CLLocationManager.authorizationStatus()
+        
+        if status == .notDetermined {
+            locationManager.requestAlwaysAuthorization()
+        } else if status == .authorizedWhenInUse || status == .authorizedAlways {
+            beginLocationUpdates(locationManager: locationManager)
+        }
+    }
+    
+    private func beginLocationUpdates(locationManager: CLLocationManager) {
+        mapView.showsUserLocation = true
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+    }
+    
+    private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D) {
+        
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
+        mapView.setRegion(region, animated: true)
+    }
 
+}
+
+extension PatientMapViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("did get latest location")
+        guard let latestLocation = locations.first else { return }
+        
+//        if currentLocation == nil {
+//            zoomToLatestLocation(with: latestLocation.coordinate)
+//        }
+        zoomToLatestLocation(with: latestLocation.coordinate)
+        currentLocation = latestLocation.coordinate
+    }
+    
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        print("the status changed")
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            beginLocationUpdates(locationManager: manager)
+        }
+    }
 }
 
