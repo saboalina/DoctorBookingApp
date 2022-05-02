@@ -82,7 +82,7 @@ class LoginViewController: UIViewController {
         
 //        let email = "maria@gmail.com"
 //        let password = "maria1999"
-        
+
         let userType = verifyUser(email: email)
         
         if userType == "is a patient" {

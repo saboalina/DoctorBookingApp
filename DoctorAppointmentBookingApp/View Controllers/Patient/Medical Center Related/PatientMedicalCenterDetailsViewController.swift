@@ -89,6 +89,10 @@ extension PatientMedicalCenterDetailsViewController: UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryOfMCViewCell") as! CategoryOfMCViewCell
         cell.serviceNameLabel.text = services[indexPath.row]
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = .zero
+        cell.layer.cornerRadius = 8
+        cell.layer.shadowOpacity = 0.1
         return cell
     }
     

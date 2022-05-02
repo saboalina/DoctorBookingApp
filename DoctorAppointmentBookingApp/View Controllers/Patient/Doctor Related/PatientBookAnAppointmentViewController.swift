@@ -74,7 +74,7 @@ class PatientBookAnAppointmentViewController: UIViewController {
     @IBAction func confirmAppointmentButtonTapped(_ sender: Any) {
         print(appointmentDatePicker.date)
         let appointment = Appointment(patientId: patient.email, doctorId: doctor.email, date: appointmentDate, time: appointmentTime, type: doctor.service, id: "")
-        appointmentViewModel.addAppointment(appointment: appointment) { [weak self] (success) in
+        appointmentViewModel.addAppointment(appointment: appointment) { success in
             if (success) {
                 //self.appointments.remove(at: rowIndex)
                 print("tuto bene")
