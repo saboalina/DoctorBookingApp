@@ -113,6 +113,15 @@ extension PatientMapViewController: CLLocationManagerDelegate {
 //        }
         zoomToLatestLocation(with: latestLocation.coordinate)
         currentLocation = latestLocation.coordinate
+        let currentCoordinate = CLLocation(latitude: currentLocation!.latitude, longitude: currentLocation!.longitude)
+        for medicalCenterOnMap in medicalCentersMapList {
+            
+            let medicalCoordinate = CLLocation(latitude: medicalCenterOnMap.coordinate.latitude, longitude: medicalCenterOnMap.coordinate.longitude)
+            let distanceInMeters = currentCoordinate.distance(from: medicalCoordinate)
+            if distanceInMeters < 500 {
+                print("e aproape")
+            }
+        }
     }
     
 
