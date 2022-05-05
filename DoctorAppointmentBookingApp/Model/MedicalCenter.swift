@@ -26,7 +26,9 @@ public class MedicalCenter: NSObject {
     var latitude: String
     var longitude: String
     
-    init(name: String, address: String, services: String, doctors: String, sun: String, mon: String, tue: String, wed: String, thu: String, fri: String, sat: String, latitude: String, longitude: String){
+    var id: String
+    
+    init(name: String, address: String, services: String, doctors: String, sun: String, mon: String, tue: String, wed: String, thu: String, fri: String, sat: String, latitude: String, longitude: String, id: String){
         self.name = name
         self.address = address
         self.services = services
@@ -40,8 +42,27 @@ public class MedicalCenter: NSObject {
         self.fri = fri
         self.sat = sat
         
+        self.id = id
+        
         self.latitude = latitude
         self.longitude = longitude
+    }
+    
+    init(document: [String:Any], id: String) {
+        name =          document["name"] as? String ?? ""
+        address =       document["address"] as? String ?? ""
+        services =      document["services"] as? String ?? ""
+        doctors =       document["doctors"] as? String ?? ""
+        sun =           document["sun"] as? String ?? ""
+        mon =           document["mon"] as? String ?? ""
+        tue =           document["tue"] as? String ?? ""
+        wed =           document["wed"] as? String ?? ""
+        thu =           document["thu"] as? String ?? ""
+        fri =           document["fri"] as? String ?? ""
+        sat =           document["sat"] as? String ?? ""
+        latitude =      document["latitude"] as? String ?? ""
+        longitude =     document["longitude"] as? String ?? ""
+        self.id =               id
     }
 
 }
@@ -62,7 +83,9 @@ extension MedicalCenter {
                                                 fri:           document["Fri"] as? String ?? "",
                                                 sat:           document["Sat"] as? String ?? "",
                                                 latitude:           document["latitude"] as? String ?? "",
-                                                longitude:           document["longitude"] as? String ?? ""))
+                                                longitude:           document["longitude"] as? String ?? "",
+                                                id:         document.documentID
+))
         }
         return medicalCentres
     }

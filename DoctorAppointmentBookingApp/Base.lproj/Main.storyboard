@@ -2218,6 +2218,7 @@
                     <navigationItem key="navigationItem" id="EP5-Rn-DF3"/>
                     <connections>
                         <outlet property="mapView" destination="ycK-dm-J1d" id="SSX-2W-PiT"/>
+                        <segue destination="nzK-OK-L8H" kind="show" identifier="showMedicalCenterDetailsFromMap" id="gqt-V4-J8Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IW-n6-ZhO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2500,7 +2501,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mYN-NY-0IO"/>
+        <segue reference="gqt-V4-J8Y"/>
         <segue reference="k4E-NV-tRH"/>
         <segue reference="tbD-sl-kvF"/>
         <segue reference="Vfr-Bc-B3Q"/>

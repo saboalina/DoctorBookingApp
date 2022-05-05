@@ -11,6 +11,7 @@ class PatientMapViewController: UIViewController {
     var medicalCenterViewModel = MedicalCenterViewModel()
     
     var patient: Patient!
+    var medicalCenter: MedicalCenter!
     
     private var allMedicalCenters = [MedicalCenter]() {
         didSet {
@@ -163,6 +164,22 @@ class PatientMapViewController: UIViewController {
 
         return newDate
     }
+    
+    func navigateToMedicalCenterPage(medicalCenter: MedicalCenter) {
+        performSegue(withIdentifier: "showMedicalCenterDetailsFromMap", sender: medicalCenter)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                
+        if segue.identifier == "showMedicalCenterDetailsFromMap" {
+            if let medicalCenterDetailsViewConntroller = segue.destination as? PatientMedicalCenterDetailsViewController {
+                medicalCenterDetailsViewConntroller.medicalCenter =  sender as! MedicalCenter
+                medicalCenterDetailsViewConntroller.patient = patient
+            }
+        }
+        
+    }
 
 }
 
@@ -171,6 +188,16 @@ extension PatientMapViewController: MKMapViewDelegate {
         {
             if let annotationTitle = view.annotation?.title
             {
+                let medicalCenterName = annotationTitle!
+                self.medicalCenterViewModel.getMedicalCenterBy(name: medicalCenterName, handler: { res in
+                    switch res{
+                    case .success(let medicalCenter):
+                        self.medicalCenter = medicalCenter
+                        self.navigateToMedicalCenterPage(medicalCenter: medicalCenter)
+                    case .failure(let err):
+                        print(err)
+                    }
+                })
                 print("User tapped on annotation with title: \(annotationTitle!)")
             }
         }

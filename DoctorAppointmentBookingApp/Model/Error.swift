@@ -20,3 +20,9 @@ enum PatientError: Error {
 enum AppointmentError: Error {
     case AppointmentNotFound
 }
+
+enum MedicalCenterError: Error {
+    case MedicalCenterNotFound
+}
+
+
