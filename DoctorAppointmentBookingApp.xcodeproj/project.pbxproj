@@ -111,6 +111,7 @@
 		C296DEA128159E7500019B14 /* MedicalCenterHorizontalViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalCenterHorizontalViewCell.xib; sourceTree = "<group>"; };
 		C296DEA52815B04800019B14 /* CategoriesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewCell.swift; sourceTree = "<group>"; };
 		C296DEA62815B04800019B14 /* CategoriesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewCell.xib; sourceTree = "<group>"; };
+		C29B9221282130F50094BF42 /* DoctorAppointmentBookingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DoctorAppointmentBookingApp.entitlements; sourceTree = "<group>"; };
 		C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDoctorDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMedicalCenterDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOfMCViewCell.swift; sourceTree = "<group>"; };
@@ -409,6 +410,7 @@
 		C2C58C0F27F9F08200B637C6 /* DoctorAppointmentBookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				C29B9221282130F50094BF42 /* DoctorAppointmentBookingApp.entitlements */,
 				C296DE8D281411B200019B14 /* ViewCells */,
 				C27D9CB027FA096800511C4B /* View Model */,
 				C27D9CAD27FA08B300511C4B /* Model */,
@@ -750,6 +752,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DoctorAppointmentBookingApp/DoctorAppointmentBookingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6H94T4SL56;
@@ -779,6 +782,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DoctorAppointmentBookingApp/DoctorAppointmentBookingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6H94T4SL56;

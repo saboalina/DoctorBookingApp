@@ -2050,7 +2050,7 @@
                                     <constraint firstAttribute="height" constant="200" id="oDk-Yv-Kpg"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryOfMCViewCell" rowHeight="71" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-Qo-asa" customClass="CategoryOfMCViewCell" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryOfMCViewCell" rowHeight="71" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-Qo-asa" customClass="CategoryOfMCViewCell" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="388" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Me9-Qo-asa" id="0hg-xa-jLF">
@@ -2201,6 +2201,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ycK-dm-J1d">
                                 <rect key="frame" x="0.0" y="88" width="428" height="755"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tc0-3r-QCi" id="h7C-CR-cgi"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JVh-ap-ndz"/>
