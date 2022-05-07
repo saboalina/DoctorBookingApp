@@ -6,6 +6,8 @@ class PatientSearchViewController: UIViewController {
     var doctorSearch = true
     var patient: Patient!
     
+    @IBOutlet weak var zoomIndexTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,4 +31,23 @@ class PatientSearchViewController: UIViewController {
     }
     
     
+
+    @IBAction func selectAreaButtonTapped(_ sender: Any) {
+        let zoomIndex = Int(zoomIndexTextField.text ?? "2000")
+        performSegue(withIdentifier: "fromSearchToMapPage", sender: zoomIndex)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                
+        if segue.identifier == "fromSearchToMapPage" {
+            if let mapPage = segue.destination as? PatientMapViewController {
+                mapPage.zoomIndex =  sender as! Int
+                mapPage.patient = patient
+            }
+        }
+        
+    }
+    
 }
+

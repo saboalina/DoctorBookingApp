@@ -36,6 +36,7 @@ class PatientMapViewController: UIViewController {
         
     private let locationManager = CLLocationManager()
     private var currentLocation: CLLocationCoordinate2D?
+    var zoomIndex = 2000
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +95,7 @@ class PatientMapViewController: UIViewController {
     
     private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D) {
         
-        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: CLLocationDistance(zoomIndex), longitudinalMeters: CLLocationDistance(zoomIndex))
         mapView.setRegion(region, animated: true)
     }
     

@@ -64,11 +64,11 @@
             <objects>
                 <viewController id="0Vg-uW-z0g" customClass="PatientMedicalCentersListViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d6v-yJ-OYv">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AAJ-vA-f2P">
-                                <rect key="frame" x="0.0" y="144" width="428" height="628"/>
+                                <rect key="frame" x="0.0" y="188" width="428" height="555"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MedicalCenterVerticalViewCell" rowHeight="165" id="W2m-eP-j0A" customClass="MedicalCenterVerticalViewCell" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
@@ -1115,6 +1115,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Select Area"/>
+                                <connections>
+                                    <action selector="selectAreaButtonTapped:" destination="nRf-KV-Qim" eventType="touchUpInside" id="mdg-02-if2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9d-33-epO">
                                 <rect key="frame" x="122" y="669" width="130" height="57"/>
@@ -1132,6 +1135,12 @@
                                     <constraint firstAttribute="height" constant="150" id="gpu-ap-80C"/>
                                 </constraints>
                             </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5m-VG-bvN">
+                                <rect key="frame" x="56" y="410" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rnu-35-gba"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1148,10 +1157,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hlS-18-3Zn"/>
+                    <connections>
+                        <outlet property="zoomIndexTextField" destination="H5m-VG-bvN" id="fND-Yb-NQv"/>
+                        <segue destination="tc0-3r-QCi" kind="show" identifier="fromSearchToMapPage" id="C3H-Af-Veo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVh-Mx-CeJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6983" y="-11"/>
+            <point key="canvasLocation" x="7176" y="-90"/>
         </scene>
         <!--Patient Select Date View Controller-->
         <scene sceneID="U0X-vn-C0R">
@@ -2501,11 +2514,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="C3H-Af-Veo"/>
         <segue reference="gqt-V4-J8Y"/>
-        <segue reference="k4E-NV-tRH"/>
+        <segue reference="7TJ-ij-TGH"/>
         <segue reference="tbD-sl-kvF"/>
         <segue reference="Vfr-Bc-B3Q"/>
-        <segue reference="RWg-73-SOG"/>
+        <segue reference="gPg-6Z-Clk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
