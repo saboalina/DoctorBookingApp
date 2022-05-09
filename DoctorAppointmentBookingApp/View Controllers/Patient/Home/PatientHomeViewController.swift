@@ -13,7 +13,7 @@ class PatientHomeViewController: UIViewController {
     
     var doctorViewModel = DoctorViewModel.shared
     var medicalCenterViewModel = MedicalCenterViewModel.shared
-    var appointmentViewModel = AppointmentViewModel()
+    var appointmentViewModel = AppointmentViewModel.shared
     var filterViewModel = FiltersViewModel.shared
     
     var patient: Patient!

@@ -15,7 +15,7 @@ class PatientBookAnAppointmentViewController: UIViewController {
     @IBOutlet weak var slotsCollectionView: UICollectionView!
     
     var filterViewModel = FiltersViewModel.shared
-    var appointmentViewModel = AppointmentViewModel()
+    var appointmentViewModel = AppointmentViewModel.shared
     
     var patient: Patient!
     var doctor: Doctor!

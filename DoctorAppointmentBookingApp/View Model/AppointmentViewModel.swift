@@ -1,9 +1,3 @@
-//
-//  AppointmentViewModel.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 11.04.2022.
-//
 
 import Foundation
 import Firebase
@@ -12,8 +6,10 @@ import FirebaseFirestore
 
 class AppointmentViewModel {
     
-//    var allAppointments = [Appointment]()
+    static let shared = AppointmentViewModel()
     let db = Firestore.firestore()
+    
+    private init() {}
  
     func addAppointment(appointment: Appointment, completionBlock: @escaping (_ success: Bool) -> Void) {
         
@@ -30,34 +26,6 @@ class AppointmentViewModel {
                 completionBlock(true)
             }
         }
-//        var patientId: String
-//        var doctorId: String
-//        var date: String
-//        var time: String
-//        var type: String
-//        var id: String
-//
-//
-//            Auth.auth().createUser(withEmail: patient.email, password: patient.password) {(authResult, error) in
-//                    if let user = authResult?.user {
-////                        print("-> \(user)")
-//                        //let db = Firestore.firestore()
-//                        self.db.collection("patients").addDocument(data: [
-//                            "email":patient.email,
-//                            "name":patient.name,
-//                            "phoneNumber":patient.phoneNumber,
-//                            "password":patient.password,
-//                            "history":patient.history
-//                        ]) { (error) in
-//                            if error != nil {
-//                                print("error saving user data")
-//                            }
-//                        }
-//                        completionBlock(true)
-//                    } else {
-//                        completionBlock(false)
-//                    }
-//                }
         }
 
     func getAllAppointmentsForADoctor(collectionID: String, doctorEmail: String, handler: @escaping ([Appointment]) -> Void) {

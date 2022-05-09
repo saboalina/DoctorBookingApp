@@ -1,9 +1,3 @@
-//
-//  DoctorViewModel.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 03.04.2022.
-//
 
 import Foundation
 import Firebase
@@ -83,33 +77,7 @@ class DoctorViewModel {
             }
         }
     }
-    
-//    func getDoctorsAvailableIn(day: String, handler: @escaping ([Doctor]) -> Void){
-//        let dayOfTheWeek = "\(day)"
-//        db.collection("doctors").whereField(dayOfTheWeek, isNotEqualTo: "")
-//                .addSnapshotListener { querySnapshot, err in
-//                    if let error = err {
-//                        print(error)
-//                        handler([])
-//                    } else {
-//                        handler(Doctor.build(from: querySnapshot?.documents ?? []))
-//                    }
-//        }
-//    }
-    
-//    func getDoctorsBy(service: String, handler: @escaping ([Doctor]) -> Void){
-//        db.collection("doctors").whereField("service", isEqualTo: service)
-//                .addSnapshotListener { querySnapshot, err in
-//                    if let error = err {
-//                        print(error)
-//                        handler([])
-//                    } else {
-//                        handler(Doctor.build(from: querySnapshot?.documents ?? []))
-//                    }
-//        }
-//    }
-    
-    
+        
     func updateDoctor(doctorId: String, name: String, phoneNumber: String, service: String, worksAt: String, experience: String, consultancyFee: String, handler: @escaping (Bool) -> Void ) {
         db.collection("doctors").document(doctorId).setData([
             "name":         name,
