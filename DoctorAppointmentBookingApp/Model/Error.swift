@@ -1,9 +1,3 @@
-//
-//  Error.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 14.04.2022.
-//
 
 import Foundation
 

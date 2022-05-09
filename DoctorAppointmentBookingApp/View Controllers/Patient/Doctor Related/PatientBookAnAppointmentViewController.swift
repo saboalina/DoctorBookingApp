@@ -1,9 +1,3 @@
-//
-//  PatientBookAnAppointmentViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 30.04.2022.
-//
 
 import UIKit
 
@@ -76,10 +70,8 @@ class PatientBookAnAppointmentViewController: UIViewController {
         let appointment = Appointment(patientId: patient.email, doctorId: doctor.email, date: appointmentDate, time: appointmentTime, type: doctor.service, id: "")
         appointmentViewModel.addAppointment(appointment: appointment) { success in
             if (success) {
-                //self.appointments.remove(at: rowIndex)
                 print("tuto bene")
             } else {
-                //self.errorLabel.text = "There was an error."
                 print("There was an error.")
             }
         }

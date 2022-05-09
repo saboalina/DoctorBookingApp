@@ -25,10 +25,8 @@ class PatientMedicalCenterDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         services = medicalCenter.services.components(separatedBy: ",")
-        print("]]]]]]] \(services)")
         setLabels()
         
-        print("in PatientMedicalCenterDetailsViewController \(patient)")
     }
     
     func setLabels() {

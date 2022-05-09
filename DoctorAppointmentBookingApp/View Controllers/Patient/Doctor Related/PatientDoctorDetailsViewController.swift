@@ -21,7 +21,6 @@ class PatientDoctorDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         setLabels()
-        print("in PatientDoctorDetailsViewController \(patient)")
     }
     
     func setLabels() {
@@ -38,7 +37,6 @@ class PatientDoctorDetailsViewController: UIViewController {
     
     
     @IBAction func bookAnAppointmentButtonTapped(_ sender: Any) {
-        print("in booking \(patient)")
         performSegue(withIdentifier: "fromDoctorDetailstoBookApp", sender: doctor)
     }
     

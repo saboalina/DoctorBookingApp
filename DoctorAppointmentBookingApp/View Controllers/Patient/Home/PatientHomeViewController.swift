@@ -61,7 +61,6 @@ class PatientHomeViewController: UIViewController {
     var appointments = [Appointment]() {
         didSet {
             DispatchQueue.main.async {
-                //self.appointmentsTableView.reloadData()
                 self.checkDates()
             }
         }
@@ -146,16 +145,15 @@ class PatientHomeViewController: UIViewController {
         content.body = "You have an appointment for tomorrow at \(appointment.time). Check your appointments list!"
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = "yourIdentifier"
-        content.userInfo = ["example": "information"] // You can retrieve this when displaying notification
+        content.userInfo = ["example": "information"]
         
         let date = convertDate(date: Date() + 5)
                 
         let trigger = UNCalendarNotificationTrigger(dateMatching: date as DateComponents, repeats: false)
         
-        // Create request
-        let uniqueID = UUID().uuidString // Keep a record of this if necessary
+        let uniqueID = UUID().uuidString
         let request = UNNotificationRequest(identifier: uniqueID, content: content, trigger: trigger)
-        center.add(request) // Add the notification request
+        center.add(request) 
     }
     
     func convertDate(date: Date) -> NSDateComponents {

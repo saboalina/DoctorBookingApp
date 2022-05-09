@@ -1,9 +1,4 @@
-//
-//  DoctorProfileViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 03.04.2022.
-//
+
 
 import UIKit
 import Firebase
@@ -50,7 +45,6 @@ class DoctorProfileViewController: UIViewController {
             switch res{
             case .success(let doctor):
                 self.doctor = doctor
-                //self.navigateToDoctorProfile(doctor: doctor)
                 self.setLabels()
             case .failure(let err):
                 print(err)
@@ -63,15 +57,7 @@ class DoctorProfileViewController: UIViewController {
     
 
     @IBAction func logoutButtonTapped(_ sender: Any) {
-        
-//        do {
-//            try Auth.auth().signOut()
-//        } catch let logoutError {
-//            print(logoutError)
-//        }
-        
-        //storyboard?.instantiateInitialViewController()
-        
+                
         let firstPage = storyboard?.instantiateInitialViewController()
      
         view.window?.rootViewController = firstPage
@@ -84,9 +70,6 @@ class DoctorProfileViewController: UIViewController {
         
         editDoctorProfilePage?.doctor = doctor
      
-//        view.window?.rootViewController = editDoctorProfilePage
-//        view.window?.makeKeyAndVisible()
-        
         navigationController?.pushViewController(editDoctorProfilePage!, animated: true)
     }
 }

@@ -1,9 +1,3 @@
-//
-//  Appointment.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 11.04.2022.
-//
 
 import Foundation
 import FirebaseFirestore

@@ -1,9 +1,4 @@
-//
-//  PatientProfileViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 17.04.2022.
-//
+
 
 import UIKit
 import Firebase
@@ -30,7 +25,6 @@ class PatientProfileViewController: UIViewController {
             switch res{
             case .success(let patient):
                 self.patient = patient
-                //self.navigateToDoctorProfile(doctor: doctor)
                 self.setLabels()
             case .failure(let err):
                 print(err)
@@ -63,13 +57,4 @@ class PatientProfileViewController: UIViewController {
      
         navigationController?.pushViewController(editProfilePage!, animated: true)
     }
-    
-//    func navigateToPatientPage(pacient: Patient) {
-//        let patientPage = storyboard?.instantiateViewController(withIdentifier: "PatientPage") as? PatientPageViewController
-//        
-//        patientPage?.patient = patient
-//     
-//        view.window?.rootViewController = patientPage
-//        view.window?.makeKeyAndVisible()
-//    }
 }

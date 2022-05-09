@@ -10,7 +10,6 @@ class PatientMedicalCentersListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("in PatientMedicalCentersListViewController \(patient)")
     }
     
 

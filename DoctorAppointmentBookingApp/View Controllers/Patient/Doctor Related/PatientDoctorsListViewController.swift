@@ -10,8 +10,6 @@ class PatientDoctorsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("in PatientDoctorsListViewController \(patient)")
     }
 
 }

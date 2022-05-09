@@ -1,9 +1,4 @@
-//
-//  PatientAppointmentsViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 17.04.2022.
-//
+
 
 import UIKit
 import FirebaseFirestore
@@ -46,8 +41,6 @@ class PatientAppointmentsViewController: UIViewController {
         appointmentsTableView.delegate = self
         
         loadData()
-        print("=====> \(patient)")
-        
 
     }
 
@@ -69,9 +62,6 @@ extension PatientAppointmentsViewController: UITableViewDataSource, UITableViewD
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AppointmentPatientViewCell") as! AppointmentPatientViewCell
         
-        //let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-        //cell.accessoryType = .disclosureIndicator
-        
         cell.dateLabel.text = appointments[indexPath.row].date
         cell.timeLabel.text = appointments[indexPath.row].time
         
@@ -79,13 +69,10 @@ extension PatientAppointmentsViewController: UITableViewDataSource, UITableViewD
             switch res{
             case .success(let doctor):
                 cell.doctorLabel.text = doctor.name
-//                        self.performSegue(withIdentifier: "loadDoctorHomePage", sender: self)
-                //self.navigateToDoctorPage(doctor: doctor)
             case .failure(let err):
                 print(err)
             }
         })
-        //cell.doctorLabel.text = appointments[indexPath.row].doctorId
         cell.placeLabel.text = "Cluj-Napoca"
         cell.typeLabel.text = appointments[indexPath.row].type
         cell.layer.borderWidth = 20
@@ -108,7 +95,7 @@ extension PatientAppointmentsViewController: UITableViewDataSource, UITableViewD
     {
 
         let maskLayer = CALayer()
-        maskLayer.cornerRadius = 10    //if you want round edges
+        maskLayer.cornerRadius = 10
         maskLayer.backgroundColor = UIColor.black.cgColor
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 20, dy: 10)
         cell.layer.mask = maskLayer
@@ -124,10 +111,8 @@ extension PatientAppointmentsViewController: UITableViewDataSource, UITableViewD
         appointmentViewModel.deleteAppointment(appointment: appointments[rowIndex]) { [weak self] (success) in
             guard let `self` = self else { return }
             if (success) {
-                //self.appointments.remove(at: rowIndex)
                 self.appointmentsTableView.reloadData()
             } else {
-                //self.errorLabel.text = "There was an error."
                 print("There was an error.")
             }
         }

@@ -1,9 +1,3 @@
-//
-//  PatientEditProfileViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 27.04.2022.
-//
 
 import UIKit
 
@@ -41,28 +35,9 @@ class PatientEditProfileViewController: UIViewController {
             }
             
         }
-        
-//        self.patientViewModel.getPatientBy(email: patient!.email, handler: { res in
-//            switch res{
-//            case .success(let patient):
-//                self.patient = patient
-//                self.navigateToPatientProfile(pacient: patient)
-//            case .failure(let err):
-//                print(err)
-//            }
-//
-//        })
     }
     
-    func navigateToPatientProfile() {
-//        let patientProfilePage = storyboard?.instantiateViewController(withIdentifier: "patientProfilePage") as? PatientProfileViewController
-//
-//        patientProfilePage?.patient = patient
-//
-//        view.window?.rootViewController = patientProfilePage
-//        view.window?.makeKeyAndVisible()
-//        self.navigationController?.popToRootViewController(animated: true)
-        
+    func navigateToPatientProfile() {        
         navigationController?.popViewController(animated: true)
     }
 

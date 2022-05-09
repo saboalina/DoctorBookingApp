@@ -1,9 +1,4 @@
-//
-//  DoctorEditProfileViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 28.04.2022.
-//
+
 
 import UIKit
 
@@ -47,32 +42,13 @@ class DoctorEditProfileViewController: UIViewController {
             }
             
         }
-        
-//        self.doctorViewModel.getDoctorBy(email: doctor!.email, handler: { res in
-//            switch res{
-//            case .success(let doctor):
-//                self.doctor = doctor
-//                self.navigateToDoctorProfile(doctor: doctor)
-//            case .failure(let err):
-//                print(err)
-//            }
-//
-//        })
     }
     
     func navigateToDoctorProfile() {
-//        let doctorProfilePage = storyboard?.instantiateViewController(withIdentifier: "doctorProfilePage") as? DoctorProfileViewController
-//
-//        doctorProfilePage?.doctor = doctor
-//
-//        view.window?.rootViewController = doctorProfilePage
-//        view.window?.makeKeyAndVisible()
-        //self.navigationController?.popToRootViewController(animated: true)
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
-        //let doctor = self.doctor!
         self.navigateToDoctorProfile()
     }
 }

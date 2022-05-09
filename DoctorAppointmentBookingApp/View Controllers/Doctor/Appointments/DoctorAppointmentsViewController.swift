@@ -1,9 +1,4 @@
-//
-//  DoctorAppointmentsViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 10.04.2022.
-//
+
 
 import UIKit
 import FirebaseFirestore
@@ -44,8 +39,6 @@ class DoctorAppointmentsViewController: UIViewController {
         appointmentsTableView.delegate = self
         
         loadData()
-        print("=====> \(doctor)")
-        
 
     }
     
@@ -88,7 +81,7 @@ extension DoctorAppointmentsViewController: UITableViewDataSource, UITableViewDe
     {
 
         let maskLayer = CALayer()
-        maskLayer.cornerRadius = 10    //if you want round edges
+        maskLayer.cornerRadius = 10    
         maskLayer.backgroundColor = UIColor.black.cgColor
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 20, dy: 10)
         cell.layer.mask = maskLayer

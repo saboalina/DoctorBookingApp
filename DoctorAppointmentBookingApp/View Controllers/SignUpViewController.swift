@@ -1,9 +1,3 @@
-//
-//  SignUpViewController.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 03.04.2022.
-//
 
 import UIKit
 
@@ -25,19 +19,6 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let string = "veronica@yahoo.com"
-
-        if string.range(of:"@yahoo.com") != nil {
-            print("exists")
-        } else {
-            print("not")
-        }
-
-        if string.contains("@yahoo.com") != nil {
-            print("exists456")
-        } else {
-            print("not456")
-        }
     }
     
     func validateFields() -> String? {
@@ -57,9 +38,7 @@ class SignUpViewController: UIViewController {
     func verifyUser(email: String) -> String {
         var user = ""
 
-        // alternative: not case sensitive
         if email.lowercased().contains("@yahoo.com") {
-            print("exists")
             user = "is a patient"
         } else {
             user = "is a doctor"

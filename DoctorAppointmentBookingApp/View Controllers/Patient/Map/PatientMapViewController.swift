@@ -17,7 +17,6 @@ class PatientMapViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.medicalCenters = self.allMedicalCenters
-                print("3==> \(self.medicalCenters)")
             }
         }
     }
@@ -42,9 +41,6 @@ class PatientMapViewController: UIViewController {
         super.viewDidLoad()
         configureLocationServices()
         loadData()
-        
-        print("in PatientMapViewController \(patient.name)")
-
     }
     
     func loadData() {
@@ -62,7 +58,6 @@ class PatientMapViewController: UIViewController {
             let longitude = Double(medicalCenter.longitude)!
             let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             let medicalCenterForMap = MedicalCenterForMap(title:medicalCenter.name, coordinate: coordinates)
-            //medicalCenterForMap.locationName = medicalCenter.name
             medicalCentersMapList.append(medicalCenterForMap)
             
         }
@@ -100,14 +95,12 @@ class PatientMapViewController: UIViewController {
     }
     
     func verifyDistance() {
-        //print(currentLocation)
         let currentCoordinate = CLLocation(latitude: currentLocation!.latitude, longitude: currentLocation!.longitude)
         for medicalCenterOnMap in medicalCentersMapList {
             
             let medicalCoordinate = CLLocation(latitude: medicalCenterOnMap.coordinate.latitude, longitude: medicalCenterOnMap.coordinate.longitude)
             let distanceInMeters = currentCoordinate.distance(from: medicalCoordinate)
             if distanceInMeters < 200 {
-                print("in verifyInitialDistance e aproape \(distanceInMeters)")
                 getNotification(medicalCenterForMap: medicalCenterOnMap)
             }
         }
@@ -122,16 +115,15 @@ class PatientMapViewController: UIViewController {
         content.body = "You are close to the parking lot \(medicalCenterForMap.title!) and there are 100 free spaces"
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = "yourIdentifier"
-        content.userInfo = ["example": "information"] // You can retrieve this when displaying notification
+        content.userInfo = ["example": "information"]
         
         let date = convertDate(date: Date() + 5)
                 
         let trigger = UNCalendarNotificationTrigger(dateMatching: date as DateComponents, repeats: false)
         
-        // Create request
-        let uniqueID = UUID().uuidString // Keep a record of this if necessary
+        let uniqueID = UUID().uuidString
         let request = UNNotificationRequest(identifier: uniqueID, content: content, trigger: trigger)
-        center.add(request) // Add the notification request
+        center.add(request) 
     }
     
     func convertDate(date: Date) -> NSDateComponents {
