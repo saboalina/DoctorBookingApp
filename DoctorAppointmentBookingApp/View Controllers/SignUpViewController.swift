@@ -18,7 +18,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
-    var doctorViewModel = DoctorViewModel()
+    var doctorViewModel = DoctorViewModel.shared
     var patientViewModel = PatientViewModel()
     
     

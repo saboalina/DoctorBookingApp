@@ -21,22 +21,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "13B44677-1C04-468E-98BD-3040FF15CC78"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoctorAppointmentBookingApp/View Model/AppointmentViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "deleteAppointment(appointment:completionBlock:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "72949F19-1CB2-4110-B4C0-552DF184A0DD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -48,22 +32,6 @@
             endingLineNumber = "71"
             landmarkName = "navigateToDoctorProfile()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0BC5E80F-FFBB-422A-BB89-7946FD91B26E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoctorAppointmentBookingApp/View Model/DoctorViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "DoctorViewModel"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -124,8 +92,8 @@
             filePath = "DoctorAppointmentBookingApp/View Controllers/Patient/Map/PatientMapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -140,8 +108,8 @@
             filePath = "DoctorAppointmentBookingApp/View Controllers/Patient/Map/PatientMapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "mapView(_:didSelect:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -149,17 +117,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0A21FFAB-B50A-4DAA-ABEF-7D5FC877FB33"
+            uuid = "7F7FC8D8-5E2D-4291-8253-9B203781D064"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DoctorAppointmentBookingApp/View Controllers/Patient/Home/PatientSearchViewController.swift"
+            filePath = "DoctorAppointmentBookingApp/View Controllers/Patient/Home/PatientHomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "loadData()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81E35116-657F-4372-9B24-A5568D318F18"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoctorAppointmentBookingApp/View Controllers/Patient/Home/PatientHomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "allAppointments"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6FC923E-3C55-4AB8-BA28-C114D6C2E604"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoctorAppointmentBookingApp/View Controllers/Patient/Home/PatientHomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "appointments"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

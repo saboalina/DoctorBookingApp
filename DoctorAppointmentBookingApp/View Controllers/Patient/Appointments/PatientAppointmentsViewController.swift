@@ -14,7 +14,7 @@ class PatientAppointmentsViewController: UIViewController {
     @IBOutlet weak var appointmentsTableView: UITableView!
     var patientViewModel = PatientViewModel()
     var appointmentViewModel = AppointmentViewModel()
-    var doctorViewModel = DoctorViewModel()
+    var doctorViewModel = DoctorViewModel.shared
     
     var patient: Patient!
     

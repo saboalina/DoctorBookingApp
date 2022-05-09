@@ -10,7 +10,7 @@ class FiltersViewModel {
     
     static let shared = FiltersViewModel()
     
-    var doctorViewModel = DoctorViewModel()
+    var doctorViewModel = DoctorViewModel.shared
     var medicalCenterViewModel = MedicalCenterViewModel()
     
     private var allDoctors = [Doctor]() {

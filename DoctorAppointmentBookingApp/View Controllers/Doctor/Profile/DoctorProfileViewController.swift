@@ -21,7 +21,7 @@ class DoctorProfileViewController: UIViewController {
     @IBOutlet weak var consultanceFeeLabel: UILabel!
     @IBOutlet weak var logoutButton: UIButton!
 
-    var doctorViewModel = DoctorViewModel()
+    var doctorViewModel = DoctorViewModel.shared
     var doctor: Doctor!
     
     override func viewDidLoad() {

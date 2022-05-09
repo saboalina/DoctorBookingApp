@@ -16,7 +16,7 @@ class DoctorEditProfileViewController: UIViewController {
     @IBOutlet weak var experienceTextField: UITextField!
     @IBOutlet weak var consultancyFeeTextField: UITextField!
     
-    var doctorViewModel = DoctorViewModel()
+    var doctorViewModel = DoctorViewModel.shared
     var doctor: Doctor?
     
     override func viewDidLoad() {

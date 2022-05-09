@@ -11,7 +11,7 @@ class PatientHomeViewController: UIViewController {
     @IBOutlet weak var medicalCenterCollectionView: UICollectionView!
     
     
-    var doctorViewModel = DoctorViewModel()
+    var doctorViewModel = DoctorViewModel.shared
     var medicalCenterViewModel = MedicalCenterViewModel()
     var appointmentViewModel = AppointmentViewModel()
     var filterViewModel = FiltersViewModel.shared
