@@ -11,7 +11,7 @@ class FiltersViewModel {
     static let shared = FiltersViewModel()
     
     var doctorViewModel = DoctorViewModel.shared
-    var medicalCenterViewModel = MedicalCenterViewModel()
+    var medicalCenterViewModel = MedicalCenterViewModel.shared
     
     private var allDoctors = [Doctor]() {
         didSet {

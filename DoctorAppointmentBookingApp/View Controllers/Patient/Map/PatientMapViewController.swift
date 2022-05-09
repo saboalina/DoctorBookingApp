@@ -8,7 +8,7 @@ class PatientMapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var medicalCenterViewModel = MedicalCenterViewModel()
+    var medicalCenterViewModel = MedicalCenterViewModel.shared
     
     var patient: Patient!
     var medicalCenter: MedicalCenter!

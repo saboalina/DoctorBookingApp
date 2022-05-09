@@ -12,8 +12,10 @@ import FirebaseFirestore
 
 class MedicalCenterViewModel {
     
+    static let shared = MedicalCenterViewModel()
     let db = Firestore.firestore()
 
+    private init() {}
     
     func getAllMedicalCenters(collectionID: String, handler: @escaping ([MedicalCenter]) -> Void) {
         db.collection("medicalCenters")
