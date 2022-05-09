@@ -10,7 +10,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     var doctorViewModel = DoctorViewModel.shared
-    var patientViewModel = PatientViewModel()
+    var patientViewModel = PatientViewModel.shared
     var doctor : Doctor!
     var patient: Patient!
     
@@ -77,11 +77,11 @@ class LoginViewController: UIViewController {
 //        let email = self.emailTextField.text!
 //        let password = self.passwordTextField.text!
         
-//        let email = "alina@yahoo.com"
-//        let password = "alina1999"
+        let email = "alina@yahoo.com"
+        let password = "alina1999"
         
-        let email = "maria@gmail.com"
-        let password = "maria1999"
+//        let email = "maria@gmail.com"
+//        let password = "maria1999"
 
         let userType = verifyUser(email: email)
         

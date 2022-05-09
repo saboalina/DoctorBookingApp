@@ -19,7 +19,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     var doctorViewModel = DoctorViewModel.shared
-    var patientViewModel = PatientViewModel()
+    var patientViewModel = PatientViewModel.shared
     
     
     override func viewDidLoad() {

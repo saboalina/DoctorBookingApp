@@ -12,7 +12,10 @@ import FirebaseFirestore
 
 class PatientViewModel {
     
+    static let shared = PatientViewModel()
     let db = Firestore.firestore()
+    
+    private init() {}
     
     func createUser(patient: Patient, completionBlock: @escaping (_ success: Bool) -> Void) {
             Auth.auth().createUser(withEmail: patient.email, password: patient.password) {(authResult, error) in

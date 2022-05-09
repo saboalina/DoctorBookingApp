@@ -15,7 +15,7 @@ class PatientEditProfileViewController: UIViewController {
     @IBOutlet weak var historyTextView: UITextView!
     
     
-    var patientViewModel = PatientViewModel()
+    var patientViewModel = PatientViewModel.shared
     var patient: Patient?
     
     override func viewDidLoad() {

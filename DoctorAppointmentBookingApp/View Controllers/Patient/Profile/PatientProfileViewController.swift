@@ -15,7 +15,7 @@ class PatientProfileViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var historyTextView: UITextView!
     
-    var patientViewModel = PatientViewModel()
+    var patientViewModel = PatientViewModel.shared
     var patient: Patient!
     
     override func viewDidLoad() {
