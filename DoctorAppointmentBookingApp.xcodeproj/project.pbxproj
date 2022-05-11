@@ -48,6 +48,7 @@
 		C296DEA328159E7500019B14 /* MedicalCenterHorizontalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C296DEA128159E7500019B14 /* MedicalCenterHorizontalViewCell.xib */; };
 		C296DEA72815B04800019B14 /* CategoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DEA52815B04800019B14 /* CategoriesViewCell.swift */; };
 		C296DEA82815B04800019B14 /* CategoriesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C296DEA62815B04800019B14 /* CategoriesViewCell.xib */; };
+		C29B9223282BF4780094BF42 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B9222282BF4780094BF42 /* ResetPasswordViewController.swift */; };
 		C2A345C6281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */; };
 		C2A345C8281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */; };
 		C2A345CA281D120B00F5B3B7 /* CategoryOfMCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */; };
@@ -112,6 +113,7 @@
 		C296DEA52815B04800019B14 /* CategoriesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewCell.swift; sourceTree = "<group>"; };
 		C296DEA62815B04800019B14 /* CategoriesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewCell.xib; sourceTree = "<group>"; };
 		C29B9221282130F50094BF42 /* DoctorAppointmentBookingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DoctorAppointmentBookingApp.entitlements; sourceTree = "<group>"; };
+		C29B9222282BF4780094BF42 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDoctorDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMedicalCenterDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOfMCViewCell.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 			children = (
 				C2C58C2427F9F10900B637C6 /* SignUpViewController.swift */,
 				C2C58C2627F9F11500B637C6 /* LoginViewController.swift */,
+				C29B9222282BF4780094BF42 /* ResetPasswordViewController.swift */,
 				C2BD6B5B2802B78E00DBC642 /* Doctor */,
 				C296DE7B280C0B9100019B14 /* Patient */,
 			);
@@ -565,6 +568,7 @@
 				C296DE83280C328400019B14 /* PatientAppointmentsViewController.swift in Sources */,
 				C2BD6B5F2802D07900DBC642 /* DoctorProfileNavigationController.swift in Sources */,
 				C2770C0B2819B8E6006F4EBF /* PatientEditProfileViewController.swift in Sources */,
+				C29B9223282BF4780094BF42 /* ResetPasswordViewController.swift in Sources */,
 				C26CCF7A281D433100986E8E /* MedicalCenterVerticalViewCell.swift in Sources */,
 				C2238EEE281C10ED00571C08 /* PatientMapViewController.swift in Sources */,
 				C26CCF77281D40FF00986E8E /* PatientMedicalCentersListViewController.swift in Sources */,

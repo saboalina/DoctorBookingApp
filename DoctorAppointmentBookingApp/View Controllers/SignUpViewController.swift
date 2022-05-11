@@ -38,10 +38,10 @@ class SignUpViewController: UIViewController {
     func verifyUser(email: String) -> String {
         var user = ""
 
-        if email.lowercased().contains("@yahoo.com") {
-            user = "is a patient"
-        } else {
+        if email.lowercased().contains("@med.com") {
             user = "is a doctor"
+        } else {
+            user = "is a patient"
         }
         
         return user
@@ -63,7 +63,7 @@ class SignUpViewController: UIViewController {
             let password = self.passwordTextField.text ?? ""
             let confirmPassword = self.confirmPasswordTextField.text ?? ""
             
-            var userType = verifyUser(email: email)
+            let userType = verifyUser(email: email)
             
             if userType == "is a patient" {
                 

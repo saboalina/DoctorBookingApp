@@ -282,6 +282,15 @@
                                     <constraint firstItem="khs-Xu-DQw" firstAttribute="height" secondItem="eCD-Zo-jtN" secondAttribute="height" multiplier="0.85" id="yv8-7a-n8g"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tr5-X5-0qy">
+                                <rect key="frame" x="135" y="567" width="202" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="reset password"/>
+                                <connections>
+                                    <action selector="resetPasswordButtonTapped:" destination="n4y-5t-tC3" eventType="touchUpInside" id="Wfe-QW-Jbs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Czw-1N-IgQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -297,11 +306,48 @@
                         <outlet property="errorLabel" destination="Bma-vo-bIV" id="mxR-fx-YED"/>
                         <outlet property="loginButton" destination="J57-Su-w4R" id="kgq-bl-716"/>
                         <outlet property="passwordTextField" destination="khs-Xu-DQw" id="4Y4-oF-sKQ"/>
+                        <segue destination="ovB-T9-n50" kind="show" identifier="toResetPasswordPage" id="Cas-yT-MUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvH-pJ-CXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="481"/>
+            <point key="canvasLocation" x="1979.4392523364486" y="480.77753779697628"/>
+        </scene>
+        <!--Reset Password View Controller-->
+        <scene sceneID="qm8-kP-GdB">
+            <objects>
+                <viewController id="ovB-T9-n50" customClass="ResetPasswordViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ybd-lj-H6K">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1H7-b0-jhP">
+                                <rect key="frame" x="125" y="212" width="240" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W1-UE-eyM">
+                                <rect key="frame" x="138" y="356" width="151" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="resetPasswordButtonTapped:" destination="ovB-T9-n50" eventType="touchUpInside" id="KDs-lU-ikC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Nl-o8-RrR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2j4-Et-g9A"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="1H7-b0-jhP" id="5c1-At-B1z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Duv-do-xXb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982.2429906542054" y="1262.8509719222463"/>
         </scene>
         <!--Doctor Profile View Controller-->
         <scene sceneID="QVb-S3-UEl">
@@ -2633,7 +2679,7 @@
         <segue reference="C3H-Af-Veo"/>
         <segue reference="cBr-mF-ftF"/>
         <segue reference="Wif-nk-ILZ"/>
-        <segue reference="Vfr-Bc-B3Q"/>
+        <segue reference="Z8h-gL-v2s"/>
         <segue reference="I50-8e-ewY"/>
     </inferredMetricsTieBreakers>
     <resources>

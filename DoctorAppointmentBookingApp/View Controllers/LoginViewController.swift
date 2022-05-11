@@ -21,11 +21,10 @@ class LoginViewController: UIViewController {
     func verifyUser(email: String) -> String {
         var user = ""
 
-        if email.lowercased().contains("@yahoo.com") {
-            print("exists")
-            user = "is a patient"
-        } else {
+        if email.lowercased().contains("@med.com") {
             user = "is a doctor"
+        } else {
+            user = "is a patient"
         }
         
         return user
@@ -74,11 +73,11 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginButtonTapped(_ sender: Any) {
         
-//        let email = self.emailTextField.text!
-//        let password = self.passwordTextField.text!
+        let email = self.emailTextField.text!
+        let password = self.passwordTextField.text!
         
-        let email = "alina@yahoo.com"
-        let password = "alina1999"
+//        let email = "sabo.alina.99@gmail.com"
+//        let password = "ananas123456"
         
 //        let email = "maria@gmail.com"
 //        let password = "maria1999"
@@ -110,5 +109,14 @@ class LoginViewController: UIViewController {
         view.window?.rootViewController = patientPage
         view.window?.makeKeyAndVisible()
     }
-
+    
+    
+    @IBAction func resetPasswordButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "toResetPasswordPage", sender: self)
+//        let resetPasswordPage = storyboard?.instantiateViewController(withIdentifier: "toResetPasswordPage") as? ResetPasswordViewController
+//
+//        view.window?.rootViewController = resetPasswordPage
+//        view.window?.makeKeyAndVisible()
+    }
+    
 }
