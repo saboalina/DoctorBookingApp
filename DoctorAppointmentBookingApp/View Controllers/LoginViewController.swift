@@ -129,8 +129,8 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginButtonTapped(_ sender: Any) {
 //        
-//        let email = self.emailTextField.text!
-//        let password = self.passwordTextField.text!
+        let email = self.emailTextField.text!
+        let password = self.passwordTextField.text!
         
 //        let email = "sabo.alina.99@gmail.com"
 //        let password = "ananas123456"
@@ -138,8 +138,8 @@ class LoginViewController: UIViewController {
 //        let email = "maria@gmail.com"
 //        let password = "maria1999"
         
-        let email = "alina@yahoo.com"
-        let password = "alina1999"
+//        let email = "alina@yahoo.com"
+//        let password = "alina1999"
         
         let errorMessage = validateFields()
         if errorMessage != nil {
@@ -178,16 +178,18 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func resetPasswordButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "toResetPasswordPage", sender: self)
+        
+        let resetPasswordPage = storyboard?.instantiateViewController(withIdentifier: "ResetPasswordPage") as? ResetPasswordViewController
+
+        navigationController?.pushViewController(resetPasswordPage!, animated: true)
+        
     }
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
 
         
         let signUpPage = storyboard?.instantiateViewController(withIdentifier: "SignUpPage") as? SignUpViewController
-     
-//        view.window?.rootViewController = signUpPage
-//        view.window?.makeKeyAndVisible()
+
         navigationController?.pushViewController(signUpPage!, animated: true)
     }
 }

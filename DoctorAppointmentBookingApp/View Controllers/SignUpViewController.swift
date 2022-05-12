@@ -16,6 +16,9 @@ class SignUpViewController: UIViewController {
     var doctorViewModel = DoctorViewModel.shared
     var patientViewModel = PatientViewModel.shared
     
+    var doctor : Doctor!
+    var patient: Patient!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,8 +99,6 @@ class SignUpViewController: UIViewController {
 
     @IBAction func signUpButtonTapped(_ sender: Any) {
         
-        let error = validateFields()
-        
         let errorMessage = validateFields()
         if errorMessage != nil {
             let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
@@ -119,12 +120,26 @@ class SignUpViewController: UIViewController {
                 patientViewModel.createUser(patient: patient) {[weak self] (success) in
                     guard let `self` = self else { return }
                     if (success) {
+
                         let alert = UIAlertController(title: "Success", message: "Your account is created!", preferredStyle: .alert)
-                        let okAction = UIAlertAction(title: "Ok", style: .default, handler: {action in self.performSegue(withIdentifier: "loadLoginPage", sender: self)})
-                        alert.addAction(okAction)
-                        self.present(alert, animated: true)
+
+                        if userType == "is a patient" {
+                            let okAction = UIAlertAction(title: "Ok", style: .default, handler: {action in
+                                self.signUpAsPatient(email: email, password: password)
+                            })
+                            alert.addAction(okAction)
+                            self.present(alert, animated: true)
+                            
+                        } else {
+                            let okAction = UIAlertAction(title: "Ok", style: .default, handler: {action in
+                                self.signUpAsDoctor(email: email, password: password)
+                                
+                            })
+                            alert.addAction(okAction)
+                            self.present(alert, animated: true)
+                            
+                        }
                         
-                        //self.performSegue(withIdentifier: "loadLoginPage", sender: self)
                     } else {
                         let alert = UIAlertController(title: "Error", message: "There was an error.", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -145,11 +160,26 @@ class SignUpViewController: UIViewController {
                         self.present(alert, animated: true, completion: nil)
                         
                     } else {
-                                                
+                        
                         let alert = UIAlertController(title: "Success", message: "Your account is created!", preferredStyle: .alert)
-                        let okAction = UIAlertAction(title: "Ok", style: .default, handler: {action in self.performSegue(withIdentifier: "loadLoginPage", sender: self)})
-                        alert.addAction(okAction)
-                        self.present(alert, animated: true)
+
+                        if userType == "is a patient" {
+                            let okAction = UIAlertAction(title: "Ok", style: .default, handler: {action in
+                                self.signUpAsPatient(email: email, password: password)
+                            })
+                            alert.addAction(okAction)
+                            self.present(alert, animated: true)
+                            
+                        } else {
+                            let okAction = UIAlertAction(title: "Ok", style: .default, handler: {action in
+                                self.signUpAsDoctor(email: email, password: password)
+                                
+                            })
+                            alert.addAction(okAction)
+                            self.present(alert, animated: true)
+                            
+                        }
+                                                
 
                     }
                 }
@@ -159,13 +189,78 @@ class SignUpViewController: UIViewController {
         }
 
     }
+    
+    func signUpAsDoctor(email: String, password: String) {
         
+        doctorViewModel.login(email: email, pass: password) { [weak self] (success) in
+            guard let `self` = self else { return }
+            if (success) {
+                self.doctorViewModel.getDoctorBy(email: email, handler: { res in
+                    switch res{
+                    case .success(let doctor):
+                        self.doctor = doctor
+                        self.navigateToDoctorPage(doctor: doctor)
+                    case .failure(let err):
+                        let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                })
+            } else {
+                let alert = UIAlertController(title: "Error", message: "Email/Password combination is invalid!", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        
+    }
+    
+    func signUpAsPatient(email: String, password: String) {
+        self.patientViewModel.login(email: email, pass: password) { [weak self] (success) in
+            guard let `self` = self else { return }
+            if (success) {
+                self.patientViewModel.getPatientBy(email: email, handler: { res in
+                    switch res{
+                    case .success(let patient):
+                        self.patient = patient
+                        self.navigateToPatientPage(pacient: patient)
+                    case .failure(let err):
+
+                        let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                
+                })
+            } else {
+                let alert = UIAlertController(title: "Error", message: "Email/Password combination is invalid!", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func navigateToDoctorPage(doctor: Doctor) {
+        let doctorPage = storyboard?.instantiateViewController(withIdentifier: "DoctorPage") as? DoctorPageViewController
+        
+        doctorPage?.doctor = doctor
+     
+        view.window?.rootViewController = doctorPage
+        view.window?.makeKeyAndVisible()
+    }
+    
+    func navigateToPatientPage(pacient: Patient) {
+        let patientPage = storyboard?.instantiateViewController(withIdentifier: "PatientPage") as? PatientPageViewController
+        
+        patientPage?.patient = patient
+     
+        view.window?.rootViewController = patientPage
+        view.window?.makeKeyAndVisible()
+    }
+    
     func transitionToHome() {
         
         let loginPage = storyboard?.instantiateViewController(withIdentifier: "LoginPage") as? LoginViewController
-     
-//        view.window?.rootViewController = loginPage
-//        view.window?.makeKeyAndVisible()
         navigationController?.pushViewController(loginPage!, animated: true)
 
     }

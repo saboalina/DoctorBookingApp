@@ -333,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qji-Ni-vUU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265" y="-277"/>
+            <point key="canvasLocation" x="1915" y="-267"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Len-CI-Vrb">
@@ -454,48 +454,95 @@
                         <outlet property="loginButton" destination="J57-Su-w4R" id="kgq-bl-716"/>
                         <outlet property="passwordTextField" destination="khs-Xu-DQw" id="4Y4-oF-sKQ"/>
                         <outlet property="viewUiView" destination="3c5-lQ-Rg7" id="dWy-Ym-XCv"/>
-                        <segue destination="ovB-T9-n50" kind="show" identifier="toResetPasswordPage" id="Cas-yT-MUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvH-pJ-CXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2879.4392523364486" y="480.77753779697628"/>
+            <point key="canvasLocation" x="1915" y="518"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="qm8-kP-GdB">
             <objects>
-                <viewController id="ovB-T9-n50" customClass="ResetPasswordViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResetPasswordPage" id="ovB-T9-n50" customClass="ResetPasswordViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ybd-lj-H6K">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1H7-b0-jhP">
-                                <rect key="frame" x="125" y="212" width="240" height="34"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backImage" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-Te-RXI">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W1-UE-eyM">
-                                <rect key="frame" x="138" y="356" width="151" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="resetPasswordButtonTapped:" destination="ovB-T9-n50" eventType="touchUpInside" id="KDs-lU-ikC"/>
-                                </connections>
-                            </button>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csH-zC-Uj6">
+                                <rect key="frame" x="20" y="358" width="388" height="210"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email to reset your password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSr-EN-fgg">
+                                        <rect key="frame" x="20" y="20" width="348" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="KT9-2P-6tf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W1-UE-eyM" customClass="ButtonClassBlue" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="140" width="348" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="uHP-qL-jlW"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="y0f-Xc-qxl"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Reset password"/>
+                                        <connections>
+                                            <action selector="resetPasswordButtonTapped:" destination="ovB-T9-n50" eventType="touchUpInside" id="KDs-lU-ikC"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1H7-b0-jhP" customClass="TextFieldDesign" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="70" width="348" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="1qq-sO-4Ca"/>
+                                            <constraint firstAttribute="height" constant="50" id="4Z3-PL-kkJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1H7-b0-jhP" firstAttribute="leading" secondItem="csH-zC-Uj6" secondAttribute="leading" constant="20" id="1dT-L1-EBi"/>
+                                    <constraint firstItem="OSr-EN-fgg" firstAttribute="leading" secondItem="csH-zC-Uj6" secondAttribute="leading" constant="20" id="Aor-O3-Afs"/>
+                                    <constraint firstAttribute="trailing" secondItem="3W1-UE-eyM" secondAttribute="trailing" constant="20" id="Kve-tu-kid"/>
+                                    <constraint firstAttribute="trailing" secondItem="OSr-EN-fgg" secondAttribute="trailing" constant="20" id="OVj-se-o5C"/>
+                                    <constraint firstItem="1H7-b0-jhP" firstAttribute="top" secondItem="OSr-EN-fgg" secondAttribute="bottom" constant="20" id="WGi-gn-tj7"/>
+                                    <constraint firstItem="3W1-UE-eyM" firstAttribute="leading" secondItem="csH-zC-Uj6" secondAttribute="leading" constant="20" id="Wo3-Oa-Evv"/>
+                                    <constraint firstAttribute="trailing" secondItem="1H7-b0-jhP" secondAttribute="trailing" constant="20" id="bEs-Nz-hYb"/>
+                                    <constraint firstAttribute="bottom" secondItem="3W1-UE-eyM" secondAttribute="bottom" constant="20" id="lVd-Uc-UIo"/>
+                                    <constraint firstAttribute="height" constant="210" id="mP0-gr-sWF"/>
+                                    <constraint firstItem="OSr-EN-fgg" firstAttribute="top" secondItem="csH-zC-Uj6" secondAttribute="top" constant="20" id="wku-91-nm5"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Nl-o8-RrR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="csH-zC-Uj6" firstAttribute="centerX" secondItem="Ybd-lj-H6K" secondAttribute="centerX" id="0r0-TA-cog"/>
+                            <constraint firstItem="2Nl-o8-RrR" firstAttribute="trailing" secondItem="csH-zC-Uj6" secondAttribute="trailing" constant="20" id="3UR-1l-p3D"/>
+                            <constraint firstItem="2Nl-o8-RrR" firstAttribute="trailing" secondItem="csH-zC-Uj6" secondAttribute="trailing" constant="20" id="61G-DS-6aL"/>
+                            <constraint firstItem="csH-zC-Uj6" firstAttribute="centerX" secondItem="Ybd-lj-H6K" secondAttribute="centerX" id="Lmc-Pf-5Ys"/>
+                            <constraint firstItem="csH-zC-Uj6" firstAttribute="leading" secondItem="2Nl-o8-RrR" secondAttribute="leading" constant="20" id="azI-pd-15b"/>
+                            <constraint firstItem="csH-zC-Uj6" firstAttribute="centerY" secondItem="Ybd-lj-H6K" secondAttribute="centerY" id="pDD-GE-0IO"/>
+                            <constraint firstItem="csH-zC-Uj6" firstAttribute="leading" secondItem="2Nl-o8-RrR" secondAttribute="leading" constant="20" id="rwt-Ni-uOa"/>
+                            <constraint firstItem="csH-zC-Uj6" firstAttribute="centerY" secondItem="Ybd-lj-H6K" secondAttribute="centerY" id="sNh-KU-W51"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2j4-Et-g9A"/>
                     <connections>
                         <outlet property="emailTextField" destination="1H7-b0-jhP" id="5c1-At-B1z"/>
+                        <outlet property="enterEmailLabel" destination="OSr-EN-fgg" id="J68-aJ-aRU"/>
+                        <outlet property="viewUiView" destination="csH-zC-Uj6" id="aYh-lu-Ov1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Duv-do-xXb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1982.2429906542054" y="1262.8509719222463"/>
+            <point key="canvasLocation" x="1914.9532710280373" y="1290.7127429805616"/>
         </scene>
         <!--Doctor Profile View Controller-->
         <scene sceneID="QVb-S3-UEl">
