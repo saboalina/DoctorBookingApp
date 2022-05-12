@@ -19,17 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        //Messaging.messaging().delegate = self
-        //UNUserNotificationCenter.current().delegate = self
-        
-//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-//            if granted {
-//                print("User gave permission")
-//            }
-//        }
-        
-//        application.registerForRemoteNotifications()
-        
         let center = UNUserNotificationCenter.current()
             
             

@@ -6,16 +6,50 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var viewUiView: UIView!
     
+    @IBOutlet weak var dontHaveAnAccountLabel: UILabel!
     var doctorViewModel = DoctorViewModel.shared
     var patientViewModel = PatientViewModel.shared
     var doctor : Doctor!
     var patient: Patient!
     
+    var attrs = [
+        NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17.0),
+        NSAttributedString.Key.underlineStyle : 1] as [NSAttributedString.Key : Any]
+
+    var attributedString = NSMutableAttributedString(string:"")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        viewUiView.layer.cornerRadius = 5
+        viewUiView.backgroundColor = UIColor(red: 203/255, green: 206/255, blue: 199/255, alpha: 1.0)
+
+        viewUiView.layer.shadowColor = UIColor.black.cgColor
+        viewUiView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        viewUiView.layer.shadowOpacity = 0.7
+        viewUiView.layer.shadowRadius = 4.0
+        
+        dontHaveAnAccountLabel.textColor = UIColor(red: 46/255, green: 80/255, blue: 107/255, alpha: 1.0)
+        
+        let buttonTitleStr = NSMutableAttributedString(string:"Forgot password?", attributes:attrs)
+        attributedString.append(buttonTitleStr)
+        forgotPasswordButton.setAttributedTitle(attributedString, for: .normal)
+        forgotPasswordButton.backgroundColor = UIColor(red: 203/255, green: 206/255, blue: 199/255, alpha: 1.0)
+        forgotPasswordButton.tintColor = UIColor(red: 46/255, green: 80/255, blue: 107/255, alpha: 1.0)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     func verifyUser(email: String) -> String {
@@ -41,11 +75,15 @@ class LoginViewController: UIViewController {
                         self.doctor = doctor
                         self.navigateToDoctorPage(doctor: doctor)
                     case .failure(let err):
-                        print(err)
+                        let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
                     }
                 })
             } else {
-                self.errorLabel.text = "There was an error."
+                let alert = UIAlertController(title: "Error", message: "Email/Password combination is invalid!", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
         
@@ -61,26 +99,54 @@ class LoginViewController: UIViewController {
                         self.patient = patient
                         self.navigateToPatientPage(pacient: patient)
                     case .failure(let err):
-                        print(err)
+
+                        let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
                     }
                 
                 })
             } else {
-                self.errorLabel.text = "There was an error."
+                let alert = UIAlertController(title: "Error", message: "Email/Password combination is invalid!", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
+    
+    func validateFields() -> String? {
+        
+        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return "Please enter an email address"
+        }
+        
+        if passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return "Please enter a password"
+        }
+    
+        return nil
+    }
 
     @IBAction func loginButtonTapped(_ sender: Any) {
-        
-        let email = self.emailTextField.text!
-        let password = self.passwordTextField.text!
+//        
+//        let email = self.emailTextField.text!
+//        let password = self.passwordTextField.text!
         
 //        let email = "sabo.alina.99@gmail.com"
 //        let password = "ananas123456"
         
 //        let email = "maria@gmail.com"
 //        let password = "maria1999"
+        
+        let email = "alina@yahoo.com"
+        let password = "alina1999"
+        
+        let errorMessage = validateFields()
+        if errorMessage != nil {
+            let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
 
         let userType = verifyUser(email: email)
         
@@ -113,10 +179,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func resetPasswordButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "toResetPasswordPage", sender: self)
-//        let resetPasswordPage = storyboard?.instantiateViewController(withIdentifier: "toResetPasswordPage") as? ResetPasswordViewController
-//
-//        view.window?.rootViewController = resetPasswordPage
-//        view.window?.makeKeyAndVisible()
     }
     
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+
+        
+        let signUpPage = storyboard?.instantiateViewController(withIdentifier: "SignUpPage") as? SignUpViewController
+     
+//        view.window?.rootViewController = signUpPage
+//        view.window?.makeKeyAndVisible()
+        navigationController?.pushViewController(signUpPage!, animated: true)
+    }
 }
