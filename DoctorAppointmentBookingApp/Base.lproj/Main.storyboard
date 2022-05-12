@@ -18,12 +18,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4x8-eQ-Bb0">
-                                <rect key="frame" x="40" y="761" width="348" height="91"/>
+                                <rect key="frame" x="40" y="821" width="348" height="31"/>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="backImage" translatesAutoresizingMaskIntoConstraints="NO" id="ttb-e5-byf">
+                                <rect key="frame" x="0.0" y="-10" width="428" height="936"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o6x-5V-MMK">
+                                <rect key="frame" x="20" y="651" width="388" height="160"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzq-R3-UkF">
-                                        <rect key="frame" x="0.0" y="0.0" width="348" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4Z-DG-cP6" customClass="ButtonClassOrange" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="348" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="kVM-DC-dep"/>
+                                            <constraint firstAttribute="height" constant="50" id="mwr-ZS-Hih"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Log in"/>
+                                        <connections>
+                                            <segue destination="n4y-5t-tC3" kind="show" id="Vfr-Bc-B3Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzq-R3-UkF" customClass="ButtonClassBlue" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="90" width="348" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="18a-2x-5Ab"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
@@ -31,33 +52,43 @@
                                             <segue destination="29g-2p-7VM" kind="show" id="aHW-w5-B2y"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4Z-DG-cP6">
-                                        <rect key="frame" x="0.0" y="60" width="348" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Log in"/>
-                                        <connections>
-                                            <segue destination="n4y-5t-tC3" kind="show" id="Vfr-Bc-B3Q"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
-                                    <constraint firstItem="H4Z-DG-cP6" firstAttribute="height" secondItem="mzq-R3-UkF" secondAttribute="height" multiplier="0.775" id="rwP-4g-v7q"/>
+                                    <constraint firstAttribute="trailing" secondItem="H4Z-DG-cP6" secondAttribute="trailing" constant="20" id="30F-6B-rL0"/>
+                                    <constraint firstAttribute="trailing" secondItem="mzq-R3-UkF" secondAttribute="trailing" constant="20" id="GCz-7B-hi9"/>
+                                    <constraint firstItem="mzq-R3-UkF" firstAttribute="leading" secondItem="o6x-5V-MMK" secondAttribute="leading" constant="20" id="MNz-Gj-cnp"/>
+                                    <constraint firstAttribute="height" constant="160" id="bgF-Su-oEY"/>
+                                    <constraint firstItem="H4Z-DG-cP6" firstAttribute="leading" secondItem="o6x-5V-MMK" secondAttribute="leading" constant="20" id="mo8-QF-Jyv"/>
+                                    <constraint firstItem="mzq-R3-UkF" firstAttribute="top" secondItem="H4Z-DG-cP6" secondAttribute="bottom" constant="20" id="q2d-of-UYP"/>
+                                    <constraint firstItem="H4Z-DG-cP6" firstAttribute="top" secondItem="o6x-5V-MMK" secondAttribute="top" constant="20" id="tYV-4h-1Rw"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4x8-eQ-Bb0" secondAttribute="trailing" constant="40" id="ZMG-Jg-OdW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4x8-eQ-Bb0" secondAttribute="bottom" constant="40" id="bFs-R9-4dt"/>
-                            <constraint firstItem="4x8-eQ-Bb0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="hu8-cu-cAp"/>
+                            <constraint firstItem="ttb-e5-byf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-50" id="Ilm-d2-cav"/>
+                            <constraint firstItem="4x8-eQ-Bb0" firstAttribute="top" secondItem="o6x-5V-MMK" secondAttribute="bottom" constant="10" id="QJf-eI-JED"/>
+                            <constraint firstItem="ttb-e5-byf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SLz-mJ-AHs"/>
+                            <constraint firstItem="4x8-eQ-Bb0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="821" id="U5w-6Z-Ro6"/>
+                            <constraint firstItem="4x8-eQ-Bb0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="YDw-zS-pNl"/>
+                            <constraint firstItem="ttb-e5-byf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ggK-c7-Ng1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4x8-eQ-Bb0" secondAttribute="bottom" constant="40" id="klP-Xj-iaU"/>
+                            <constraint firstItem="o6x-5V-MMK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mXV-E2-ORf"/>
+                            <constraint firstAttribute="trailing" secondItem="o6x-5V-MMK" secondAttribute="trailing" constant="20" id="pX5-EZ-f3D"/>
+                            <constraint firstItem="4x8-eQ-Bb0" firstAttribute="centerX" secondItem="o6x-5V-MMK" secondAttribute="centerX" id="t5C-5H-7GB"/>
+                            <constraint firstAttribute="bottom" secondItem="ttb-e5-byf" secondAttribute="bottom" id="uJI-29-b4H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PeS-eg-zww"/>
+                    <connections>
+                        <outlet property="viewUiView" destination="o6x-5V-MMK" id="wXY-U3-oaw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="121.875"/>
+            <point key="canvasLocation" x="1047.1962616822429" y="121.81425485961124"/>
         </scene>
         <!--Patient Medical Centers List View Controller-->
         <scene sceneID="iwY-XG-0B5">
@@ -2679,10 +2710,11 @@
         <segue reference="C3H-Af-Veo"/>
         <segue reference="cBr-mF-ftF"/>
         <segue reference="Wif-nk-ILZ"/>
-        <segue reference="Z8h-gL-v2s"/>
+        <segue reference="Vfr-Bc-B3Q"/>
         <segue reference="I50-8e-ewY"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="backImage" width="2000" height="2000"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -2709,6 +2741,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
