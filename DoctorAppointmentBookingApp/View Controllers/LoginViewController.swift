@@ -24,7 +24,13 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+             
+        setDesign()
+
+    }
+    
+    func setDesign() {
+        
         viewUiView.layer.cornerRadius = 5
         viewUiView.backgroundColor = Colors.brown
 
@@ -40,6 +46,7 @@ class LoginViewController: UIViewController {
         forgotPasswordButton.setAttributedTitle(attributedString, for: .normal)
         forgotPasswordButton.backgroundColor = Colors.brown
         forgotPasswordButton.tintColor = Colors.darkBlue
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -135,18 +142,18 @@ class LoginViewController: UIViewController {
 //        let email = "sabo.alina.99@gmail.com"
 //        let password = "ananas123456"
         
-        let email = "yasminross@med.com"
-        let password = "yasminross1234"
+        let email = "niallshelton@med.com"
+        let password = "niallshelton1234"
         
 //        let email = "alina@yahoo.com"
 //        let password = "alina1999"
         
-        let errorMessage = validateFields()
-        if errorMessage != nil {
-            let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+//        let errorMessage = validateFields()
+//        if errorMessage != nil {
+//            let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//        }
 
         let userType = verifyUser(email: email)
         

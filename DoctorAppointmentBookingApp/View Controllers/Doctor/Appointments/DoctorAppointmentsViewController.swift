@@ -39,8 +39,25 @@ class DoctorAppointmentsViewController: UIViewController {
         appointmentsTableView.delegate = self
         
         loadData()
+        
+        setDesign()
 
     }
+        
+    func setDesign() {
+        
+        
+        title = "My Appointments"
+        view.backgroundColor = Colors.brown
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.white
+        nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.darkBlue]
+
+        appointmentsTableView.backgroundColor = Colors.brown
+                
+    }
+    
     
     func loadData() {
         appointmentViewModel.getAllAppointmentsForADoctor(collectionID: "appointments", doctorEmail: doctor.email) { appointments in
@@ -65,10 +82,15 @@ extension DoctorAppointmentsViewController: UITableViewDataSource, UITableViewDe
             switch res{
             case .success(let patient):
                 cell.nameLabel.text = patient.name
+                cell.nameLabel.textColor = Colors.darkBlue
             case .failure(let err):
                 print(err)
             }
         })
+        
+        cell.doneButton.addTarget(self, action: #selector(deleteAppointment(sender:)), for: .touchUpInside)
+        cell.cancelButton.addTarget(self, action: #selector(deleteAppointment(sender:)), for: .touchUpInside)
+        
         return cell
     }
     
@@ -85,6 +107,25 @@ extension DoctorAppointmentsViewController: UITableViewDataSource, UITableViewDe
         maskLayer.backgroundColor = UIColor.black.cgColor
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 20, dy: 10)
         cell.layer.mask = maskLayer
+        
+    }
+    
+    
+    @objc
+    func deleteAppointment(sender: UIButton){
+        let rowIndex = sender.tag
+        //do something
+        print(rowIndex)
+        print(appointments[rowIndex].doctorId)
+        
+        appointmentViewModel.deleteAppointment(appointment: appointments[rowIndex]) { [weak self] (success) in
+            guard let `self` = self else { return }
+            if (success) {
+                self.appointmentsTableView.reloadData()
+            } else {
+                print("There was an error.")
+            }
+        }
     }
     
 }

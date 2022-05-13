@@ -53,6 +53,7 @@
 		C29B922A282D31820094BF42 /* ButtonClassBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B9229282D31820094BF42 /* ButtonClassBlue.swift */; };
 		C29B9231282D52EF0094BF42 /* TextFieldDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B9230282D52EF0094BF42 /* TextFieldDesign.swift */; };
 		C2A101B9282E498200F49819 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101B8282E498200F49819 /* Colors.swift */; };
+		C2A101BB282E525400F49819 /* TableViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101BA282E525400F49819 /* TableViewDesign.swift */; };
 		C2A345C6281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */; };
 		C2A345C8281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */; };
 		C2A345CA281D120B00F5B3B7 /* CategoryOfMCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */; };
@@ -122,6 +123,7 @@
 		C29B9229282D31820094BF42 /* ButtonClassBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClassBlue.swift; sourceTree = "<group>"; };
 		C29B9230282D52EF0094BF42 /* TextFieldDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDesign.swift; sourceTree = "<group>"; };
 		C2A101B8282E498200F49819 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		C2A101BA282E525400F49819 /* TableViewDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDesign.swift; sourceTree = "<group>"; };
 		C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDoctorDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMedicalCenterDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOfMCViewCell.swift; sourceTree = "<group>"; };
@@ -395,6 +397,8 @@
 			children = (
 				C29B9226282D2E500094BF42 /* ButtonDesign */,
 				C2A101B8282E498200F49819 /* Colors.swift */,
+				C29B9230282D52EF0094BF42 /* TextFieldDesign.swift */,
+				C2A101BA282E525400F49819 /* TableViewDesign.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -446,13 +450,11 @@
 				C2C58C2A27F9F13C00B637C6 /* View Controllers */,
 				C2C58C1027F9F08200B637C6 /* AppDelegate.swift */,
 				C2C58C1227F9F08200B637C6 /* SceneDelegate.swift */,
-				C2C58C1427F9F08200B637C6 /* ViewController.swift */,
 				C2C58C1627F9F08200B637C6 /* Main.storyboard */,
 				C2C58C1927F9F08400B637C6 /* Assets.xcassets */,
 				C2C58C1B27F9F08400B637C6 /* LaunchScreen.storyboard */,
 				C27D9CAB27F9FE2E00511C4B /* GoogleService-Info.plist */,
 				C2C58C1E27F9F08400B637C6 /* Info.plist */,
-				C29B9230282D52EF0094BF42 /* TextFieldDesign.swift */,
 			);
 			path = DoctorAppointmentBookingApp;
 			sourceTree = "<group>";
@@ -463,6 +465,7 @@
 				C2C58C2427F9F10900B637C6 /* SignUpViewController.swift */,
 				C2C58C2627F9F11500B637C6 /* LoginViewController.swift */,
 				C29B9222282BF4780094BF42 /* ResetPasswordViewController.swift */,
+				C2C58C1427F9F08200B637C6 /* ViewController.swift */,
 				C2BD6B5B2802B78E00DBC642 /* Doctor */,
 				C296DE7B280C0B9100019B14 /* Patient */,
 			);
@@ -609,6 +612,7 @@
 				C2C58C2527F9F10900B637C6 /* SignUpViewController.swift in Sources */,
 				C29B9228282D2E9E0094BF42 /* ButtonClassOrange.swift in Sources */,
 				C2C58C2927F9F12C00B637C6 /* DoctorPageViewController.swift in Sources */,
+				C2A101BB282E525400F49819 /* TableViewDesign.swift in Sources */,
 				C2770C0528196870006F4EBF /* PatientSearchViewController.swift in Sources */,
 				C2238EF2281C188700571C08 /* MedicalCenterForMap.swift in Sources */,
 				C296DE7F280C202700019B14 /* PatientProfileNavigationController.swift in Sources */,
