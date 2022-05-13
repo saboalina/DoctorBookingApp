@@ -56,13 +56,13 @@ public class Doctor: NSObject {
         service =           document["service"] as? String ?? ""
         self.id =               id
         
-        sun =           document["Sun"] as? String ?? ""
-        mon =           document["Mon"] as? String ?? ""
-        tue =           document["Tue"] as? String ?? ""
-        wed =           document["Wed"] as? String ?? ""
-        thu =           document["Thu"] as? String ?? ""
-        fri =           document["Fri"] as? String ?? ""
-        sat =           document["Sat"] as? String ?? ""
+        sun =           document["sun"] as? String ?? ""
+        mon =           document["mon"] as? String ?? ""
+        tue =           document["tue"] as? String ?? ""
+        wed =           document["wed"] as? String ?? ""
+        thu =           document["thu"] as? String ?? ""
+        fri =           document["fri"] as? String ?? ""
+        sat =           document["sat"] as? String ?? ""
     }
 
 }
@@ -81,13 +81,13 @@ extension Doctor {
                                 consultancyFee:     document["consultancyFee"] as? String ?? "",
                                 service:            document["service"] as? String ?? "",
                                 id:         document.documentID,
-                                sun:           document["Sun"] as? String ?? "",
-                                mon:           document["Mon"] as? String ?? "",
-                                tue:           document["Tue"] as? String ?? "",
-                                wed:           document["Wed"] as? String ?? "",
-                                thu:           document["Thu"] as? String ?? "",
-                                fri:           document["Fri"] as? String ?? "",
-                                sat:           document["Sat"] as? String ?? ""))
+                                sun:           document["sun"] as? String ?? "",
+                                mon:           document["mon"] as? String ?? "",
+                                tue:           document["tue"] as? String ?? "",
+                                wed:           document["wed"] as? String ?? "",
+                                thu:           document["thu"] as? String ?? "",
+                                fri:           document["fri"] as? String ?? "",
+                                sat:           document["sat"] as? String ?? ""))
         }
         return users
     }

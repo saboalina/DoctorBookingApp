@@ -105,7 +105,9 @@ class DoctorProfileViewController: UIViewController {
                 self.doctor = doctor
                 self.setLabels()
             case .failure(let err):
-                print(err)
+                let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
 
         })

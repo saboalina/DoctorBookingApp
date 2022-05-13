@@ -8,8 +8,16 @@ class DoctorEditProfileViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var serviceTextField: UITextField!
     @IBOutlet weak var servicesAtTextField: UITextView!
-    @IBOutlet weak var experienceTextField: UITextField!
     @IBOutlet weak var consultancyFeeTextField: UITextField!
+    
+    
+    @IBOutlet weak var monTextField: UITextField!
+    @IBOutlet weak var tueTextField: UITextField!
+    @IBOutlet weak var wedTextField: UITextField!
+    @IBOutlet weak var thuTextField: UITextField!
+    @IBOutlet weak var friTextField: UITextField!
+    @IBOutlet weak var satTextField: UITextField!
+    @IBOutlet weak var sunTextField: UITextField!
     
     var doctorViewModel = DoctorViewModel.shared
     var doctor: Doctor?
@@ -26,8 +34,15 @@ class DoctorEditProfileViewController: UIViewController {
         phoneTextField.text = doctor?.phoneNumber
         serviceTextField.text = doctor?.service
         servicesAtTextField.text = doctor?.worksAt
-        experienceTextField.text = doctor?.experience
         consultancyFeeTextField.text = doctor?.consultancyFee
+        
+        monTextField.text = doctor?.mon
+        tueTextField.text = doctor?.tue
+        wedTextField.text = doctor?.wed
+        thuTextField.text = doctor?.thu
+        friTextField.text = doctor?.fri
+        satTextField.text = doctor?.sat
+        sunTextField.text = doctor?.sun
     }
     
     
@@ -36,14 +51,23 @@ class DoctorEditProfileViewController: UIViewController {
         let phoneNumber = phoneTextField.text!
         let service = serviceTextField.text!
         let worksAt = servicesAtTextField.text!
-        let experience = experienceTextField.text!
         let consultancyFee = consultancyFeeTextField.text!
         
-        doctorViewModel.updateDoctor(doctorId: doctor!.id, name: name, phoneNumber: phoneNumber, service: service, worksAt: worksAt, experience: experience, consultancyFee: consultancyFee) { success in
+        let mon = monTextField.text!
+        let tue = tueTextField.text!
+        let wed = wedTextField.text!
+        let thu = thuTextField.text!
+        let fri = friTextField.text!
+        let sat = satTextField.text!
+        let sun = sunTextField.text!
+        
+        doctorViewModel.updateDoctor(doctorId: doctor!.id, name: name, phoneNumber: phoneNumber, service: service, worksAt: worksAt, consultancyFee: consultancyFee, mon: mon, tue: tue, wed: wed, thu: thu, fri: fri, sat: sat, sun: sun) { success in
             if success {
                 self.navigateToDoctorProfile()
             } else {
-                print("eroare")
+                let alert = UIAlertController(title: "Error", message: "There was an error!", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
             
         }
@@ -67,8 +91,5 @@ class DoctorEditProfileViewController: UIViewController {
     func navigateToDoctorProfile() {
         navigationController?.popViewController(animated: true)
     }
-    
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        self.navigateToDoctorProfile()
-    }
+
 }

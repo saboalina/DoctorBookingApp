@@ -78,14 +78,20 @@ class DoctorViewModel {
         }
     }
         
-    func updateDoctor(doctorId: String, name: String, phoneNumber: String, service: String, worksAt: String, experience: String, consultancyFee: String, handler: @escaping (Bool) -> Void ) {
+    func updateDoctor(doctorId: String, name: String, phoneNumber: String, service: String, worksAt: String, consultancyFee: String, mon: String, tue: String, wed: String, thu: String, fri: String, sat: String, sun: String, handler: @escaping (Bool) -> Void ) {
         db.collection("doctors").document(doctorId).setData([
             "name":         name,
             "phoneNumber":  phoneNumber,
             "service":      service,
             "worksAt":  worksAt,
-            "experience":      experience,
             "consultancyFee":      consultancyFee,
+            "mon":      mon,
+            "tue":      tue,
+            "wed":      wed,
+            "thu":      thu,
+            "fri":      fri,
+            "sat":      sat,
+            "sun":      sun,
         ], merge: true) { err in
             if let _ = err {
                 handler(false)
