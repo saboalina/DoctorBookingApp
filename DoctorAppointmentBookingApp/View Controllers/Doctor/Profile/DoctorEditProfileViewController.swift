@@ -16,7 +16,12 @@ class DoctorEditProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setLabels()
+        setDesign()
+    }
+    
+    func setLabels() {
         nameTextField.text = doctor?.name
         phoneTextField.text = doctor?.phoneNumber
         serviceTextField.text = doctor?.service
@@ -42,6 +47,21 @@ class DoctorEditProfileViewController: UIViewController {
             }
             
         }
+    }
+    
+    func setDesign() {
+        
+        
+        title = "Edit My Profile"
+        view.backgroundColor = Colors.brown
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.white
+        nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.darkBlue]
+
+        servicesAtTextField.layer.shadowColor = UIColor.black.cgColor
+        servicesAtTextField.layer.cornerRadius = 10
+                
     }
     
     func navigateToDoctorProfile() {

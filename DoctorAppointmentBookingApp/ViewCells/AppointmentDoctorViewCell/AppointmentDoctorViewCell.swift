@@ -20,14 +20,6 @@ class AppointmentDoctorViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-//        contentViewUIView.clipsToBounds = false;
-//        contentViewUIView.layer.masksToBounds = false;
-//        
-//        contentViewUIView.layer.shadowColor = UIColor.black.cgColor
-//        contentViewUIView.layer.shadowOffset = CGSize(width: 3, height: 3)
-//        contentViewUIView.layer.shadowOpacity = 0.3
-//        contentViewUIView.layer.shadowRadius = 4.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

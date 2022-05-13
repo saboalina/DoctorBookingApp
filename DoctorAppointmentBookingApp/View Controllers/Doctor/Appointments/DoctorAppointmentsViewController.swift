@@ -103,9 +103,21 @@ extension DoctorAppointmentsViewController: UITableViewDataSource, UITableViewDe
     {
 
         let maskLayer = CALayer()
-        maskLayer.cornerRadius = 10    
+        maskLayer.cornerRadius = 10
         maskLayer.backgroundColor = UIColor.black.cgColor
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 20, dy: 10)
+        
+        maskLayer.shadowColor = UIColor.black.cgColor
+        maskLayer.shadowOffset = CGSize(width: 3, height: 3)
+        maskLayer.shadowOpacity = 0.3
+        maskLayer.shadowRadius = 4.0
+        
+//
+//        layer.shadowColor = UIColor.black.cgColor
+//        layer.shadowOffset = CGSize(width: 3, height: 3)
+//        layer.shadowOpacity = 0.3
+//        layer.shadowRadius = 4.0
+        
         cell.layer.mask = maskLayer
         
     }
