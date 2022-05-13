@@ -111,7 +111,6 @@ class DoctorProfileViewController: UIViewController {
                 (data, response, error) in
                 
                 if error != nil {
-                    print(error)
                     return
                 }
                 DispatchQueue.main.sync {

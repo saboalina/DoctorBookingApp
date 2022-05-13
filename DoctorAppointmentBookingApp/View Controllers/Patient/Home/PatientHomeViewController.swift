@@ -10,6 +10,7 @@ class PatientHomeViewController: UIViewController {
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var medicalCenterCollectionView: UICollectionView!
     
+    @IBOutlet weak var searchButton: UIButton!
     
     var doctorViewModel = DoctorViewModel.shared
     var medicalCenterViewModel = MedicalCenterViewModel.shared
@@ -73,11 +74,24 @@ class PatientHomeViewController: UIViewController {
         loadData()
         registerCell()
         
-        print("in PatientHomeViewController \(patient.name)")
+        searchButton.layer.cornerRadius = 20
+        searchButton.layer.shadowColor = UIColor.black.cgColor
+        searchButton.layer.shadowOffset = CGSize(width: 3, height: 3)
+        searchButton.layer.shadowOpacity = 0.3
+        searchButton.layer.shadowRadius = 4.0
+        searchButton.tintColor = UIColor.white
+        view.backgroundColor = Colors.brown
+        
+//        let image = UIImage(named: "magnifyingglass")
+//        searchButton.setImage(image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
+//        searchButton.tintColor = UIColor.white
+
         
         DispatchQueue.global().async { // should be in main queue
             _ = UIView(frame: .zero)  // whatever UI is here
         }
+        
+        
     }
 
     func loadData() {

@@ -16,6 +16,11 @@ class CategoriesViewCell: UICollectionViewCell {
     
     func setup(category: String) {
         categoryNameLabel.text = category
+        
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 3, height: 3)
+        layer.shadowOpacity = 0.3
+        layer.shadowRadius = 4.0
     }
     
 }

@@ -142,11 +142,11 @@ class LoginViewController: UIViewController {
 //        let email = "sabo.alina.99@gmail.com"
 //        let password = "ananas123456"
         
-        let email = "niallshelton@med.com"
-        let password = "niallshelton1234"
+//        let email = "niallshelton@med.com"
+//        let password = "niallshelton1234"
         
-//        let email = "alina@yahoo.com"
-//        let password = "alina1999"
+        let email = "alina@yahoo.com"
+        let password = "alina1999"
         
 //        let errorMessage = validateFields()
 //        if errorMessage != nil {

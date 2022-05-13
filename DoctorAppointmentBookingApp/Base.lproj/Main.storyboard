@@ -3,6 +3,7 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -564,7 +565,6 @@
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lr4-4b-ykp">
                                 <rect key="frame" x="20" y="138" width="140" height="140"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="CIL-qM-3nr"/>
                                     <constraint firstAttribute="width" constant="140" id="Vse-DL-azV"/>
@@ -666,7 +666,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ore-l3-Of5" customClass="ButtonClassBlue" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="783" width="388" height="50"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="A91-sK-ngg"/>
                                 </constraints>
@@ -1001,7 +1000,6 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DS0-RZ-VMc">
                                 <rect key="frame" x="20" y="54" width="130" height="130"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="3uv-fw-DHx"/>
                                     <constraint firstAttribute="height" constant="130" id="p4N-eE-Frs"/>
@@ -1057,7 +1055,6 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zv-Sd-9ek" customClass="ButtonClassBlue" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="842" width="388" height="40"/>
-                                <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="P35-7I-rIS"/>
                                 </constraints>
@@ -1501,10 +1498,9 @@
             <objects>
                 <tabBarController storyboardIdentifier="PatientPage" id="23b-kU-I1a" customClass="PatientPageViewController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Qij-JD-Wg3"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BnY-RS-9eY">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnY-RS-9eY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="EsG-yw-hQv" kind="relationship" relationship="viewControllers" id="Has-qK-XAF"/>
@@ -1526,14 +1522,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Doctors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k3-Pn-jyL">
-                                <rect key="frame" x="20" y="142" width="72.666666666666671" height="25.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="148" width="388" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vYu-MO-EA0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.18039215689999999" green="0.31372549020000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aic-KJ-3Pr">
-                                <rect key="frame" x="0.0" y="643" width="428" height="200"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aic-KJ-3Pr">
+                                <rect key="frame" x="0.0" y="628" width="428" height="200"/>
+                                <color key="backgroundColor" red="0.7965099216" green="0.80659598109999997" blue="0.78046864270000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="9gg-0z-hnF"/>
                                 </constraints>
@@ -1550,20 +1549,26 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Medical Centers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr5-xk-tsW">
-                                <rect key="frame" x="20" y="597.66666666666663" width="149" height="25.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="598" width="388" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yqR-gO-yRE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.18039215689999999" green="0.31372549020000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfs-xO-i0y">
-                                <rect key="frame" x="20" y="397.33333333333331" width="83" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="398" width="388" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TKs-fZ-x4Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.18039215689999999" green="0.31372549020000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zyf-3X-Mg6">
-                                <rect key="frame" x="0.0" y="427.66666666666669" width="428" height="150.00000000000006"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <rect key="frame" x="0.0" y="428" width="428" height="150"/>
+                                <color key="backgroundColor" red="0.7965099216" green="0.80659598109999997" blue="0.78046864270000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="dCf-kJ-RY4"/>
                                 </constraints>
@@ -1580,8 +1585,8 @@
                                 </connections>
                             </collectionView>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PGs-7Q-3tB">
-                                <rect key="frame" x="0.0" y="177.33333333333337" width="428" height="200"/>
-                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <rect key="frame" x="0.0" y="178" width="428" height="200"/>
+                                <color key="backgroundColor" red="0.7965099216" green="0.80659598109999997" blue="0.78046864270000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="r3D-CJ-5iM"/>
                                 </constraints>
@@ -1597,13 +1602,21 @@
                                     <outlet property="delegate" destination="rum-1L-0km" id="vTC-Jw-DpW"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfv-lE-nl7">
-                                <rect key="frame" x="0.0" y="88" width="428" height="30"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfv-lE-nl7">
+                                <rect key="frame" x="10" y="88" width="408" height="40"/>
+                                <color key="backgroundColor" red="0.31764705879999999" green="0.59607843140000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5mJ-gi-N9u"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Search">
-                                    <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="|  Search...">
+                                    <color key="titleColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <imageReference key="image" image="magnifyingglass" catalog="system" renderingMode="template"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="medium" weight="regular"/>
                                 </state>
                                 <connections>
                                     <action selector="searchButtonTapped:" destination="rum-1L-0km" eventType="touchUpInside" id="rLH-ra-uHF"/>
@@ -1613,24 +1626,27 @@
                         <viewLayoutGuide key="safeArea" id="bQJ-bZ-mXn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kfs-xO-i0y" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" constant="20" id="2Et-tL-wtt"/>
                             <constraint firstItem="vfv-lE-nl7" firstAttribute="top" secondItem="bQJ-bZ-mXn" secondAttribute="top" id="2hu-VI-dQZ"/>
-                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="top" secondItem="7k3-Pn-jyL" secondAttribute="bottom" constant="10" id="AaA-09-veH"/>
+                            <constraint firstItem="PGs-7Q-3tB" firstAttribute="top" secondItem="7k3-Pn-jyL" secondAttribute="bottom" id="AaA-09-veH"/>
                             <constraint firstItem="dr5-xk-tsW" firstAttribute="top" secondItem="zyf-3X-Mg6" secondAttribute="bottom" constant="20" id="DBB-bB-Nu1"/>
                             <constraint firstItem="bQJ-bZ-mXn" firstAttribute="trailing" secondItem="aic-KJ-3Pr" secondAttribute="trailing" id="EXz-4Z-mPM"/>
-                            <constraint firstItem="zyf-3X-Mg6" firstAttribute="top" secondItem="kfs-xO-i0y" secondAttribute="bottom" constant="10" id="GO9-aF-mXf"/>
-                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="bottom" secondItem="aic-KJ-3Pr" secondAttribute="bottom" constant="10" id="H3m-pt-8bl"/>
-                            <constraint firstItem="kfs-xO-i0y" firstAttribute="leading" secondItem="dr5-xk-tsW" secondAttribute="leading" id="LMz-kE-jys"/>
-                            <constraint firstItem="7k3-Pn-jyL" firstAttribute="leading" secondItem="15R-A2-1dx" secondAttribute="leadingMargin" id="OoY-Yq-I59"/>
+                            <constraint firstItem="zyf-3X-Mg6" firstAttribute="top" secondItem="kfs-xO-i0y" secondAttribute="bottom" id="GO9-aF-mXf"/>
                             <constraint firstItem="PGs-7Q-3tB" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" id="PnX-L5-szB"/>
-                            <constraint firstItem="aic-KJ-3Pr" firstAttribute="top" secondItem="dr5-xk-tsW" secondAttribute="bottom" constant="10" id="QpD-Jz-Q4w"/>
+                            <constraint firstItem="7k3-Pn-jyL" firstAttribute="top" secondItem="vfv-lE-nl7" secondAttribute="bottom" constant="20" id="QHb-KG-BuL"/>
+                            <constraint firstItem="aic-KJ-3Pr" firstAttribute="top" secondItem="dr5-xk-tsW" secondAttribute="bottom" id="QpD-Jz-Q4w"/>
+                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="trailing" secondItem="7k3-Pn-jyL" secondAttribute="trailing" constant="20" id="Ukf-8B-jQ5"/>
                             <constraint firstItem="zyf-3X-Mg6" firstAttribute="leading" secondItem="PGs-7Q-3tB" secondAttribute="leading" id="XQF-xq-ldj"/>
                             <constraint firstItem="zyf-3X-Mg6" firstAttribute="trailing" secondItem="PGs-7Q-3tB" secondAttribute="trailing" id="aln-BU-qbe"/>
                             <constraint firstItem="kfs-xO-i0y" firstAttribute="top" secondItem="PGs-7Q-3tB" secondAttribute="bottom" constant="20" id="hSl-3I-yLS"/>
-                            <constraint firstItem="vfv-lE-nl7" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" id="hdu-0D-Vea"/>
-                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="trailing" secondItem="vfv-lE-nl7" secondAttribute="trailing" id="pcr-ng-Peq"/>
-                            <constraint firstItem="dr5-xk-tsW" firstAttribute="leading" secondItem="7k3-Pn-jyL" secondAttribute="leading" id="twQ-GP-Eoz"/>
+                            <constraint firstItem="vfv-lE-nl7" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" constant="10" id="hdu-0D-Vea"/>
+                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="trailing" secondItem="kfs-xO-i0y" secondAttribute="trailing" constant="20" id="iCp-X3-qij"/>
+                            <constraint firstItem="7k3-Pn-jyL" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" constant="20" id="oEb-6s-yDy"/>
+                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="trailing" secondItem="vfv-lE-nl7" secondAttribute="trailing" constant="10" id="pcr-ng-Peq"/>
                             <constraint firstItem="PGs-7Q-3tB" firstAttribute="trailing" secondItem="bQJ-bZ-mXn" secondAttribute="trailing" id="uSV-86-p9q"/>
+                            <constraint firstItem="dr5-xk-tsW" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" constant="20" id="vTA-7d-6Kf"/>
                             <constraint firstItem="aic-KJ-3Pr" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" id="vzO-6R-ihh"/>
+                            <constraint firstItem="bQJ-bZ-mXn" firstAttribute="trailing" secondItem="dr5-xk-tsW" secondAttribute="trailing" constant="20" id="wPx-rQ-6Y2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tfz-nc-yOg"/>
@@ -1638,6 +1654,7 @@
                         <outlet property="categoriesCollectionView" destination="zyf-3X-Mg6" id="qs9-lX-jlA"/>
                         <outlet property="doctorCollectionView" destination="PGs-7Q-3tB" id="gwz-Z4-zG3"/>
                         <outlet property="medicalCenterCollectionView" destination="aic-KJ-3Pr" id="G5S-lQ-Z2Y"/>
+                        <outlet property="searchButton" destination="vfv-lE-nl7" id="1b3-b6-j5d"/>
                         <segue destination="nRf-KV-Qim" kind="show" identifier="SearchPage" id="33c-0V-CQk"/>
                         <segue destination="hw4-6i-2Kv" kind="show" identifier="showDoctorDetails" id="7TJ-ij-TGH"/>
                         <segue destination="nzK-OK-L8H" kind="show" identifier="showMedicalCenterDetails" id="mYN-NY-0IO"/>
@@ -1980,11 +1997,11 @@
             </objects>
             <point key="canvasLocation" x="10711.682242990653" y="802.80777537796985"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="K9X-R5-fDs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EsG-yw-hQv" customClass="PatientHomeNavigationController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qgC-hY-Rl4"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="qgC-hY-Rl4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kjn-ET-yz0">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -2863,11 +2880,11 @@
             </objects>
             <point key="canvasLocation" x="8231.7757009345787" y="755.50755939524845"/>
         </scene>
-        <!--Item-->
+        <!--Appointments-->
         <scene sceneID="9XW-8x-clM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6cG-Ti-4RJ" customClass="PatientAppointmentsNavigationController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pxy-Oe-yx8"/>
+                    <tabBarItem key="tabBarItem" title="Appointments" image="doc.plaintext" catalog="system" id="pxy-Oe-yx8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hc1-Vg-aKM">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -2916,11 +2933,11 @@
             </objects>
             <point key="canvasLocation" x="6087" y="1514"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="kAl-97-PmM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ADM-vz-pJ0" customClass="PatientMapNavigationController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="o35-Er-JzX"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="mappin" catalog="system" id="o35-Er-JzX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OQA-bw-FdJ">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -3171,11 +3188,11 @@
             </objects>
             <point key="canvasLocation" x="6912.6168224299063" y="2267.818574514039"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="nJ1-VH-ues">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YAE-wZ-vnJ" customClass="PatientProfileNavigationController" customModule="DoctorAppointmentBookingApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FC0-RC-hIM"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="FC0-RC-hIM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HT3-B3-x1Y">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -3192,14 +3209,17 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="C3H-Af-Veo"/>
-        <segue reference="cBr-mF-ftF"/>
-        <segue reference="Wif-nk-ILZ"/>
-        <segue reference="I50-8e-ewY"/>
+        <segue reference="JJg-OG-LFI"/>
+        <segue reference="mYN-NY-0IO"/>
+        <segue reference="7TJ-ij-TGH"/>
+        <segue reference="gPg-6Z-Clk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backImage" width="2000" height="2000"/>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="mappin" catalog="system" width="105" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
