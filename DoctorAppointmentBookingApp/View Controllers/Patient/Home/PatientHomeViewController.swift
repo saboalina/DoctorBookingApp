@@ -67,7 +67,7 @@ class PatientHomeViewController: UIViewController {
         }
     }
     
-    let categories = ["Dermathology", "Endocrinology", "Ultrasound", "Dermathology", "Psychology", "Plastic surgery", "Nutrition", "Cardiology", "Ophthalmology", "Neurology", "Paediatrics", "Psychiatry"]
+    let categories = ["Dermatology", "Oral health", "Pulmonology", "Orthopedics", "Plastic surgery", "Gynecology", "Cardiology", "Ophthalmology", "Neurology", "Urology", "Hepatology"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -228,7 +228,6 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
                     (data, response, error) in
                     
                     if error != nil {
-                        print(error)
                         return
                     }
                     DispatchQueue.main.sync {
@@ -279,14 +278,14 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
         
         if segue.identifier == "showDoctorDetails" {
             if let doctorDetailsViewConntroller = segue.destination as? PatientDoctorDetailsViewController {
-                doctorDetailsViewConntroller.doctor =  sender as! Doctor
+                doctorDetailsViewConntroller.doctor =  sender as? Doctor
                 doctorDetailsViewConntroller.patient = patient
             }
         }
         
         if segue.identifier == "showMedicalCenterDetails" {
             if let medicalCenterDetailsViewConntroller = segue.destination as? PatientMedicalCenterDetailsViewController {
-                medicalCenterDetailsViewConntroller.medicalCenter =  sender as! MedicalCenter
+                medicalCenterDetailsViewConntroller.medicalCenter =  sender as? MedicalCenter
                 medicalCenterDetailsViewConntroller.patient = patient
             }
         }
