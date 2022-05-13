@@ -24,14 +24,14 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
                 
         viewUIView.layer.cornerRadius = 5
-        viewUIView.backgroundColor = UIColor(red: 203/255, green: 206/255, blue: 199/255, alpha: 1.0)
+        viewUIView.backgroundColor = Colors.brown
 
         viewUIView.layer.shadowColor = UIColor.black.cgColor
         viewUIView.layer.shadowOffset = CGSize(width: 3, height: 3)
         viewUIView.layer.shadowOpacity = 0.7
         viewUIView.layer.shadowRadius = 4.0
         
-        alreadyHaveAnAccountLabel.textColor = UIColor(red: 46/255, green: 80/255, blue: 107/255, alpha: 1.0)
+        alreadyHaveAnAccountLabel.textColor = Colors.darkBlue
 
     }
     

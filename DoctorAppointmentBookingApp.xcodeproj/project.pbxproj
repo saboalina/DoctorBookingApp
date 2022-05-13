@@ -52,6 +52,7 @@
 		C29B9228282D2E9E0094BF42 /* ButtonClassOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B9227282D2E9E0094BF42 /* ButtonClassOrange.swift */; };
 		C29B922A282D31820094BF42 /* ButtonClassBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B9229282D31820094BF42 /* ButtonClassBlue.swift */; };
 		C29B9231282D52EF0094BF42 /* TextFieldDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B9230282D52EF0094BF42 /* TextFieldDesign.swift */; };
+		C2A101B9282E498200F49819 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101B8282E498200F49819 /* Colors.swift */; };
 		C2A345C6281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */; };
 		C2A345C8281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */; };
 		C2A345CA281D120B00F5B3B7 /* CategoryOfMCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */; };
@@ -120,6 +121,7 @@
 		C29B9227282D2E9E0094BF42 /* ButtonClassOrange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClassOrange.swift; sourceTree = "<group>"; };
 		C29B9229282D31820094BF42 /* ButtonClassBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClassBlue.swift; sourceTree = "<group>"; };
 		C29B9230282D52EF0094BF42 /* TextFieldDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDesign.swift; sourceTree = "<group>"; };
+		C2A101B8282E498200F49819 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDoctorDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMedicalCenterDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOfMCViewCell.swift; sourceTree = "<group>"; };
@@ -388,6 +390,15 @@
 			path = ButtonDesign;
 			sourceTree = "<group>";
 		};
+		C2A101B7282E496C00F49819 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				C29B9226282D2E500094BF42 /* ButtonDesign */,
+				C2A101B8282E498200F49819 /* Colors.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
 		C2A345CB281D121C00F5B3B7 /* CategoryOfMCViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,7 +438,7 @@
 		C2C58C0F27F9F08200B637C6 /* DoctorAppointmentBookingApp */ = {
 			isa = PBXGroup;
 			children = (
-				C29B9226282D2E500094BF42 /* ButtonDesign */,
+				C2A101B7282E496C00F49819 /* Design */,
 				C29B9221282130F50094BF42 /* DoctorAppointmentBookingApp.entitlements */,
 				C296DE8D281411B200019B14 /* ViewCells */,
 				C27D9CB027FA096800511C4B /* View Model */,
@@ -615,6 +626,7 @@
 				C296DE85280C330200019B14 /* PatientAppointmentsNavigationController.swift in Sources */,
 				C2BD6B5A2802B6CA00DBC642 /* DoctorAppointmentsViewController.swift in Sources */,
 				C296DE8A281409DB00019B14 /* PatientHomeViewController.swift in Sources */,
+				C2A101B9282E498200F49819 /* Colors.swift in Sources */,
 				C2A345C6281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift in Sources */,
 				C27D9CB427FA215A00511C4B /* DoctorProfileViewController.swift in Sources */,
 				C26CCF86281D7D7B00986E8E /* PatientBookAnAppointmentViewController.swift in Sources */,

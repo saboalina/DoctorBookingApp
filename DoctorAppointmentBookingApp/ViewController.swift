@@ -9,7 +9,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewUiView.layer.cornerRadius = 5
-        viewUiView.backgroundColor = UIColor(red: 203/255, green: 206/255, blue: 199/255, alpha: 1.0)
+        viewUiView.backgroundColor = Colors.brown
 
         viewUiView.layer.shadowColor = UIColor.black.cgColor
         viewUiView.layer.shadowOffset = CGSize(width: 3, height: 3)

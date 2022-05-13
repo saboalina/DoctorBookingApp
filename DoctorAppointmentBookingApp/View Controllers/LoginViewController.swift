@@ -26,20 +26,20 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
                 
         viewUiView.layer.cornerRadius = 5
-        viewUiView.backgroundColor = UIColor(red: 203/255, green: 206/255, blue: 199/255, alpha: 1.0)
+        viewUiView.backgroundColor = Colors.brown
 
         viewUiView.layer.shadowColor = UIColor.black.cgColor
         viewUiView.layer.shadowOffset = CGSize(width: 3, height: 3)
         viewUiView.layer.shadowOpacity = 0.7
         viewUiView.layer.shadowRadius = 4.0
         
-        dontHaveAnAccountLabel.textColor = UIColor(red: 46/255, green: 80/255, blue: 107/255, alpha: 1.0)
+        dontHaveAnAccountLabel.textColor = Colors.darkBlue
         
         let buttonTitleStr = NSMutableAttributedString(string:"Forgot password?", attributes:attrs)
         attributedString.append(buttonTitleStr)
         forgotPasswordButton.setAttributedTitle(attributedString, for: .normal)
-        forgotPasswordButton.backgroundColor = UIColor(red: 203/255, green: 206/255, blue: 199/255, alpha: 1.0)
-        forgotPasswordButton.tintColor = UIColor(red: 46/255, green: 80/255, blue: 107/255, alpha: 1.0)
+        forgotPasswordButton.backgroundColor = Colors.brown
+        forgotPasswordButton.tintColor = Colors.darkBlue
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -129,14 +129,14 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginButtonTapped(_ sender: Any) {
 //        
-        let email = self.emailTextField.text!
-        let password = self.passwordTextField.text!
+//        let email = self.emailTextField.text!
+//        let password = self.passwordTextField.text!
         
 //        let email = "sabo.alina.99@gmail.com"
 //        let password = "ananas123456"
         
-//        let email = "maria@gmail.com"
-//        let password = "maria1999"
+        let email = "yasminross@med.com"
+        let password = "yasminross1234"
         
 //        let email = "alina@yahoo.com"
 //        let password = "alina1999"
