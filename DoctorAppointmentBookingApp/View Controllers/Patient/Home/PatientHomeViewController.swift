@@ -74,6 +74,10 @@ class PatientHomeViewController: UIViewController {
         registerCell()
         
         print("in PatientHomeViewController \(patient.name)")
+        
+        DispatchQueue.global().async { // should be in main queue
+            _ = UIView(frame: .zero)  // whatever UI is here
+        }
     }
 
     func loadData() {
@@ -204,6 +208,21 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
         if collectionView == self.doctorCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DoctorHorizontalViewCell.identifier, for: indexPath) as! DoctorHorizontalViewCell
             cell.setup(doctor: doctors[indexPath.row])
+            if let profilePictureURL = doctors[indexPath.row].imageURL {
+                let url = NSURL(string: profilePictureURL)
+                URLSession.shared.dataTask(with: url! as URL, completionHandler: {
+                    (data, response, error) in
+                    
+                    if error != nil {
+                        print(error)
+                        return
+                    }
+                    DispatchQueue.main.sync {
+                        cell.doctorImageView.image  = UIImage(data: data!)
+                        cell.doctorImageView.contentMode = .scaleAspectFill
+                    }
+                }).resume()
+            }
             return cell
         }
         if collectionView == self.categoriesCollectionView {

@@ -16,6 +16,7 @@ class DoctorProfileViewController: UIViewController {
     @IBOutlet weak var consultanceFeeLabel: UILabel!
     @IBOutlet weak var logoutButton: UIButton!
     
+    @IBOutlet weak var profilePictureImageView: UIImageView!
     
     @IBOutlet weak var serviceAt: UILabel!
     @IBOutlet weak var patients: UILabel!
@@ -36,8 +37,14 @@ class DoctorProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        DispatchQueue.global().async { // should be in main queue
+            _ = UIView(frame: .zero)  // whatever UI is here
+        }
+        
         setLabels()
         setDesign()
+        setProfilePicture()
+        
     }
     
     func setDesign() {
@@ -82,6 +89,7 @@ class DoctorProfileViewController: UIViewController {
         phoneLabel.text = doctor.phoneNumber
         serviceLabel.text = "\(doctor.service) Specialist"
         servicesAtTextView.text = doctor.worksAt
+        servicesAtTextView.isEditable = false
         patientNumberLabel.text = doctor.numberOfPatients
         experienceLabel.text = doctor.experience
         consultanceFeeLabel.text = doctor.consultancyFee
@@ -94,6 +102,24 @@ class DoctorProfileViewController: UIViewController {
         satLabel.text = doctor.sat
         sunLabel.text = doctor.sun
 
+    }
+    
+    func setProfilePicture() {
+        if let profilePictureURL = doctor.imageURL {
+            let url = NSURL(string: profilePictureURL)
+            URLSession.shared.dataTask(with: url! as URL, completionHandler: {
+                (data, response, error) in
+                
+                if error != nil {
+                    print(error)
+                    return
+                }
+                DispatchQueue.main.sync {
+                    self.profilePictureImageView.image  = UIImage(data: data!)
+                    self.profilePictureImageView.contentMode = .scaleAspectFill
+                }
+            }).resume()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

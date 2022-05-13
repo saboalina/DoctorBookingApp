@@ -150,11 +150,11 @@ class SignUpViewController: UIViewController {
             } else {
                 
                 let doctor = Doctor(email: email, password: password, name: name, phoneNumber: phoneNumber, worksAt: "", numberOfPatients: "", experience: "", consultancyFee: "", service: "", id: "",
-                                    sun: "", mon: "", tue: "", wed: "", thu: "", fri: "", sat: "")
+                                    sun: "", mon: "", tue: "", wed: "", thu: "", fri: "", sat: "", imageURL: "")
                 
                 doctorViewModel.createUser(doctor: doctor) {[weak self] (errorCode) in
                     guard let `self` = self else { return }
-                    if let err = errorCode {
+                    if errorCode != nil {
                         let alert = UIAlertController(title: "Error", message: "There was an error.", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)

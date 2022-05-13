@@ -23,7 +23,9 @@ public class Doctor: NSObject {
     var fri: String
     var sat: String
     
-    init(email: String, password: String, name: String, phoneNumber: String, worksAt: String, numberOfPatients: String, experience: String, consultancyFee: String, service: String, id: String, sun: String, mon: String, tue: String, wed: String, thu: String, fri: String, sat: String){
+    var imageURL: String?
+    
+    init(email: String, password: String, name: String, phoneNumber: String, worksAt: String, numberOfPatients: String, experience: String, consultancyFee: String, service: String, id: String, sun: String, mon: String, tue: String, wed: String, thu: String, fri: String, sat: String, imageURL: String){
         self.email = email
         self.password = password
         self.name = name
@@ -42,6 +44,8 @@ public class Doctor: NSObject {
         self.thu = thu
         self.fri = fri
         self.sat = sat
+        
+        self.imageURL = imageURL
     }
     
     init(document: [String:Any], id: String) {
@@ -63,6 +67,8 @@ public class Doctor: NSObject {
         thu =           document["thu"] as? String ?? ""
         fri =           document["fri"] as? String ?? ""
         sat =           document["sat"] as? String ?? ""
+        
+        imageURL =           document["imageURL"] as? String ?? ""
     }
 
 }
@@ -87,7 +93,8 @@ extension Doctor {
                                 wed:           document["wed"] as? String ?? "",
                                 thu:           document["thu"] as? String ?? "",
                                 fri:           document["fri"] as? String ?? "",
-                                sat:           document["sat"] as? String ?? ""))
+                                sat:           document["sat"] as? String ?? "",
+                                imageURL:           document["imageURL"] as? String ?? ""))
         }
         return users
     }

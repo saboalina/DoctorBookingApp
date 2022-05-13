@@ -11,6 +11,7 @@ class DoctorEditProfileViewController: UIViewController {
     @IBOutlet weak var consultancyFeeTextField: UITextField!
     
     
+    @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var monTextField: UITextField!
     @IBOutlet weak var tueTextField: UITextField!
     @IBOutlet weak var wedTextField: UITextField!
@@ -20,13 +21,18 @@ class DoctorEditProfileViewController: UIViewController {
     @IBOutlet weak var sunTextField: UITextField!
     
     var doctorViewModel = DoctorViewModel.shared
-    var doctor: Doctor?
+    var doctor: Doctor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        DispatchQueue.global().async { // should be in main queue
+            _ = UIView(frame: .zero)  // whatever UI is here
+        }
+        
         setLabels()
         setDesign()
+        setProfilePicture()
     }
     
     func setLabels() {
@@ -43,6 +49,24 @@ class DoctorEditProfileViewController: UIViewController {
         friTextField.text = doctor?.fri
         satTextField.text = doctor?.sat
         sunTextField.text = doctor?.sun
+    }
+    
+    func setProfilePicture() {
+        if let profilePictureURL = doctor.imageURL {
+            let url = NSURL(string: profilePictureURL)
+            URLSession.shared.dataTask(with: url! as URL, completionHandler: {
+                (data, response, error) in
+                
+                if error != nil {
+                    print(error)
+                    return
+                }
+                DispatchQueue.main.sync {
+                    self.profilePictureImageView.image  = UIImage(data: data!)
+                    self.profilePictureImageView.contentMode = .scaleAspectFill
+                }
+            }).resume()
+        }
     }
     
     
