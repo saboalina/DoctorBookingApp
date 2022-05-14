@@ -10,15 +10,17 @@ class PatientEditProfileViewController: UIViewController {
     
     
     var patientViewModel = PatientViewModel.shared
-    var patient: Patient?
+    var patient: Patient!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //print("aici e \(patientId)")
-        nameTextField.text = patient?.name
-        phoneTextField.text = patient?.phoneNumber
-        historyTextView.text = patient?.history
+        nameTextField.text = patient.name
+        phoneTextField.text = patient.phoneNumber
+        historyTextView.text = patient.history
+        
+        setDesign()
     }
     
 
@@ -35,6 +37,21 @@ class PatientEditProfileViewController: UIViewController {
             }
             
         }
+    }
+    
+    func setDesign() {
+        
+        
+        title = "Edit My Profile"
+        view.backgroundColor = Colors.brown
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.white
+        nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.darkBlue]
+
+        historyTextView.layer.shadowColor = UIColor.black.cgColor
+        historyTextView.layer.cornerRadius = 10
+                
     }
     
     func navigateToPatientProfile() {        

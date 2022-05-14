@@ -15,6 +15,20 @@ class PatientProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = Colors.brown
+        
+        title = "My Profile"
+        view.backgroundColor = Colors.brown
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.white
+        nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.darkBlue]
+
+        historyTextView.layer.shadowColor = UIColor.black.cgColor
+        historyTextView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        historyTextView.layer.shadowOpacity = 0.7
+        historyTextView.layer.shadowRadius = 4.0
+        historyTextView.layer.cornerRadius = 10
 
     }
     
