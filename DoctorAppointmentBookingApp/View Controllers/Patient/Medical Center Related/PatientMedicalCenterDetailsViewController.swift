@@ -26,6 +26,8 @@ class PatientMedicalCenterDetailsViewController: UIViewController {
 
         services = medicalCenter.services.components(separatedBy: ",")
         setLabels()
+        view.backgroundColor = Colors.brown
+        servicesTableView.backgroundColor = Colors.brown
         
     }
     
@@ -96,8 +98,24 @@ extension PatientMedicalCenterDetailsViewController: UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let service = services[indexPath.row]
-        var doctorsList = filterViewModel.getDoctorsByServiceWorkingAt(service: service, medicalCenterName: medicalCenter.name)
+        let doctorsList = filterViewModel.getDoctorsByServiceWorkingAt(service: service, medicalCenterName: medicalCenter.name)
         performSegue(withIdentifier: "fromMedicalDetailsToDoctorsList", sender: doctorsList)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+        let verticalPadding: CGFloat = 8
+
+        let maskLayer = CALayer()
+        maskLayer.cornerRadius = 10    //if you want round edges
+        maskLayer.backgroundColor = UIColor.white.cgColor
+        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
+        maskLayer.shadowColor = UIColor.white.cgColor
+        maskLayer.shadowOffset = CGSize(width: 3, height: 3)
+        maskLayer.shadowOpacity = 0.9
+        maskLayer.shadowRadius = 4.0
+        
+        cell.layer.mask = maskLayer
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

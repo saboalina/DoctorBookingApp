@@ -41,6 +41,8 @@ class PatientMapViewController: UIViewController {
         super.viewDidLoad()
         configureLocationServices()
         loadData()
+        view.backgroundColor = Colors.brown
+
     }
     
     func loadData() {
