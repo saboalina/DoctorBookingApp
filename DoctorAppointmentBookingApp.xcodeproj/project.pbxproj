@@ -54,6 +54,8 @@
 		C29B9231282D52EF0094BF42 /* TextFieldDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B9230282D52EF0094BF42 /* TextFieldDesign.swift */; };
 		C2A101B9282E498200F49819 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101B8282E498200F49819 /* Colors.swift */; };
 		C2A101BB282E525400F49819 /* TableViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101BA282E525400F49819 /* TableViewDesign.swift */; };
+		C2A101BD282FA74500F49819 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101BC282FA74500F49819 /* Category.swift */; };
+		C2A101BF282FA83000F49819 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101BE282FA83000F49819 /* CategoryViewModel.swift */; };
 		C2A345C6281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */; };
 		C2A345C8281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */; };
 		C2A345CA281D120B00F5B3B7 /* CategoryOfMCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */; };
@@ -124,6 +126,8 @@
 		C29B9230282D52EF0094BF42 /* TextFieldDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDesign.swift; sourceTree = "<group>"; };
 		C2A101B8282E498200F49819 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C2A101BA282E525400F49819 /* TableViewDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDesign.swift; sourceTree = "<group>"; };
+		C2A101BC282FA74500F49819 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C2A101BE282FA83000F49819 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDoctorDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMedicalCenterDetailsViewController.swift; sourceTree = "<group>"; };
 		C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOfMCViewCell.swift; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 				C296DE77280BFDB300019B14 /* Patient.swift */,
 				C296DE9B281589F800019B14 /* MedicalCenter.swift */,
 				C2238EF1281C188700571C08 /* MedicalCenterForMap.swift */,
+				C2A101BC282FA74500F49819 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				C296DE79280BFFE200019B14 /* PatientViewModel.swift */,
 				C296DE9D28158C2700019B14 /* MedicalCenterViewModel.swift */,
 				C2770C0E281A9C90006F4EBF /* FiltersViewModel.swift */,
+				C2A101BE282FA83000F49819 /* CategoryViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -602,6 +608,7 @@
 				C2770C0B2819B8E6006F4EBF /* PatientEditProfileViewController.swift in Sources */,
 				C29B9223282BF4780094BF42 /* ResetPasswordViewController.swift in Sources */,
 				C26CCF7A281D433100986E8E /* MedicalCenterVerticalViewCell.swift in Sources */,
+				C2A101BF282FA83000F49819 /* CategoryViewModel.swift in Sources */,
 				C2238EEE281C10ED00571C08 /* PatientMapViewController.swift in Sources */,
 				C26CCF77281D40FF00986E8E /* PatientMedicalCentersListViewController.swift in Sources */,
 				C296DE912814123B00019B14 /* DoctorHorizontalViewCell.swift in Sources */,
@@ -647,6 +654,7 @@
 				C2770C0F281A9C90006F4EBF /* FiltersViewModel.swift in Sources */,
 				C29B922A282D31820094BF42 /* ButtonClassBlue.swift in Sources */,
 				C296DE9C281589F800019B14 /* MedicalCenter.swift in Sources */,
+				C2A101BD282FA74500F49819 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

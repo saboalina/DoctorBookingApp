@@ -16,6 +16,8 @@ class PatientHomeViewController: UIViewController {
     var medicalCenterViewModel = MedicalCenterViewModel.shared
     var appointmentViewModel = AppointmentViewModel.shared
     var filterViewModel = FiltersViewModel.shared
+    var categoryViewModel = CategoryViewModel.shared
+
     
     var patient: Patient!
     
@@ -67,7 +69,23 @@ class PatientHomeViewController: UIViewController {
         }
     }
     
-    let categories = ["Dermatology", "Oral health", "Pulmonology", "Orthopedics", "Plastic surgery", "Gynecology", "Cardiology", "Ophthalmology", "Neurology", "Urology", "Hepatology"]
+    private var allCategories = [Category]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.categories = self.allCategories
+            }
+        }
+    }
+
+    var categories = [Category]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.categoriesCollectionView.reloadData()
+            }
+        }
+    }
+    
+//    let categories = ["Dermatology", "Oral health", "Pulmonology", "Orthopedics", "Plastic surgery", "Gynecology", "Cardiology", "Ophthalmology", "Neurology", "Urology", "Hepatology"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,17 +99,7 @@ class PatientHomeViewController: UIViewController {
         searchButton.layer.shadowRadius = 4.0
         searchButton.tintColor = UIColor.white
         view.backgroundColor = Colors.brown
-        
-//        let image = UIImage(named: "magnifyingglass")
-//        searchButton.setImage(image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
-//        searchButton.tintColor = UIColor.white
-
-        
-        DispatchQueue.global().async { // should be in main queue
-            _ = UIView(frame: .zero)  // whatever UI is here
-        }
-        
-        
+                
     }
 
     func loadData() {
@@ -106,6 +114,11 @@ class PatientHomeViewController: UIViewController {
         appointmentViewModel.getAllAppointmentsForAPatient(collectionID: "appointments", patientEmail: patient.email) { appointments in
                 self.appointments = appointments
         }
+        
+        categoryViewModel.getAllCategories(collectionID: "categories") { categories in
+                self.categories = categories
+        }
+
 
     }
     
@@ -241,6 +254,22 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
         if collectionView == self.categoriesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesViewCell.identifier, for: indexPath) as! CategoriesViewCell
             cell.setup(category: categories[indexPath.row])
+            
+            if let categoryURL = categories[indexPath.row].imageURL {
+                let url = NSURL(string: categoryURL)
+                URLSession.shared.dataTask(with: url! as URL, completionHandler: {
+                    (data, response, error) in
+                    
+                    if error != nil {
+                        return
+                    }
+                    DispatchQueue.main.sync {
+                        cell.categoryImage.image  = UIImage(data: data!)
+                        cell.categoryImage.contentMode = .scaleAspectFill
+                    }
+                }).resume()
+            }
+            
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MedicalCenterHorizontalViewCell.identifier, for: indexPath) as! MedicalCenterHorizontalViewCell
@@ -256,7 +285,7 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
         }
         
         if collectionView == self.categoriesCollectionView {
-            let service = categories[indexPath.row]
+            let service = categories[indexPath.row].name
             let medicaCentersList = filterViewModel.getMedicalCentersByService(service: service)
             performSegue(withIdentifier: "fromHomeToMedicalCentersList", sender: medicaCentersList)
         }

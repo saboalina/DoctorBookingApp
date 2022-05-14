@@ -55,6 +55,7 @@
             </constraints>
             <size key="customSize" width="228" height="210"/>
             <connections>
+                <outlet property="categoryImage" destination="OGS-DZ-1nh" id="5lJ-LC-tL4"/>
                 <outlet property="categoryNameLabel" destination="5kO-9f-ABk" id="B4O-xj-Bfm"/>
             </connections>
             <point key="canvasLocation" x="227.536231884058" y="150.66964285714286"/>

@@ -11,11 +11,12 @@ class CategoriesViewCell: UICollectionViewCell {
 
    
     @IBOutlet weak var categoryNameLabel: UILabel!
+    @IBOutlet weak var categoryImage: UIImageView!
     
     static let identifier = String(describing: CategoriesViewCell.self)
     
-    func setup(category: String) {
-        categoryNameLabel.text = category
+    func setup(category: Category) {
+        categoryNameLabel.text = category.name
         
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 3, height: 3)
