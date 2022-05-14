@@ -147,7 +147,7 @@ class LoginViewController: UIViewController {
         
         let email = "alina@yahoo.com"
         let password = "alina1999"
-        
+//
 //        let errorMessage = validateFields()
 //        if errorMessage != nil {
 //            let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
