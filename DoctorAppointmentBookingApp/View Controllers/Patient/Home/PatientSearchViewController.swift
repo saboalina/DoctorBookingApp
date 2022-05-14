@@ -30,29 +30,35 @@ class PatientSearchViewController: UIViewController {
         
         doctorsTableView.isHidden = false
         enterRadiusLabel.isHidden = true
-        
         checkAvailabilityLabel.text = "Check doctors availability from date:"
         selectAreaButton.isHidden = true
         zoomIndexTextField.isHidden = true
         mapView.isHidden = true
         
-        
+        setDesign()
+    }
+    
+    func setDesign() {
+        view.backgroundColor = Colors.brown
     }
     
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            checkAvailabilityLabel.text = "Check doctors availability from date:"
+            checkAvailabilityLabel.text = "Check doctors availability from:"
             doctorsTableView.isHidden = false
-            enterRadiusLabel.isHidden = true
             doctorSearch = true
+            enterRadiusLabel.text = ""
             selectAreaButton.isHidden = true
             zoomIndexTextField.isHidden = true
             mapView.isHidden = true
+            mapView.layer.cornerRadius = 10
         }
         if sender.selectedSegmentIndex == 1 {
-            checkAvailabilityLabel.text = "Check medical centers availability from date:"
+            checkAvailabilityLabel.text = "Check medical centers availability from:"
             doctorsTableView.isHidden = true
             enterRadiusLabel.isHidden = false
+            enterRadiusLabel.text = "Enter the radius you want to search:"
+            enterRadiusLabel.textColor = Colors.darkBlue
             doctorSearch = false
             selectAreaButton.isHidden = false
             zoomIndexTextField.isHidden = false
@@ -61,13 +67,13 @@ class PatientSearchViewController: UIViewController {
     }
     
     
-    @IBAction func selectDateButtonTapped(_ sender: Any) {
-        let selectDateProfilePage = storyboard?.instantiateViewController(withIdentifier: "selectDateProfilePage") as? PatientSelectDateViewController
-        
-        selectDateProfilePage?.doctorSearch = doctorSearch
-        selectDateProfilePage!.patient = patient
-        navigationController?.pushViewController(selectDateProfilePage!, animated: true)
-    }
+//    @IBAction func selectDateButtonTapped(_ sender: Any) {
+//        let selectDateProfilePage = storyboard?.instantiateViewController(withIdentifier: "selectDateProfilePage") as? PatientSelectDateViewController
+//
+//        selectDateProfilePage?.doctorSearch = doctorSearch
+//        selectDateProfilePage!.patient = patient
+//        navigationController?.pushViewController(selectDateProfilePage!, animated: true)
+//    }
     
     
     @IBAction func checkAvailabilityButtonTapped(_ sender: Any) {
@@ -77,7 +83,9 @@ class PatientSearchViewController: UIViewController {
         if doctorSearch == true {
             doctors = filterViewModel.getAvailableDoctors(startDate: startDate, endDate: endDate)
             doctorsTableView.reloadData()
-            //performSegue(withIdentifier: "fromSearchToDoctorsList", sender: doctorsList)
+            enterRadiusLabel.text = "Available Doctors"
+            enterRadiusLabel.textColor = Colors.darkBlue
+
         }
         else {
             let medicaCentersList = filterViewModel.getAvailableMedicalCenters(startDate: startDate, endDate: endDate)
@@ -97,7 +105,7 @@ class PatientSearchViewController: UIViewController {
                 
         if segue.identifier == "fromSearchToMapPage" {
             if let mapPage = segue.destination as? PatientMapViewController {
-                mapPage.zoomIndex =  sender as! Int
+                mapPage.zoomIndex =  sender as? Int ?? 2000
                 mapPage.patient = patient
             }
         }
