@@ -83,6 +83,8 @@ extension DoctorAppointmentsViewController: UITableViewDataSource, UITableViewDe
             case .success(let patient):
                 cell.nameLabel.text = patient.name
                 cell.nameLabel.textColor = Colors.darkBlue
+                cell.dateLabel.textColor = Colors.darkBlue
+                cell.timeLabel.textColor = Colors.darkBlue
             case .failure(let err):
                 print(err)
             }
@@ -111,12 +113,6 @@ extension DoctorAppointmentsViewController: UITableViewDataSource, UITableViewDe
         maskLayer.shadowOffset = CGSize(width: 3, height: 3)
         maskLayer.shadowOpacity = 0.3
         maskLayer.shadowRadius = 4.0
-        
-//
-//        layer.shadowColor = UIColor.black.cgColor
-//        layer.shadowOffset = CGSize(width: 3, height: 3)
-//        layer.shadowOpacity = 0.3
-//        layer.shadowRadius = 4.0
         
         cell.layer.mask = maskLayer
         

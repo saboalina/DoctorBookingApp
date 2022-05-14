@@ -10,6 +10,7 @@ import UIKit
 class DoctorVerticalViewCell: UITableViewCell {
     
     
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var serviceLabel: UILabel!
     @IBOutlet weak var experienceLabel: UILabel!

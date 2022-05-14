@@ -28,26 +28,39 @@ class PatientSearchViewController: UIViewController {
         startDatePicker.semanticContentAttribute = .forceRightToLeft
         endDatePicker.datePickerMode = UIDatePicker.Mode.date
         
-        doctorsTableView.isHidden = false
-        enterRadiusLabel.isHidden = true
+        doctorsTableView.isHidden = true
         checkAvailabilityLabel.text = "Check doctors availability from date:"
         selectAreaButton.isHidden = true
         zoomIndexTextField.isHidden = true
         mapView.isHidden = true
+        
+        if doctors.count > 0 {
+            enterRadiusLabel.isHidden = false
+            enterRadiusLabel.text = "Available Doctors"
+            enterRadiusLabel.textColor = Colors.darkBlue
+        }
         
         setDesign()
     }
     
     func setDesign() {
         view.backgroundColor = Colors.brown
+        doctorsTableView.backgroundColor = Colors.brown
     }
     
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             checkAvailabilityLabel.text = "Check doctors availability from:"
-            doctorsTableView.isHidden = false
             doctorSearch = true
             enterRadiusLabel.text = ""
+            if doctors.count > 0 {
+                enterRadiusLabel.isHidden = false
+                enterRadiusLabel.text = "Available Doctors"
+                enterRadiusLabel.textColor = Colors.darkBlue
+                doctorsTableView.isHidden = false
+            } else {
+                doctorsTableView.isHidden = true
+            }
             selectAreaButton.isHidden = true
             zoomIndexTextField.isHidden = true
             mapView.isHidden = true
@@ -65,17 +78,7 @@ class PatientSearchViewController: UIViewController {
             mapView.isHidden = false
         }
     }
-    
-    
-//    @IBAction func selectDateButtonTapped(_ sender: Any) {
-//        let selectDateProfilePage = storyboard?.instantiateViewController(withIdentifier: "selectDateProfilePage") as? PatientSelectDateViewController
-//
-//        selectDateProfilePage?.doctorSearch = doctorSearch
-//        selectDateProfilePage!.patient = patient
-//        navigationController?.pushViewController(selectDateProfilePage!, animated: true)
-//    }
-    
-    
+        
     @IBAction func checkAvailabilityButtonTapped(_ sender: Any) {
         
         let startDate = startDatePicker.date
@@ -83,8 +86,15 @@ class PatientSearchViewController: UIViewController {
         if doctorSearch == true {
             doctors = filterViewModel.getAvailableDoctors(startDate: startDate, endDate: endDate)
             doctorsTableView.reloadData()
-            enterRadiusLabel.text = "Available Doctors"
-            enterRadiusLabel.textColor = Colors.darkBlue
+            
+            if doctors.count > 0 {
+                enterRadiusLabel.isHidden = false
+                enterRadiusLabel.text = "Available Doctors"
+                enterRadiusLabel.textColor = Colors.darkBlue
+                doctorsTableView.isHidden = false
+            } else {
+                doctorsTableView.isHidden = true
+            }
 
         }
         else {
@@ -94,7 +104,6 @@ class PatientSearchViewController: UIViewController {
 
     }
     
-
     @IBAction func selectAreaButtonTapped(_ sender: Any) {
         let zoomIndex = Int(zoomIndexTextField.text ?? "2000")
         performSegue(withIdentifier: "fromSearchToMapPage", sender: zoomIndex)
@@ -140,7 +149,40 @@ extension PatientSearchViewController: UITableViewDataSource, UITableViewDelegat
         cell.nameLabel.text = "Dr. \(doctors[indexPath.row].name)"
         cell.serviceLabel.text = "\(doctors[indexPath.row].service) Specialist"
         cell.experienceLabel.text = "Experience: \(doctors[indexPath.row].experience)"
+        
+        if let profilePictureURL = doctors[indexPath.row].imageURL {
+            let url = NSURL(string: profilePictureURL)
+            URLSession.shared.dataTask(with: url! as URL, completionHandler: {
+                (data, response, error) in
+                
+                if error != nil {
+                    return
+                }
+                DispatchQueue.main.sync {
+                    cell.profileImageView.image  = UIImage(data: data!)
+                    cell.profileImageView.contentMode = .scaleAspectFill
+                }
+            }).resume()
+        }
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+
+        let maskLayer = CALayer()
+        maskLayer.cornerRadius = 10
+        maskLayer.backgroundColor = UIColor.black.cgColor
+        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 20, dy: 10)
+        
+        maskLayer.shadowColor = UIColor.black.cgColor
+        maskLayer.shadowOffset = CGSize(width: 3, height: 3)
+        maskLayer.shadowOpacity = 0.3
+        maskLayer.shadowRadius = 4.0
+        
+        cell.layer.mask = maskLayer
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
