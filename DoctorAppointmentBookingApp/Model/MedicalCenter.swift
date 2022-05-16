@@ -75,7 +75,7 @@ extension MedicalCenter {
                                                 tue:           document["Tue"] as? String ?? "",
                                                 wed:           document["Wed"] as? String ?? "",
                                                 thu:           document["Thu"] as? String ?? "",
-                                                fri:           document["Fri"] as? String ?? "",
+                                                fri:           document["fri"] as? String ?? "",
                                                 sat:           document["Sat"] as? String ?? "",
                                                 latitude:           document["latitude"] as? String ?? "",
                                                 longitude:           document["longitude"] as? String ?? "",

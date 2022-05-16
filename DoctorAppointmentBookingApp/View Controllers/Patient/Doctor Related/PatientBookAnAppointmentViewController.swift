@@ -23,6 +23,9 @@ class PatientBookAnAppointmentViewController: UIViewController {
         print(appointmentDatePicker.date)
         appointmentDatePicker.addTarget(self, action: #selector(datePickerChanged(picker:)), for: .valueChanged)
         registerCells()
+        
+        slotsCollectionView.delegate = self
+        slotsCollectionView.dataSource = self
     }
         
     @objc func datePickerChanged(picker: UIDatePicker) {

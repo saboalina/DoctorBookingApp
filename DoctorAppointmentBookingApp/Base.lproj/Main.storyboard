@@ -2626,7 +2626,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YdL-bA-Cq5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6946" y="-735"/>
+            <point key="canvasLocation" x="8218" y="-467"/>
         </scene>
         <!--Patient Book An Appointment View Controller-->
         <scene sceneID="URM-jA-rzr">
@@ -2636,9 +2636,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcR-6Q-NDh">
-                                <rect key="frame" x="144" y="735" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcR-6Q-NDh">
+                                <rect key="frame" x="20" y="802" width="388" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -2685,11 +2684,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GHm-V7-DMA">
-                                <rect key="frame" x="0.0" y="526" width="428" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GHm-V7-DMA">
+                                <rect key="frame" x="0.0" y="537" width="428" height="250"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Tzh-JP-yUX"/>
+                                    <constraint firstAttribute="height" constant="250" id="Tzh-JP-yUX"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hV1-o6-s1G">
                                     <size key="itemSize" width="128" height="128"/>
@@ -2699,8 +2698,8 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="pxg-pm-Nbu" id="VaD-bd-cql"/>
-                                    <outlet property="delegate" destination="pxg-pm-Nbu" id="B3J-rg-fMV"/>
+                                    <outlet property="dataSource" destination="pxg-pm-Nbu" id="TgR-K4-A6g"/>
+                                    <outlet property="delegate" destination="pxg-pm-Nbu" id="EDg-yb-gqV"/>
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-Ue-PhI">
@@ -2722,11 +2721,16 @@
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tsB-5E-Ahf"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
+                            <constraint firstItem="tsB-5E-Ahf" firstAttribute="bottom" secondItem="DcR-6Q-NDh" secondAttribute="bottom" constant="10" id="3BM-5V-IC0"/>
                             <constraint firstItem="WhS-h8-Mep" firstAttribute="top" secondItem="W4g-MF-9qz" secondAttribute="bottom" id="9yh-vz-7GV"/>
+                            <constraint firstItem="tsB-5E-Ahf" firstAttribute="trailing" secondItem="DcR-6Q-NDh" secondAttribute="trailing" constant="20" id="C8Q-QA-JAO"/>
+                            <constraint firstItem="GHm-V7-DMA" firstAttribute="leading" secondItem="1YN-Au-X3D" secondAttribute="leading" id="ChC-WZ-piZ"/>
                             <constraint firstItem="fSB-Ue-PhI" firstAttribute="leading" secondItem="tsB-5E-Ahf" secondAttribute="leading" constant="20" id="Cu6-v8-R3v"/>
                             <constraint firstItem="tsB-5E-Ahf" firstAttribute="trailing" secondItem="iND-Np-NsO" secondAttribute="trailing" constant="20" id="EUw-1v-PxH"/>
                             <constraint firstItem="W4g-MF-9qz" firstAttribute="leading" secondItem="tsB-5E-Ahf" secondAttribute="leading" constant="20" id="Ect-7M-9ur"/>
+                            <constraint firstItem="DcR-6Q-NDh" firstAttribute="leading" secondItem="tsB-5E-Ahf" secondAttribute="leading" constant="20" id="HR8-cs-UjT"/>
                             <constraint firstItem="W4g-MF-9qz" firstAttribute="top" secondItem="tsB-5E-Ahf" secondAttribute="top" constant="20" id="JgD-Fz-kmH"/>
                             <constraint firstItem="dUU-R4-Y7m" firstAttribute="trailing" secondItem="tsB-5E-Ahf" secondAttribute="trailing" constant="20" id="K2V-oO-B9j"/>
                             <constraint firstItem="tsB-5E-Ahf" firstAttribute="trailing" secondItem="x3s-D6-k9a" secondAttribute="trailing" constant="20" id="Msc-5V-tcb"/>
@@ -2740,13 +2744,15 @@
                             <constraint firstItem="fSB-Ue-PhI" firstAttribute="top" secondItem="iND-Np-NsO" secondAttribute="bottom" constant="30" id="ich-F0-3nh"/>
                             <constraint firstItem="tsB-5E-Ahf" firstAttribute="trailing" secondItem="fSB-Ue-PhI" secondAttribute="trailing" constant="20" id="nkQ-FO-tE0"/>
                             <constraint firstItem="dUU-R4-Y7m" firstAttribute="leading" secondItem="tsB-5E-Ahf" secondAttribute="leading" constant="20" id="nrp-M7-mKH"/>
+                            <constraint firstItem="GHm-V7-DMA" firstAttribute="centerX" secondItem="DcR-6Q-NDh" secondAttribute="centerX" id="nvT-nF-w8X"/>
                             <constraint firstItem="dUU-R4-Y7m" firstAttribute="top" secondItem="fSB-Ue-PhI" secondAttribute="bottom" constant="10" id="oJb-HN-F6z"/>
+                            <constraint firstItem="DcR-6Q-NDh" firstAttribute="top" secondItem="GHm-V7-DMA" secondAttribute="bottom" constant="15" id="xw7-rr-R4b"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nv0-BP-aWC"/>
                     <connections>
                         <outlet property="appointmentDatePicker" destination="dUU-R4-Y7m" id="l3r-ml-WHs"/>
-                        <outlet property="slotsCollectionView" destination="GHm-V7-DMA" id="VRZ-ne-SX4"/>
+                        <outlet property="slotsCollectionView" destination="GHm-V7-DMA" id="QI4-rk-ye6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQh-ub-0r4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
