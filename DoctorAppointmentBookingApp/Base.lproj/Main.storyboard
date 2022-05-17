@@ -749,7 +749,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTF-kA-7oF">
-                                        <rect key="frame" x="70" y="40" width="308" height="25"/>
+                                        <rect key="frame" x="75" y="40" width="303" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="EI9-Rm-Bvc"/>
                                         </constraints>
@@ -811,8 +811,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DW7-dJ-JtM" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="40" width="50" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DW7-dJ-JtM" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="40" width="50" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="2WQ-dw-snN"/>
                                             <constraint firstAttribute="height" constant="25" id="OvN-Ao-gKM"/>
@@ -821,7 +821,7 @@
                                         <color key="textColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kki-lu-poZ" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kki-lu-poZ" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                         <rect key="frame" x="15" y="65" width="50" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="U9b-sR-lzx"/>
@@ -831,7 +831,7 @@
                                         <color key="textColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nC-QD-hQa" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nC-QD-hQa" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                         <rect key="frame" x="15" y="90" width="50" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="B8B-Yr-cno"/>
@@ -841,7 +841,7 @@
                                         <color key="textColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RT8-vy-t6j" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RT8-vy-t6j" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                         <rect key="frame" x="15" y="115" width="50" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="J6G-2m-bVv"/>
@@ -851,7 +851,7 @@
                                         <color key="textColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLx-JT-yyl" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLx-JT-yyl" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                         <rect key="frame" x="15" y="140" width="50" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="ZAA-oH-V4X"/>
@@ -861,7 +861,7 @@
                                         <color key="textColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="306-zi-FDL" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sat:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="306-zi-FDL" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                         <rect key="frame" x="15" y="165" width="50" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="1GI-P6-qW3"/>
@@ -871,7 +871,7 @@
                                         <color key="textColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFQ-bI-Bhk" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFQ-bI-Bhk" customClass="WhiteLabel" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                         <rect key="frame" x="15" y="190" width="50" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="FZW-WC-757"/>
@@ -907,7 +907,7 @@
                                     <constraint firstItem="RT8-vy-t6j" firstAttribute="leading" secondItem="xUF-tj-8rl" secondAttribute="leading" constant="15" id="X7H-HK-01N"/>
                                     <constraint firstItem="gTF-kA-7oF" firstAttribute="top" secondItem="L6B-yZ-r2O" secondAttribute="bottom" constant="5" id="X7d-vF-ghq"/>
                                     <constraint firstItem="tK1-fN-8PV" firstAttribute="leading" secondItem="XFQ-bI-Bhk" secondAttribute="trailing" constant="10" id="ZGt-89-6p6"/>
-                                    <constraint firstItem="DW7-dJ-JtM" firstAttribute="leading" secondItem="xUF-tj-8rl" secondAttribute="leading" constant="10" id="aLw-dX-sGc"/>
+                                    <constraint firstItem="DW7-dJ-JtM" firstAttribute="leading" secondItem="xUF-tj-8rl" secondAttribute="leading" constant="15" id="aLw-dX-sGc"/>
                                     <constraint firstItem="GlK-WJ-Jn5" firstAttribute="top" secondItem="gTF-kA-7oF" secondAttribute="bottom" id="aXZ-SG-rDP"/>
                                     <constraint firstItem="RQm-y2-ajA" firstAttribute="top" secondItem="unU-mi-uvc" secondAttribute="bottom" id="b0f-V1-e8w"/>
                                     <constraint firstItem="GlK-WJ-Jn5" firstAttribute="leading" secondItem="kki-lu-poZ" secondAttribute="trailing" constant="10" id="bAT-qr-LGp"/>
@@ -1463,6 +1463,7 @@
                                             <outlet property="dateLabel" destination="5Hg-bb-YRl" id="Y8R-kj-M2Z"/>
                                             <outlet property="doneButton" destination="sRy-IH-iXR" id="8gV-dN-CeS"/>
                                             <outlet property="nameLabel" destination="4BJ-jr-nXD" id="GDo-ZV-Ht8"/>
+                                            <outlet property="patientImageView" destination="XSa-p3-nvP" id="eGh-Ri-waU"/>
                                             <outlet property="timeLabel" destination="2e6-Kz-amp" id="urG-N5-uaF"/>
                                         </connections>
                                     </tableViewCell>

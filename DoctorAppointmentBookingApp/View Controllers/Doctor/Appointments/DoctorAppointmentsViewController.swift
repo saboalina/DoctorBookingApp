@@ -85,6 +85,22 @@ extension DoctorAppointmentsViewController: UITableViewDataSource, UITableViewDe
                 cell.nameLabel.textColor = Colors.darkBlue
                 cell.dateLabel.textColor = Colors.darkBlue
                 cell.timeLabel.textColor = Colors.darkBlue
+                
+                if let profilePictureURL = patient.imageURL {
+                    let url = NSURL(string: profilePictureURL)
+                    URLSession.shared.dataTask(with: url! as URL, completionHandler: {
+                        (data, response, error) in
+                        
+                        if error != nil {
+                            return
+                        }
+                        DispatchQueue.main.async {
+                            cell.patientImageView.image  = UIImage(data: data!)
+                            cell.patientImageView.contentMode = .scaleAspectFill
+                        }
+                    }).resume()
+                }
+                
             case .failure(let err):
                 print(err)
             }

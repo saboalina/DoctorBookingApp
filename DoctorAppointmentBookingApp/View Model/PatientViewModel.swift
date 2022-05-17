@@ -19,7 +19,8 @@ class PatientViewModel {
                             "name":patient.name,
                             "phoneNumber":patient.phoneNumber,
                             "password":patient.password,
-                            "history":patient.history
+                            "history":patient.history,
+                            "imageURL": patient.imageURL
                         ]) { (error) in
                             if error != nil {
                                 print("error saving user data")

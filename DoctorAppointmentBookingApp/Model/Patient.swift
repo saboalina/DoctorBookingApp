@@ -11,14 +11,17 @@ public class Patient: NSObject {
     var history: String
     var id: String
 
+    var imageURL: String?
     
-    init(email: String, password: String, name: String, phoneNumber: String, history: String, id: String){
+    init(email: String, password: String, name: String, phoneNumber: String, history: String, id: String, imageURL: String){
         self.email = email
         self.password = password
         self.name = name
         self.phoneNumber = phoneNumber
         self.history = history
         self.id = id
+        
+        self.imageURL = imageURL
     }
     
     init(document: [String:Any], id: String) {
@@ -28,6 +31,8 @@ public class Patient: NSObject {
         phoneNumber =       document["phoneNumber"] as? String ?? ""
         history =           document["history"] as? String ?? ""
         self.id =               id
+        
+        imageURL =           document["imageURL"] as? String ?? ""
     }
     
 
@@ -42,7 +47,8 @@ extension Patient {
                                 name:               document["name"] as? String ?? "",
                                 phoneNumber:        document["phoneNumber"] as? String ?? "",
                                 history:            document["history"] as? String ?? "",
-                                 id:         document.documentID))
+                                 id:         document.documentID,
+                                 imageURL:           document["imageURL"] as? String ?? ""))
         }
         return users
     }

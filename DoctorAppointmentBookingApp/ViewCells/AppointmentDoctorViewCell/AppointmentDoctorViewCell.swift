@@ -15,6 +15,7 @@ class AppointmentDoctorViewCell: UITableViewCell {
     @IBOutlet weak var doneButton: ButtonClassBlue!
     @IBOutlet weak var cancelButton: ButtonClassOrange!
     
+    @IBOutlet weak var patientImageView: UIImageView!
     @IBOutlet weak var contentViewUIView: UIView!
     
     override func awakeFromNib() {

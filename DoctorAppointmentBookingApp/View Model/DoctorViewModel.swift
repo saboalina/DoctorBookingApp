@@ -27,7 +27,8 @@ class DoctorViewModel {
                                         "service":doctor.service,
                                         "experience":doctor.experience,
                                         "numberOfPatients":doctor.numberOfPatients,
-                                        "worksAt":doctor.worksAt
+                                        "worksAt":doctor.worksAt,
+                                        "imageURL": doctor.imageURL
                     ]) { (error) in
                         if error == nil {
                             completionBlock(nil)

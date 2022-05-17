@@ -115,7 +115,7 @@ class SignUpViewController: UIViewController {
             
             if userType == "is a patient" {
                 
-                let patient = Patient(email: email, password: password, name: name, phoneNumber: phoneNumber, history: "", id: "")
+                let patient = Patient(email: email, password: password, name: name, phoneNumber: phoneNumber, history: "", id: "", imageURL: "https://firebasestorage.googleapis.com/v0/b/doctor-appointment-booki-5017b.appspot.com/o/patients%2FScreenshot%202022-05-17%20at%2010.27.39.png?alt=media&token=74ee29bc-c180-4643-bb1a-e3717bb47522")
                 
                 patientViewModel.createUser(patient: patient) {[weak self] (success) in
                     guard let `self` = self else { return }
@@ -150,7 +150,7 @@ class SignUpViewController: UIViewController {
             } else {
                 
                 let doctor = Doctor(email: email, password: password, name: name, phoneNumber: phoneNumber, worksAt: "", numberOfPatients: "", experience: "", consultancyFee: "", service: "", id: "",
-                                    sun: "", mon: "", tue: "", wed: "", thu: "", fri: "", sat: "", imageURL: "")
+                                    sun: "", mon: "", tue: "", wed: "", thu: "", fri: "", sat: "", imageURL: "https://firebasestorage.googleapis.com/v0/b/doctor-appointment-booki-5017b.appspot.com/o/patients%2FScreenshot%202022-05-17%20at%2010.27.39.png?alt=media&token=74ee29bc-c180-4643-bb1a-e3717bb47522")
                 
                 doctorViewModel.createUser(doctor: doctor) {[weak self] (errorCode) in
                     guard let `self` = self else { return }
