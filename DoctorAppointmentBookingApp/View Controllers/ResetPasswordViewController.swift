@@ -86,7 +86,7 @@ class ResetPasswordViewController: UIViewController {
             }
         } else {
             patientViewModel.resetPassword(email: email, onSuccess: {
-                let alert = UIAlertController(title: "", message: "Enter your email to reset your password", preferredStyle: UIAlertController.Style.alert)
+                let alert = UIAlertController(title: "", message: "Please check your email to reset your password", preferredStyle: UIAlertController.Style.alert)
 
                 let okAction = UIAlertAction(title: "Ok", style: .default, handler: {action in
                     self.navigateToLoginPage()
@@ -107,5 +107,10 @@ class ResetPasswordViewController: UIViewController {
     func navigateToLoginPage() {
         let loginPage = storyboard?.instantiateViewController(withIdentifier: "LoginPage") as? LoginViewController
         navigationController?.pushViewController(loginPage!, animated: true)
+    }
+    
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigateToLoginPage()
     }
 }

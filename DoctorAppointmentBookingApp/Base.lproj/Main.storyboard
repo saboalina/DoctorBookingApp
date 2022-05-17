@@ -61,10 +61,35 @@
                                     <constraint firstItem="H4Z-DG-cP6" firstAttribute="top" secondItem="o6x-5V-MMK" secondAttribute="top" constant="20" id="tYV-4h-1Rw"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6z-F0-erB" customClass="ViewDesign" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                <rect key="frame" x="50" y="244" width="328" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAB-Cz-1Pf">
+                                        <rect key="frame" x="56.666666666666686" y="26.666666666666682" width="215" height="46.666666666666657"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="AppoBook">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.7965099216" green="0.80659598109999997" blue="0.78046864270000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="40" name="Georgia-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="wAB-Cz-1Pf" firstAttribute="centerY" secondItem="j6z-F0-erB" secondAttribute="centerY" id="5hh-hX-ELG"/>
+                                    <constraint firstAttribute="height" constant="100" id="OMx-ou-Sdv"/>
+                                    <constraint firstItem="wAB-Cz-1Pf" firstAttribute="centerX" secondItem="j6z-F0-erB" secondAttribute="centerX" id="t2X-XU-5gz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="j6z-F0-erB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Du9-8o-6yk"/>
                             <constraint firstItem="ttb-e5-byf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-10" id="Ilm-d2-cav"/>
                             <constraint firstItem="4x8-eQ-Bb0" firstAttribute="top" secondItem="o6x-5V-MMK" secondAttribute="bottom" constant="10" id="QJf-eI-JED"/>
                             <constraint firstItem="ttb-e5-byf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SLz-mJ-AHs"/>
@@ -76,10 +101,14 @@
                             <constraint firstAttribute="trailing" secondItem="o6x-5V-MMK" secondAttribute="trailing" constant="20" id="pX5-EZ-f3D"/>
                             <constraint firstItem="4x8-eQ-Bb0" firstAttribute="centerX" secondItem="o6x-5V-MMK" secondAttribute="centerX" id="t5C-5H-7GB"/>
                             <constraint firstAttribute="bottom" secondItem="ttb-e5-byf" secondAttribute="bottom" id="uJI-29-b4H"/>
+                            <constraint firstItem="j6z-F0-erB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="uLL-d1-r5S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j6z-F0-erB" secondAttribute="trailing" constant="50" id="wf2-hL-mpL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PeS-eg-zww"/>
                     <connections>
+                        <outlet property="titleLabel" destination="wAB-Cz-1Pf" id="ukX-BC-HUE"/>
+                        <outlet property="titleUiView" destination="j6z-F0-erB" id="wzj-wG-ai3"/>
                         <outlet property="viewUiView" destination="o6x-5V-MMK" id="wXY-U3-oaw"/>
                     </connections>
                 </viewController>
@@ -458,7 +487,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvH-pJ-CXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1915" y="518"/>
+            <point key="canvasLocation" x="1915" y="524"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="qm8-kP-GdB">
@@ -473,10 +502,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csH-zC-Uj6">
-                                <rect key="frame" x="20" y="358" width="388" height="210"/>
+                                <rect key="frame" x="20" y="338" width="388" height="250"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email to reset your password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSr-EN-fgg">
-                                        <rect key="frame" x="20" y="20" width="348" height="30"/>
+                                        <rect key="frame" x="20" y="60" width="348" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="KT9-2P-6tf"/>
                                         </constraints>
@@ -485,10 +514,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W1-UE-eyM" customClass="ButtonClassBlue" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="140" width="348" height="50"/>
+                                        <rect key="frame" x="20" y="180" width="348" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="uHP-qL-jlW"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="y0f-Xc-qxl"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Reset password"/>
@@ -497,26 +525,39 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1H7-b0-jhP" customClass="TextFieldDesign" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="70" width="348" height="50"/>
+                                        <rect key="frame" x="20" y="110" width="348" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="1qq-sO-4Ca"/>
                                             <constraint firstAttribute="height" constant="50" id="4Z3-PL-kkJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd7-MC-fhm" customClass="ButtonClassOrange" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="JSI-xl-BME"/>
+                                            <constraint firstAttribute="width" constant="100" id="Pko-DO-3Yl"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="ovB-T9-n50" eventType="touchUpInside" id="tEf-fo-eYg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="1H7-b0-jhP" firstAttribute="leading" secondItem="csH-zC-Uj6" secondAttribute="leading" constant="20" id="1dT-L1-EBi"/>
+                                    <constraint firstItem="3W1-UE-eyM" firstAttribute="top" secondItem="1H7-b0-jhP" secondAttribute="bottom" constant="20" id="A8l-yJ-MSA"/>
                                     <constraint firstItem="OSr-EN-fgg" firstAttribute="leading" secondItem="csH-zC-Uj6" secondAttribute="leading" constant="20" id="Aor-O3-Afs"/>
                                     <constraint firstAttribute="trailing" secondItem="3W1-UE-eyM" secondAttribute="trailing" constant="20" id="Kve-tu-kid"/>
                                     <constraint firstAttribute="trailing" secondItem="OSr-EN-fgg" secondAttribute="trailing" constant="20" id="OVj-se-o5C"/>
                                     <constraint firstItem="1H7-b0-jhP" firstAttribute="top" secondItem="OSr-EN-fgg" secondAttribute="bottom" constant="20" id="WGi-gn-tj7"/>
                                     <constraint firstItem="3W1-UE-eyM" firstAttribute="leading" secondItem="csH-zC-Uj6" secondAttribute="leading" constant="20" id="Wo3-Oa-Evv"/>
                                     <constraint firstAttribute="trailing" secondItem="1H7-b0-jhP" secondAttribute="trailing" constant="20" id="bEs-Nz-hYb"/>
+                                    <constraint firstItem="Rd7-MC-fhm" firstAttribute="top" secondItem="csH-zC-Uj6" secondAttribute="top" constant="20" id="glX-hT-GS5"/>
                                     <constraint firstAttribute="bottom" secondItem="3W1-UE-eyM" secondAttribute="bottom" constant="20" id="lVd-Uc-UIo"/>
-                                    <constraint firstAttribute="height" constant="210" id="mP0-gr-sWF"/>
-                                    <constraint firstItem="OSr-EN-fgg" firstAttribute="top" secondItem="csH-zC-Uj6" secondAttribute="top" constant="20" id="wku-91-nm5"/>
+                                    <constraint firstAttribute="height" constant="250" id="mP0-gr-sWF"/>
+                                    <constraint firstItem="Rd7-MC-fhm" firstAttribute="leading" secondItem="csH-zC-Uj6" secondAttribute="leading" constant="20" id="qxg-q3-D8d"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1521,7 +1562,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgB-vU-g5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3980" y="652"/>
+            <point key="canvasLocation" x="4879.9065420560746" y="651.83585313174956"/>
         </scene>
         <!--Patient Home View Controller-->
         <scene sceneID="dCv-1r-RI4">
@@ -1673,7 +1714,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9em-bh-zIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6048" y="-11"/>
+            <point key="canvasLocation" x="6947.663551401869" y="-11.015118790496761"/>
         </scene>
         <!--Patient Search View Controller-->
         <scene sceneID="5MF-uf-kS8">
@@ -1919,7 +1960,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVh-Mx-CeJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7709" y="283"/>
+            <point key="canvasLocation" x="8608.8785046728972" y="282.50539956803459"/>
         </scene>
         <!--Patient Doctors List View Controller-->
         <scene sceneID="OGI-9o-Qlo">
@@ -2013,7 +2054,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RL8-l4-VyU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10711.682242990653" y="802.80777537796985"/>
+            <point key="canvasLocation" x="11388.785046728972" y="843.62850971922251"/>
         </scene>
         <!--Home-->
         <scene sceneID="K9X-R5-fDs">
@@ -2032,7 +2073,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7Z-b1-IXZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4981" y="-11"/>
+            <point key="canvasLocation" x="5880.8411214953267" y="-11.015118790496761"/>
         </scene>
         <!--Patient Appointments View Controller-->
         <scene sceneID="5FJ-0z-QsZ">
@@ -2226,7 +2267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUl-VU-cgS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6048" y="739"/>
+            <point key="canvasLocation" x="6947.663551401869" y="738.66090712742982"/>
         </scene>
         <!--Patient Doctor Details View Controller-->
         <scene sceneID="tr2-6K-ss0">
@@ -3073,7 +3114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xS-zk-dHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8493.925233644859" y="1091.7926565874732"/>
+            <point key="canvasLocation" x="9393.925233644859" y="1091.7926565874732"/>
         </scene>
         <!--Appointments-->
         <scene sceneID="9XW-8x-clM">
@@ -3092,7 +3133,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2V-r4-qfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4981" y="739"/>
+            <point key="canvasLocation" x="5880.8411214953267" y="738.66090712742982"/>
         </scene>
         <!--Patient Map View Controller-->
         <scene sceneID="4E6-aS-fQ2">
@@ -3413,7 +3454,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="C3H-Af-Veo"/>
         <segue reference="gqt-V4-J8Y"/>
-        <segue reference="Wif-nk-ILZ"/>
+        <segue reference="7TJ-ij-TGH"/>
         <segue reference="I50-8e-ewY"/>
     </inferredMetricsTieBreakers>
     <resources>

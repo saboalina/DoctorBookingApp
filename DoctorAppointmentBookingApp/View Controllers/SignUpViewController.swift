@@ -62,11 +62,11 @@ class SignUpViewController: UIViewController {
             for digit in phoneNumberString {
                 let isInt = digit.isNumber
                 if !isInt {
-                    return "Please enter a valid phone number -> nu e nr"
+                    return "Please enter a valid phone number"
                 }
             }
             if phoneNumberString.count != 10 {
-                return "Please enter a valid phone number -> nu are 10 "
+                return "Please enter a valid phone number"
             }
         }
         

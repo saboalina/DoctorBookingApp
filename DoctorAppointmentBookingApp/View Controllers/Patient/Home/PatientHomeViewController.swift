@@ -243,7 +243,7 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
                     if error != nil {
                         return
                     }
-                    DispatchQueue.main.sync {
+                    DispatchQueue.main.async {
                         cell.doctorImageView.image  = UIImage(data: data!)
                         cell.doctorImageView.contentMode = .scaleAspectFill
                     }
@@ -263,7 +263,7 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
                     if error != nil {
                         return
                     }
-                    DispatchQueue.main.sync {
+                    DispatchQueue.main.async {
                         cell.categoryImage.image  = UIImage(data: data!)
                         cell.categoryImage.contentMode = .scaleAspectFill
                     }
