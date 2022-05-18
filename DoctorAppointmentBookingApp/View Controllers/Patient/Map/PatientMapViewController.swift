@@ -9,6 +9,7 @@ class PatientMapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     var medicalCenterViewModel = MedicalCenterViewModel.shared
+    var parkingLotViewModel = ParkingLotViewModel.shared
     
     var patient: Patient!
     var medicalCenter: MedicalCenter!
@@ -26,12 +27,32 @@ class PatientMapViewController: UIViewController {
             DispatchQueue.main.async {
                 self.createMedicalCentersMapList(medicalCenters: self.medicalCenters)
                 self.showMedicalCentersOnMap()
+                //self.verifyDistance()
+            }
+        }
+    }
+    
+    private var allParkingLots = [ParkingLot]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.parkingLots = self.allParkingLots
+            }
+        }
+    }
+
+    var parkingLots = [ParkingLot]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.createParkingLotsMapList(parkingLots: self.parkingLots)
+                //self.showMedicalCentersOnMap() self.parkingLots
                 self.verifyDistance()
             }
         }
     }
     
     var medicalCentersMapList = [MedicalCenterForMap]()
+    var parkingLotsMapList = [ParkingLotForMap]()
+
         
     private let locationManager = CLLocationManager()
     private var currentLocation: CLLocationCoordinate2D?
@@ -49,22 +70,37 @@ class PatientMapViewController: UIViewController {
         medicalCenterViewModel.getAllMedicalCenters(collectionID: "medicalCenters") { medicalCenters in
                 self.medicalCenters = medicalCenters
         }
+        
+        parkingLotViewModel.getAllParkingLots(collectionID: "parkingLots") { parkingLots in
+                self.parkingLots = parkingLots
+        }
 
     }
 
     
     func createMedicalCentersMapList(medicalCenters: [MedicalCenter]) {
-        
+
         for medicalCenter in medicalCenters {
             let latitude = Double(medicalCenter.latitude)!
             let longitude = Double(medicalCenter.longitude)!
             let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             let medicalCenterForMap = MedicalCenterForMap(title:medicalCenter.name, coordinate: coordinates)
             medicalCentersMapList.append(medicalCenterForMap)
-            
+
         }
     }
     
+    func createParkingLotsMapList(parkingLots: [ParkingLot]) {
+    
+        for parkingLot in parkingLots {
+            let latitude = Double(parkingLot.latitude)!
+            let longitude = Double(parkingLot.longitude)!
+            let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            let parkingLotForMap = ParkingLotForMap(title:parkingLot.name, coordinate: coordinates)
+            parkingLotsMapList.append(parkingLotForMap)
+
+        }
+    }
     
     func showMedicalCentersOnMap() {
         for medicalCenterMap in medicalCentersMapList {
@@ -98,23 +134,54 @@ class PatientMapViewController: UIViewController {
     
     func verifyDistance() {
         let currentCoordinate = CLLocation(latitude: currentLocation!.latitude, longitude: currentLocation!.longitude)
-        for medicalCenterOnMap in medicalCentersMapList {
+        
+        for parkingLotOnMap in parkingLotsMapList {
             
-            let medicalCoordinate = CLLocation(latitude: medicalCenterOnMap.coordinate.latitude, longitude: medicalCenterOnMap.coordinate.longitude)
-            let distanceInMeters = currentCoordinate.distance(from: medicalCoordinate)
-            if distanceInMeters < 200 {
-                getNotification(medicalCenterForMap: medicalCenterOnMap)
+            let parkingCoordinate = CLLocation(latitude: parkingLotOnMap.coordinate.latitude, longitude: parkingLotOnMap.coordinate.longitude)
+            let distanceInMeters = currentCoordinate.distance(from: parkingCoordinate)
+            if distanceInMeters < 700 {
+                getNotification(parkingLotForMap: parkingLotOnMap)
             }
         }
+        
+        
+//        for medicalCenterOnMap in medicalCentersMapList {
+//
+//            let medicalCoordinate = CLLocation(latitude: medicalCenterOnMap.coordinate.latitude, longitude: medicalCenterOnMap.coordinate.longitude)
+//            let distanceInMeters = currentCoordinate.distance(from: medicalCoordinate)
+//            if distanceInMeters < 200 {
+//                getNotification(medicalCenterForMap: medicalCenterOnMap)
+//            }
+//        }
     }
     
-    func getNotification(medicalCenterForMap: MedicalCenterForMap) {
+//    func getNotification(medicalCenterForMap: MedicalCenterForMap) {
+//
+//        let center = UNUserNotificationCenter.current()
+//
+//        let content = UNMutableNotificationContent()
+//        content.title = "Notification"
+//        content.body = "You are close to the parking lot \(medicalCenterForMap.title!) and there are 100 free spaces"
+//        content.sound = UNNotificationSound.default
+//        content.categoryIdentifier = "yourIdentifier"
+//        content.userInfo = ["example": "information"]
+//
+//        let date = convertDate(date: Date() + 5)
+//
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: date as DateComponents, repeats: false)
+//
+//        let uniqueID = UUID().uuidString
+//        let request = UNNotificationRequest(identifier: uniqueID, content: content, trigger: trigger)
+//        center.add(request)
+//    }
+    
+    func getNotification(parkingLotForMap: ParkingLotForMap) {
         
         let center = UNUserNotificationCenter.current()
 
         let content = UNMutableNotificationContent()
         content.title = "Notification"
-        content.body = "You are close to the parking lot \(medicalCenterForMap.title!) and there are 100 free spaces"
+        content.body = "You are close to the parking lot \(parkingLotForMap.title!) and there are 100 free spaces"
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = "yourIdentifier"
         content.userInfo = ["example": "information"]
@@ -125,7 +192,7 @@ class PatientMapViewController: UIViewController {
         
         let uniqueID = UUID().uuidString
         let request = UNNotificationRequest(identifier: uniqueID, content: content, trigger: trigger)
-        center.add(request) 
+        center.add(request)
     }
     
     func convertDate(date: Date) -> NSDateComponents {

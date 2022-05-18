@@ -27,6 +27,9 @@
 		C27D9CAF27FA08C400511C4B /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CAE27FA08C400511C4B /* Doctor.swift */; };
 		C27D9CB227FA097D00511C4B /* DoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CB127FA097D00511C4B /* DoctorViewModel.swift */; };
 		C27D9CB427FA215A00511C4B /* DoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CB327FA215A00511C4B /* DoctorProfileViewController.swift */; };
+		C283E2C22835034600AB756B /* ParkingLot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283E2C12835034600AB756B /* ParkingLot.swift */; };
+		C283E2C4283503D200AB756B /* ParkingLotForMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283E2C3283503D200AB756B /* ParkingLotForMap.swift */; };
+		C283E2C62835045000AB756B /* ParkingLotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283E2C52835045000AB756B /* ParkingLotViewModel.swift */; };
 		C290DA5728182EF3007C3CB8 /* AppointmentPatientViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290DA5628182EF3007C3CB8 /* AppointmentPatientViewCell.swift */; };
 		C290DA5A28187430007C3CB8 /* AppointmentDoctorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290DA5928187430007C3CB8 /* AppointmentDoctorViewCell.swift */; };
 		C296DE78280BFDB300019B14 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE77280BFDB300019B14 /* Patient.swift */; };
@@ -101,6 +104,9 @@
 		C27D9CAE27FA08C400511C4B /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		C27D9CB127FA097D00511C4B /* DoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewModel.swift; sourceTree = "<group>"; };
 		C27D9CB327FA215A00511C4B /* DoctorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfileViewController.swift; sourceTree = "<group>"; };
+		C283E2C12835034600AB756B /* ParkingLot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLot.swift; sourceTree = "<group>"; };
+		C283E2C3283503D200AB756B /* ParkingLotForMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLotForMap.swift; sourceTree = "<group>"; };
+		C283E2C52835045000AB756B /* ParkingLotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLotViewModel.swift; sourceTree = "<group>"; };
 		C290DA5628182EF3007C3CB8 /* AppointmentPatientViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentPatientViewCell.swift; sourceTree = "<group>"; };
 		C290DA5928187430007C3CB8 /* AppointmentDoctorViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDoctorViewCell.swift; sourceTree = "<group>"; };
 		C296DE77280BFDB300019B14 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
@@ -295,6 +301,8 @@
 				C296DE9B281589F800019B14 /* MedicalCenter.swift */,
 				C2238EF1281C188700571C08 /* MedicalCenterForMap.swift */,
 				C2A101BC282FA74500F49819 /* Category.swift */,
+				C283E2C12835034600AB756B /* ParkingLot.swift */,
+				C283E2C3283503D200AB756B /* ParkingLotForMap.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 				C296DE9D28158C2700019B14 /* MedicalCenterViewModel.swift */,
 				C2770C0E281A9C90006F4EBF /* FiltersViewModel.swift */,
 				C2A101BE282FA83000F49819 /* CategoryViewModel.swift */,
+				C283E2C52835045000AB756B /* ParkingLotViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -651,6 +660,7 @@
 				C2A345C8281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift in Sources */,
 				C2C58C2727F9F11500B637C6 /* LoginViewController.swift in Sources */,
 				C290DA5728182EF3007C3CB8 /* AppointmentPatientViewCell.swift in Sources */,
+				C283E2C62835045000AB756B /* ParkingLotViewModel.swift in Sources */,
 				C296DE85280C330200019B14 /* PatientAppointmentsNavigationController.swift in Sources */,
 				C2BD6B5A2802B6CA00DBC642 /* DoctorAppointmentsViewController.swift in Sources */,
 				C296DE8A281409DB00019B14 /* PatientHomeViewController.swift in Sources */,
@@ -667,6 +677,8 @@
 				C296DEA228159E7500019B14 /* MedicalCenterHorizontalViewCell.swift in Sources */,
 				C21AF513280839550001A8C0 /* Error.swift in Sources */,
 				C296DE8C281409F700019B14 /* PatientHomeNavigationController.swift in Sources */,
+				C283E2C22835034600AB756B /* ParkingLot.swift in Sources */,
+				C283E2C4283503D200AB756B /* ParkingLotForMap.swift in Sources */,
 				C2A345CA281D120B00F5B3B7 /* CategoryOfMCViewCell.swift in Sources */,
 				C296DE7A280BFFE200019B14 /* PatientViewModel.swift in Sources */,
 				C26CCF8A281D8FDE00986E8E /* SlotViewCell.swift in Sources */,
