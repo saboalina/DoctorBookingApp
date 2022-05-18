@@ -8,7 +8,6 @@ public class MedicalCenter: NSObject {
     var name: String
     var address: String
     var services: String
-    var doctors: String
 
     var sun: String
     var mon: String
@@ -22,12 +21,12 @@ public class MedicalCenter: NSObject {
     var longitude: String
     
     var id: String
+    var imageURL: String?
     
-    init(name: String, address: String, services: String, doctors: String, sun: String, mon: String, tue: String, wed: String, thu: String, fri: String, sat: String, latitude: String, longitude: String, id: String){
+    init(name: String, address: String, services: String, sun: String, mon: String, tue: String, wed: String, thu: String, fri: String, sat: String, latitude: String, longitude: String, id: String, imageURL: String){
         self.name = name
         self.address = address
         self.services = services
-        self.doctors = doctors
         
         self.sun = sun
         self.mon = mon
@@ -41,13 +40,14 @@ public class MedicalCenter: NSObject {
         
         self.latitude = latitude
         self.longitude = longitude
+        
+        self.imageURL = imageURL
     }
     
     init(document: [String:Any], id: String) {
         name =          document["name"] as? String ?? ""
         address =       document["address"] as? String ?? ""
         services =      document["services"] as? String ?? ""
-        doctors =       document["doctors"] as? String ?? ""
         sun =           document["sun"] as? String ?? ""
         mon =           document["mon"] as? String ?? ""
         tue =           document["tue"] as? String ?? ""
@@ -58,6 +58,8 @@ public class MedicalCenter: NSObject {
         latitude =      document["latitude"] as? String ?? ""
         longitude =     document["longitude"] as? String ?? ""
         self.id =               id
+        
+        imageURL =           document["imageURL"] as? String ?? ""
     }
 
 }
@@ -69,7 +71,6 @@ extension MedicalCenter {
             medicalCentres.append(MedicalCenter(name:       document["name"] as? String ?? "",
                                                 address:    document["address"] as? String ?? "",
                                                 services:   document["services"] as? String ?? "",
-                                                doctors:    document["doctors"] as? String ?? "",
                                                 sun:           document["Sun"] as? String ?? "",
                                                 mon:           document["Mon"] as? String ?? "",
                                                 tue:           document["Tue"] as? String ?? "",
@@ -79,7 +80,8 @@ extension MedicalCenter {
                                                 sat:           document["Sat"] as? String ?? "",
                                                 latitude:           document["latitude"] as? String ?? "",
                                                 longitude:           document["longitude"] as? String ?? "",
-                                                id:         document.documentID
+                                                id:         document.documentID,
+                                                imageURL:           document["imageURL"] as? String ?? ""
 ))
         }
         return medicalCentres

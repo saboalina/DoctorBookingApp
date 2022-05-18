@@ -274,6 +274,20 @@ extension PatientHomeViewController: UICollectionViewDelegate, UICollectionViewD
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MedicalCenterHorizontalViewCell.identifier, for: indexPath) as! MedicalCenterHorizontalViewCell
         cell.setup(medicalCenter: medicalCenters[indexPath.row])
+        if let profilePictureURL = medicalCenters[indexPath.row].imageURL {
+            let url = NSURL(string: profilePictureURL)
+            URLSession.shared.dataTask(with: url! as URL, completionHandler: {
+                (data, response, error) in
+                
+                if error != nil {
+                    return
+                }
+                DispatchQueue.main.async {
+                    cell.medicalImageView.image  = UIImage(data: data!)
+                    //cell.doctorImageView.contentMode = .scaleAspectFill
+                }
+            }).resume()
+        }
         return cell
     }
     

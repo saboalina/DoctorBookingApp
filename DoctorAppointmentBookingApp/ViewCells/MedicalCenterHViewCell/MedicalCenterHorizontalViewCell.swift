@@ -12,6 +12,7 @@ class MedicalCenterHorizontalViewCell: UICollectionViewCell {
    
     @IBOutlet weak var medicalCenterNameLabel: UILabel!
     
+    @IBOutlet weak var medicalImageView: UIImageView!
     @IBOutlet weak var addressLabel: UILabel!
     
     static let identifier = String(describing: MedicalCenterHorizontalViewCell.self)
