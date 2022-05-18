@@ -18,7 +18,6 @@ class PatientDoctorsListViewController: UIViewController {
     
     func setDesign() {
         
-        
         title = "Our Doctors"
         view.backgroundColor = Colors.brown
         let nav = self.navigationController?.navigationBar
