@@ -42,6 +42,15 @@ class PatientAppointmentsViewController: UIViewController {
         
         loadData()
 
+        view.backgroundColor = Colors.brown
+        appointmentsTableView.backgroundColor = Colors.brown
+        
+        title = "My Appointments"
+        view.backgroundColor = Colors.brown
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.white
+        nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.darkBlue]
     }
 
     
@@ -82,6 +91,13 @@ extension PatientAppointmentsViewController: UITableViewDataSource, UITableViewD
         cell.cancelButton.tag = indexPath.row
         cell.cancelButton.layer.cornerRadius = 5
         cell.cancelButton.addTarget(self, action: #selector(deleteAppointment(sender:)), for: .touchUpInside)
+        
+        cell.dateLabel.textColor = Colors.darkBlue
+        cell.timeLabel.textColor = Colors.darkBlue
+        cell.doctorLabel.textColor = Colors.darkBlue
+        cell.typeLabel.textColor = Colors.darkBlue
+        cell.placeLabel.textColor = Colors.darkBlue
+        
         return cell
         
     }
