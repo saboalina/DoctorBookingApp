@@ -252,7 +252,7 @@ extension PatientMapViewController: MKMapViewDelegate {
             annotationView?.pinTintColor = Colors.blue
             //annotationView. = setup
         } else if let annotation = annotation as? ParkingLotForMap {
-            annotationView?.pinTintColor = Colors.brown
+            annotationView?.pinTintColor = Colors.orange
         } else {
             annotationView?.pinTintColor = Colors.darkBlue
         }

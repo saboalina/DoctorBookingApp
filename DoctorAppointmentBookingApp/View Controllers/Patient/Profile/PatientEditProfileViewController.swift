@@ -8,6 +8,7 @@ class PatientEditProfileViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var historyTextView: UITextView!
     
+    @IBOutlet weak var profileImageView: UIImageView!
     
     var patientViewModel = PatientViewModel.shared
     var patient: Patient!
@@ -21,6 +22,7 @@ class PatientEditProfileViewController: UIViewController {
         historyTextView.text = patient.history
         
         setDesign()
+        setProfilePicture()
     }
     
 
@@ -51,7 +53,27 @@ class PatientEditProfileViewController: UIViewController {
 
         historyTextView.layer.shadowColor = UIColor.black.cgColor
         historyTextView.layer.cornerRadius = 10
+        historyTextView.textColor = Colors.darkBlue
+        nameTextField.textColor = Colors.darkBlue
+        phoneTextField.textColor = Colors.darkBlue
                 
+    }
+    
+    func setProfilePicture() {
+        if let profilePictureURL = patient.imageURL {
+            let url = NSURL(string: profilePictureURL)
+            URLSession.shared.dataTask(with: url! as URL, completionHandler: {
+                (data, response, error) in
+                
+                if error != nil {
+                    return
+                }
+                DispatchQueue.main.sync {
+                    self.profileImageView.image  = UIImage(data: data!)
+                    self.profileImageView.contentMode = .scaleAspectFill
+                }
+            }).resume()
+        }
     }
     
     func navigateToPatientProfile() {        

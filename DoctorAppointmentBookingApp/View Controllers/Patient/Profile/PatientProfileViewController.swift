@@ -9,7 +9,7 @@ class PatientProfileViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var historyTextView: UITextView!
-    
+    @IBOutlet weak var profileImageView: UIImageView!
     var patientViewModel = PatientViewModel.shared
     var patient: Patient!
     
@@ -29,6 +29,8 @@ class PatientProfileViewController: UIViewController {
         historyTextView.layer.shadowOpacity = 0.7
         historyTextView.layer.shadowRadius = 4.0
         historyTextView.layer.cornerRadius = 10
+        
+        setProfilePicture()
 
     }
     
@@ -52,8 +54,26 @@ class PatientProfileViewController: UIViewController {
         emailLabel.text = patient.email
         phoneLabel.text = patient.phoneNumber
         historyTextView.text = patient.history
+        
+        historyTextView.textColor = Colors.darkBlue
     }
     
+    func setProfilePicture() {
+        if let profilePictureURL = patient.imageURL {
+            let url = NSURL(string: profilePictureURL)
+            URLSession.shared.dataTask(with: url! as URL, completionHandler: {
+                (data, response, error) in
+                
+                if error != nil {
+                    return
+                }
+                DispatchQueue.main.sync {
+                    self.profileImageView.image  = UIImage(data: data!)
+                    self.profileImageView.contentMode = .scaleAspectFill
+                }
+            }).resume()
+        }
+    }
 
     @IBAction func logoutButtonTapped(_ sender: Any) {
         

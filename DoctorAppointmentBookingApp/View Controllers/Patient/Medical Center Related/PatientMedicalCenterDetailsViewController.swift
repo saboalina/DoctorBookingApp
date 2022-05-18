@@ -15,6 +15,8 @@ class PatientMedicalCenterDetailsViewController: UIViewController {
     @IBOutlet weak var sunProgramLabel: UILabel!
     @IBOutlet weak var servicesTableView: UITableView!
     
+    @IBOutlet weak var logoImageView: UIImageView!
+    
     var medicalCenter: MedicalCenter!
     var patient: Patient!
     var filterViewModel = FiltersViewModel.shared
@@ -28,7 +30,7 @@ class PatientMedicalCenterDetailsViewController: UIViewController {
         setLabels()
         view.backgroundColor = Colors.brown
         servicesTableView.backgroundColor = Colors.brown
-        
+        setLogo()
     }
     
     func setLabels() {
@@ -78,6 +80,21 @@ class PatientMedicalCenterDetailsViewController: UIViewController {
 
     }
 
+    func setLogo() {
+        if let profilePictureURL = medicalCenter.imageURL {
+            let url = NSURL(string: profilePictureURL)
+            URLSession.shared.dataTask(with: url! as URL, completionHandler: {
+                (data, response, error) in
+                
+                if error != nil {
+                    return
+                }
+                DispatchQueue.main.sync {
+                    self.logoImageView.image  = UIImage(data: data!)
+                }
+            }).resume()
+        }
+    }
 
 }
 
