@@ -27,7 +27,6 @@ class PatientMapViewController: UIViewController {
             DispatchQueue.main.async {
                 self.createMedicalCentersMapList(medicalCenters: self.medicalCenters)
                 self.showMedicalCentersOnMap()
-                //self.verifyDistance()
             }
         }
     }
@@ -44,7 +43,7 @@ class PatientMapViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.createParkingLotsMapList(parkingLots: self.parkingLots)
-                //self.showMedicalCentersOnMap() self.parkingLots
+                self.showParkingLotsOnMap()
                 self.verifyDistance()
             }
         }
@@ -108,6 +107,12 @@ class PatientMapViewController: UIViewController {
         }
     }
     
+    func showParkingLotsOnMap() {
+        for parkingLotMap in parkingLotsMapList {
+            mapView.addAnnotation(parkingLotMap)
+        }
+    }
+    
     private func configureLocationServices() {
         locationManager.delegate = self
         
@@ -139,41 +144,13 @@ class PatientMapViewController: UIViewController {
             
             let parkingCoordinate = CLLocation(latitude: parkingLotOnMap.coordinate.latitude, longitude: parkingLotOnMap.coordinate.longitude)
             let distanceInMeters = currentCoordinate.distance(from: parkingCoordinate)
-            if distanceInMeters < 700 {
+            print("----> \(distanceInMeters) \(parkingLotOnMap.title)")
+            if distanceInMeters < 500 {
                 getNotification(parkingLotForMap: parkingLotOnMap)
             }
         }
-        
-        
-//        for medicalCenterOnMap in medicalCentersMapList {
-//
-//            let medicalCoordinate = CLLocation(latitude: medicalCenterOnMap.coordinate.latitude, longitude: medicalCenterOnMap.coordinate.longitude)
-//            let distanceInMeters = currentCoordinate.distance(from: medicalCoordinate)
-//            if distanceInMeters < 200 {
-//                getNotification(medicalCenterForMap: medicalCenterOnMap)
-//            }
-//        }
     }
     
-//    func getNotification(medicalCenterForMap: MedicalCenterForMap) {
-//
-//        let center = UNUserNotificationCenter.current()
-//
-//        let content = UNMutableNotificationContent()
-//        content.title = "Notification"
-//        content.body = "You are close to the parking lot \(medicalCenterForMap.title!) and there are 100 free spaces"
-//        content.sound = UNNotificationSound.default
-//        content.categoryIdentifier = "yourIdentifier"
-//        content.userInfo = ["example": "information"]
-//
-//        let date = convertDate(date: Date() + 5)
-//
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: date as DateComponents, repeats: false)
-//
-//        let uniqueID = UUID().uuidString
-//        let request = UNNotificationRequest(identifier: uniqueID, content: content, trigger: trigger)
-//        center.add(request)
-//    }
     
     func getNotification(parkingLotForMap: ParkingLotForMap) {
         
@@ -246,23 +223,41 @@ class PatientMapViewController: UIViewController {
 }
 
 extension PatientMapViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
-        {
-            if let annotationTitle = view.annotation?.title
-            {
-                let medicalCenterName = annotationTitle!
-                self.medicalCenterViewModel.getMedicalCenterBy(name: medicalCenterName, handler: { res in
-                    switch res{
-                    case .success(let medicalCenter):
-                        self.medicalCenter = medicalCenter
-                        self.navigateToMedicalCenterPage(medicalCenter: medicalCenter)
-                    case .failure(let err):
-                        print(err)
-                    }
-                })
-                print("User tapped on annotation with title: \(annotationTitle!)")
-            }
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let annotationTitle = view.annotation?.title {
+            let medicalCenterName = annotationTitle!
+            self.medicalCenterViewModel.getMedicalCenterBy(name: medicalCenterName, handler: { res in
+                switch res{
+                case .success(let medicalCenter):
+                    self.medicalCenter = medicalCenter
+                    self.navigateToMedicalCenterPage(medicalCenter: medicalCenter)
+                case .failure(let err):
+                    print(err)
+                }
+            })
+            print("User tapped on annotation with title: \(annotationTitle!)")
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "myAnnotation") as? MKPinAnnotationView
+
+        if annotationView == nil {
+
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myAnnotation")
+        } else {
+            annotationView?.annotation = annotation
+        }
+        if let annotation = annotation as? MedicalCenterForMap {
+            annotationView?.pinTintColor = Colors.blue
+            //annotationView. = setup
+        } else if let annotation = annotation as? ParkingLotForMap {
+            annotationView?.pinTintColor = Colors.brown
+        } else {
+            annotationView?.pinTintColor = Colors.darkBlue
+        }
+        return annotationView
+    }
 }
 
 extension PatientMapViewController: CLLocationManagerDelegate {
