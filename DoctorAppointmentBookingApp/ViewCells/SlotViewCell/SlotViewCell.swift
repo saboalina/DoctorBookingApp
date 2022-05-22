@@ -16,5 +16,14 @@ class SlotViewCell: UICollectionViewCell {
     
     func setup(slot: String) {
         slotLabel.text = slot
+        
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 3, height: 3)
+        layer.shadowOpacity = 0.3
+        layer.shadowRadius = 4.0
+        
+        layer.cornerRadius = 10
+        
+        tintColor = Colors.darkBlue
     }
 }
