@@ -144,7 +144,6 @@ class PatientHomeViewController: UIViewController {
     
     func checkDates() {
         for appointment in appointments {
-            print("-----> \(appointment.date)")
             let stringDate = appointment.date
             let dateInfo = stringDate.components(separatedBy: "-")
             let appointmentYear = Int(dateInfo[0])
@@ -160,7 +159,6 @@ class PatientHomeViewController: UIViewController {
 
 
             if currentDateYear == appointmentYear && currentDateMonth == appointmentMonth && currentDateDay == appointmentDay {
-                print("programare maine")
                 getNotification(appointment: appointment)
             }
         }
@@ -188,7 +186,6 @@ class PatientHomeViewController: UIViewController {
     }
     
     func convertDate(date: Date) -> NSDateComponents {
-        print(date)
 
         let calendar = Calendar.current
 
@@ -202,8 +199,6 @@ class PatientHomeViewController: UIViewController {
 
         let newDate = NSDateComponents()
 
-        print("\(year):\(month):\(day)" + " " + "\(hour):\(minutes):\(sec)")
-
         newDate.timeZone = TimeZone.current
 
         newDate.hour = hour
@@ -213,8 +208,6 @@ class PatientHomeViewController: UIViewController {
         newDate.day = day
         newDate.month = month
         newDate.year = year
-
-        print("\(newDate.year):\(newDate.month):\(newDate.day)" + " " + "\(newDate.hour):\(newDate.minute):\(newDate.second) zone:\(TimeZone.current)")
 
         return newDate
     }

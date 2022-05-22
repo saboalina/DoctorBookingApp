@@ -1,9 +1,3 @@
-//
-//  TextFieldDesign.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 12.05.2022.
-//
 
 import Foundation
 import UIKit

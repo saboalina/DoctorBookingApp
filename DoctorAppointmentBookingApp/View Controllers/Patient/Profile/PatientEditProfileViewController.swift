@@ -16,7 +16,6 @@ class PatientEditProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //print("aici e \(patientId)")
         nameTextField.text = patient.name
         phoneTextField.text = patient.phoneNumber
         historyTextView.text = patient.history

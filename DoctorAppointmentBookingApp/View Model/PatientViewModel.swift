@@ -13,7 +13,7 @@ class PatientViewModel {
     
     func createUser(patient: Patient, completionBlock: @escaping (_ success: Bool) -> Void) {
             Auth.auth().createUser(withEmail: patient.email, password: patient.password) {(authResult, error) in
-                    if let user = authResult?.user {
+                if (authResult?.user) != nil {
                         self.db.collection("patients").addDocument(data: [
                             "email":patient.email,
                             "name":patient.name,

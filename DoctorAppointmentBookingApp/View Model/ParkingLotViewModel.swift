@@ -15,7 +15,6 @@ class ParkingLotViewModel {
         db.collection("parkingLots")
                 .addSnapshotListener { querySnapshot, err in
                     if let error = err {
-                        print(error)
                         handler([])
                     } else {
                         handler(ParkingLot.build(from: querySnapshot?.documents ?? []))

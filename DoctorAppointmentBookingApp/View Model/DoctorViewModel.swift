@@ -56,7 +56,6 @@ class DoctorViewModel {
         db.collection("doctors")
                 .addSnapshotListener { querySnapshot, err in
                     if let error = err {
-                        print(error)
                         handler([])
                     } else {
                         handler(Doctor.build(from: querySnapshot?.documents ?? []))
@@ -67,7 +66,6 @@ class DoctorViewModel {
     func getDoctorBy(email: String, handler: @escaping (Result<Doctor, Error>) -> Void) {
         db.collection("doctors").whereField("email", isEqualTo: email).getDocuments() { (querySnapshot, err) in
             if let err = err {
-                print("Error getting documents: \(err)")
                 handler(Result.failure(err))
             } else {
                 if let data = querySnapshot?.documents.first?.data() {

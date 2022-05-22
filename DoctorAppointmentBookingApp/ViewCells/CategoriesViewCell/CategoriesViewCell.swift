@@ -1,9 +1,4 @@
-//
-//  CategoriesViewCell.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 24.04.2022.
-//
+
 
 import UIKit
 

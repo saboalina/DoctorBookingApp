@@ -1,9 +1,3 @@
-//
-//  TableViewDesign.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 13.05.2022.
-//
 
 import Foundation
 

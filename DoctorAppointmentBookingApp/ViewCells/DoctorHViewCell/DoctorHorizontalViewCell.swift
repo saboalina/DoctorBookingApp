@@ -1,9 +1,3 @@
-//
-//  DoctorHorizontalViewCell.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 23.04.2022.
-//
 
 import UIKit
 

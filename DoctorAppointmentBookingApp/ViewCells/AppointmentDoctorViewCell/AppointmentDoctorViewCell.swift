@@ -1,9 +1,3 @@
-//
-//  AppointmentDoctorViewCell.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 26.04.2022.
-//
 
 import UIKit
 
@@ -20,7 +14,6 @@ class AppointmentDoctorViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

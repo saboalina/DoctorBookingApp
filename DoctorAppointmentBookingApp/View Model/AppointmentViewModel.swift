@@ -32,7 +32,6 @@ class AppointmentViewModel {
         db.collection("appointments").whereField("doctorId", isEqualTo: doctorEmail)
                 .addSnapshotListener { querySnapshot, err in
                     if let error = err {
-                        print(error)
                         handler([])
                     } else {
                         handler(Appointment.build(from: querySnapshot?.documents ?? []))
@@ -44,7 +43,6 @@ class AppointmentViewModel {
         db.collection("appointments").whereField("patientId", isEqualTo: patientEmail)
                 .addSnapshotListener { querySnapshot, err in
                     if let error = err {
-                        print(error)
                         handler([])
                     } else {
                         handler(Appointment.build(from: querySnapshot?.documents ?? []))

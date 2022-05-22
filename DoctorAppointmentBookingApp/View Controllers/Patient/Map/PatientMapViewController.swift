@@ -144,7 +144,6 @@ class PatientMapViewController: UIViewController {
             
             let parkingCoordinate = CLLocation(latitude: parkingLotOnMap.coordinate.latitude, longitude: parkingLotOnMap.coordinate.longitude)
             let distanceInMeters = currentCoordinate.distance(from: parkingCoordinate)
-            print("----> \(distanceInMeters) \(parkingLotOnMap.title)")
             if distanceInMeters < 500 {
                 getNotification(parkingLotForMap: parkingLotOnMap)
             }
@@ -173,7 +172,6 @@ class PatientMapViewController: UIViewController {
     }
     
     func convertDate(date: Date) -> NSDateComponents {
-        print(date)
 
         let calendar = Calendar.current
 
@@ -187,8 +185,6 @@ class PatientMapViewController: UIViewController {
 
         let newDate = NSDateComponents()
 
-        print("\(year):\(month):\(day)" + " " + "\(hour):\(minutes):\(sec)")
-
         newDate.timeZone = TimeZone.current
 
         newDate.hour = hour
@@ -198,8 +194,6 @@ class PatientMapViewController: UIViewController {
         newDate.day = day
         newDate.month = month
         newDate.year = year
-
-        print("\(newDate.year):\(newDate.month):\(newDate.day)" + " " + "\(newDate.hour):\(newDate.minute):\(newDate.second) zone:\(TimeZone.current)")
 
         return newDate
     }
@@ -235,7 +229,6 @@ extension PatientMapViewController: MKMapViewDelegate {
                     print(err)
                 }
             })
-            print("User tapped on annotation with title: \(annotationTitle!)")
         }
     }
     
@@ -263,7 +256,6 @@ extension PatientMapViewController: MKMapViewDelegate {
 extension PatientMapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("did get latest location")
         guard let latestLocation = locations.first else { return }
         zoomToLatestLocation(with: latestLocation.coordinate)
         currentLocation = latestLocation.coordinate
@@ -272,7 +264,6 @@ extension PatientMapViewController: CLLocationManagerDelegate {
     
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        print("the status changed")
         if status == .authorizedWhenInUse || status == .authorizedAlways {
             beginLocationUpdates(locationManager: manager)
         }

@@ -120,9 +120,6 @@ extension PatientAppointmentsViewController: UITableViewDataSource, UITableViewD
     @objc
     func deleteAppointment(sender: UIButton){
         let rowIndex = sender.tag
-        //do something
-        print(rowIndex)
-        print(appointments[rowIndex].doctorId)
         
         appointmentViewModel.deleteAppointment(appointment: appointments[rowIndex]) { [weak self] (success) in
             guard let `self` = self else { return }

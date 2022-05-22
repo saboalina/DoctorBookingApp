@@ -1,9 +1,3 @@
-//
-//  CardView.swift
-//  DoctorAppointmentBookingApp
-//
-//  Created by Alina Sabo Brandus on 23.04.2022.
-//
 
 import UIKit
 
@@ -24,7 +18,5 @@ class CardView: UIView {
         layer.shadowOffset = .zero
         layer.cornerRadius = 10
         layer.shadowOpacity = 0.1
-        
-        //cornerRadius = 10
     }
 }
