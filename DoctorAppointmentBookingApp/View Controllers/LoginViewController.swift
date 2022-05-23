@@ -136,8 +136,8 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginButtonTapped(_ sender: Any) {
         
-//        let email = self.emailTextField.text!
-//        let password = self.passwordTextField.text!
+        let email = self.emailTextField.text!
+        let password = self.passwordTextField.text!
         
 //        let email = "sabo.alina.99@gmail.com"
 //        let password = "ananas123456"
@@ -145,15 +145,15 @@ class LoginViewController: UIViewController {
 //        let email = "niallshelton@med.com"
 //        let password = "niallshelton1234"
         
-        let email = "alina@yahoo.com"
-        let password = "alina1999"
-//
-//        let errorMessage = validateFields()
-//        if errorMessage != nil {
-//            let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//        }
+//        let email = "alina@yahoo.com"
+//        let password = "alina1999"
+
+        let errorMessage = validateFields()
+        if errorMessage != nil {
+            let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
 
         let userType = verifyUser(email: email)
         

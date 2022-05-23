@@ -207,7 +207,6 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T5V-Ze-g79"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="T5V-Ze-g79" firstAttribute="bottom" secondItem="AAJ-vA-f2P" secondAttribute="bottom" id="5CC-ch-GIW"/>
                             <constraint firstItem="T5V-Ze-g79" firstAttribute="trailing" secondItem="AAJ-vA-f2P" secondAttribute="trailing" id="J6g-R4-4Zu"/>
@@ -223,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBN-kW-Ocz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10303.738317757008" y="-379.04967602591796"/>
+            <point key="canvasLocation" x="6697" y="524"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eSF-QJ-D39">
@@ -1025,7 +1024,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIc-lW-XU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6047.663551401869" y="-768.46652267818581"/>
+            <point key="canvasLocation" x="5636" y="-1041"/>
         </scene>
         <!--Doctor Edit Profile View Controller-->
         <scene sceneID="FJ3-wy-dmS">
@@ -1385,7 +1384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCo-6m-UwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9492" y="-1731"/>
+            <point key="canvasLocation" x="6698" y="-1041"/>
         </scene>
         <!--Doctor Appointments View Controller-->
         <scene sceneID="tC6-EF-FRP">
@@ -1509,7 +1508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHF-0J-7HP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6047.663551401869" y="-1560.2591792656588"/>
+            <point key="canvasLocation" x="5636" y="-1827"/>
         </scene>
         <!--Doctor Page View Controller-->
         <scene sceneID="0IJ-ne-Bko">
@@ -1528,7 +1527,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13s-93-hNh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3980" y="-901"/>
+            <point key="canvasLocation" x="3109" y="-268"/>
         </scene>
         <!--Profile-->
         <scene sceneID="dvy-PW-WTq">
@@ -1547,7 +1546,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kvq-0H-0S5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4981" y="-768"/>
+            <point key="canvasLocation" x="4607" y="-1040"/>
         </scene>
         <!--Appointments-->
         <scene sceneID="WAP-fo-Tmt">
@@ -1566,7 +1565,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wo-Xe-Dmw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4981" y="-1560"/>
+            <point key="canvasLocation" x="4607" y="-1827"/>
         </scene>
         <!--Patient Page View Controller-->
         <scene sceneID="Ht5-Tu-5gC">
@@ -1587,7 +1586,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgB-vU-g5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4879.9065420560746" y="651.83585313174956"/>
+            <point key="canvasLocation" x="3109" y="524"/>
         </scene>
         <!--Patient Home View Controller-->
         <scene sceneID="dCv-1r-RI4">
@@ -1700,7 +1699,6 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bQJ-bZ-mXn"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kfs-xO-i0y" firstAttribute="leading" secondItem="bQJ-bZ-mXn" secondAttribute="leading" constant="20" id="2Et-tL-wtt"/>
                             <constraint firstItem="vfv-lE-nl7" firstAttribute="top" secondItem="bQJ-bZ-mXn" secondAttribute="top" id="2hu-VI-dQZ"/>
@@ -1739,7 +1737,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9em-bh-zIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6947.663551401869" y="-11.015118790496761"/>
+            <point key="canvasLocation" x="5636" y="-268"/>
         </scene>
         <!--Patient Search View Controller-->
         <scene sceneID="5MF-uf-kS8">
@@ -1773,7 +1771,6 @@
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Gd-uK-iXu">
                                 <rect key="frame" x="20" y="183" width="388" height="50"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <color key="tintColor" red="0.18039215689999999" green="0.31372549020000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="leY-fe-tyD"/>
@@ -1797,7 +1794,6 @@
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9d-33-epO" customClass="ButtonClassBlue" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="323" width="388" height="50"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ag8-Dk-cEd"/>
                                 </constraints>
@@ -1906,7 +1902,6 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-29-MWr" customClass="ButtonClassOrange" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                 <rect key="frame" x="190" y="449" width="218" height="35"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="VAv-dK-wPN"/>
                                 </constraints>
@@ -1985,7 +1980,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVh-Mx-CeJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8608.8785046728972" y="282.50539956803459"/>
+            <point key="canvasLocation" x="6697" y="-268"/>
         </scene>
         <!--Patient Doctors List View Controller-->
         <scene sceneID="OGI-9o-Qlo">
@@ -2072,7 +2067,6 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6gQ-aa-xk3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Fe4-rV-eU6" firstAttribute="top" secondItem="6gQ-aa-xk3" secondAttribute="top" id="4Ak-BU-YNJ"/>
                             <constraint firstItem="Fe4-rV-eU6" firstAttribute="leading" secondItem="6gQ-aa-xk3" secondAttribute="leading" constant="10" id="XyU-sU-2X1"/>
@@ -2088,7 +2082,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RL8-l4-VyU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6850" y="-1560"/>
+            <point key="canvasLocation" x="7693" y="1291"/>
         </scene>
         <!--Home-->
         <scene sceneID="K9X-R5-fDs">
@@ -2107,7 +2101,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7Z-b1-IXZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5880.8411214953267" y="-11.015118790496761"/>
+            <point key="canvasLocation" x="4607" y="-268"/>
         </scene>
         <!--Patient Appointments View Controller-->
         <scene sceneID="5FJ-0z-QsZ">
@@ -2279,7 +2273,6 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sVl-yK-EhE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="T6r-oX-ENx" secondAttribute="bottom" id="5v0-f0-1bQ"/>
                             <constraint firstItem="T6r-oX-ENx" firstAttribute="top" secondItem="sVl-yK-EhE" secondAttribute="top" id="XL9-z7-PRh"/>
@@ -2294,7 +2287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUl-VU-cgS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6947.663551401869" y="738.66090712742982"/>
+            <point key="canvasLocation" x="5636" y="524"/>
         </scene>
         <!--Patient Doctor Details View Controller-->
         <scene sceneID="tr2-6K-ss0">
@@ -2694,7 +2687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YdL-bA-Cq5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8218" y="-467"/>
+            <point key="canvasLocation" x="7692" y="524"/>
         </scene>
         <!--Patient Book An Appointment View Controller-->
         <scene sceneID="URM-jA-rzr">
@@ -2710,7 +2703,7 @@
                                     <constraint firstAttribute="height" constant="50" id="FIx-1K-DK4"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create the appointment"/>
                                 <connections>
                                     <action selector="confirmAppointmentButtonTapped:" destination="pxg-pm-Nbu" eventType="touchUpInside" id="UNN-8L-5BL"/>
                                 </connections>
@@ -2792,7 +2785,6 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tsB-5E-Ahf"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="tsB-5E-Ahf" firstAttribute="bottom" secondItem="DcR-6Q-NDh" secondAttribute="bottom" constant="10" id="3BM-5V-IC0"/>
                             <constraint firstItem="WhS-h8-Mep" firstAttribute="top" secondItem="W4g-MF-9qz" secondAttribute="bottom" id="9yh-vz-7GV"/>
@@ -2834,7 +2826,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQh-ub-0r4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9297.196261682242" y="1753.9956803455725"/>
+            <point key="canvasLocation" x="8724" y="524"/>
         </scene>
         <!--Patient Medical Center Details View Controller-->
         <scene sceneID="rWJ-X3-k6P">
@@ -3074,7 +3066,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstItem="8NY-JC-HQE" firstAttribute="leading" secondItem="1gW-J3-L5Q" secondAttribute="trailing" id="0fD-Ha-MLZ"/>
                                     <constraint firstAttribute="trailing" secondItem="D8u-2y-Bnv" secondAttribute="trailing" constant="10" id="14t-G7-ZWS"/>
@@ -3117,7 +3108,6 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qpv-Vl-iuk"/>
-                        <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
                             <constraint firstItem="3Gn-aQ-4vP" firstAttribute="trailing" secondItem="1fX-yD-CQF" secondAttribute="trailing" id="3TU-hx-ytY"/>
                             <constraint firstItem="Qpv-Vl-iuk" firstAttribute="trailing" secondItem="1fX-yD-CQF" secondAttribute="trailing" constant="20" id="6uj-UD-5aB"/>
@@ -3162,7 +3152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xS-zk-dHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9393.925233644859" y="1091.7926565874732"/>
+            <point key="canvasLocation" x="6697" y="1291"/>
         </scene>
         <!--Appointments-->
         <scene sceneID="9XW-8x-clM">
@@ -3181,7 +3171,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2V-r4-qfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5880.8411214953267" y="738.66090712742982"/>
+            <point key="canvasLocation" x="4607" y="524"/>
         </scene>
         <!--Patient Map View Controller-->
         <scene sceneID="4E6-aS-fQ2">
@@ -3199,7 +3189,6 @@
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JVh-ap-ndz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ycK-dm-J1d" firstAttribute="leading" secondItem="JVh-ap-ndz" secondAttribute="leading" id="g6G-e9-HHg"/>
                             <constraint firstItem="ycK-dm-J1d" firstAttribute="top" secondItem="hz0-Nm-Qvq" secondAttribute="top" id="gJP-rJ-TaB"/>
@@ -3215,7 +3204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IW-n6-ZhO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6087" y="1514"/>
+            <point key="canvasLocation" x="5636" y="1291"/>
         </scene>
         <!--Map-->
         <scene sceneID="kAl-97-PmM">
@@ -3234,7 +3223,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="831-Ed-Acd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5006" y="1514"/>
+            <point key="canvasLocation" x="4607" y="1291"/>
         </scene>
         <!--Patient Profile View Controller-->
         <scene sceneID="N9b-o8-7MA">
@@ -3292,7 +3281,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnA-Aa-gIY" customClass="ButtonClassBlue" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="783" width="388" height="50"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1cz-tI-x6s"/>
                                 </constraints>
@@ -3359,7 +3347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhI-sv-RWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6086.9158878504668" y="2267.818574514039"/>
+            <point key="canvasLocation" x="5636" y="2057"/>
         </scene>
         <!--Patient Edit Profile View Controller-->
         <scene sceneID="XNW-dU-squ">
@@ -3420,7 +3408,6 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwB-Hn-PNY" customClass="ButtonClassBlue" customModule="DoctorAppointmentBookingApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="832" width="388" height="50"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RDF-Hn-xPn"/>
                                 </constraints>
@@ -3477,7 +3464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLR-Ba-RRw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6912.6168224299063" y="2267.818574514039"/>
+            <point key="canvasLocation" x="6620" y="2057"/>
         </scene>
         <!--Profile-->
         <scene sceneID="nJ1-VH-ues">
@@ -3496,13 +3483,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTj-oH-t32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5005" y="2268"/>
+            <point key="canvasLocation" x="4607" y="2057"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="C3H-Af-Veo"/>
         <segue reference="gqt-V4-J8Y"/>
-        <segue reference="k4E-NV-tRH"/>
+        <segue reference="Wif-nk-ILZ"/>
         <segue reference="I50-8e-ewY"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -3528,29 +3515,14 @@
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
