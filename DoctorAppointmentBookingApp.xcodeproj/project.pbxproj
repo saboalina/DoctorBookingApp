@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AFCF14E80D1976F1F5EC5F9 /* Pods_DoctorAppointmentBookingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5188B86694E39644387694A8 /* Pods_DoctorAppointmentBookingApp.framework */; };
+		72EF5E25039810A9E618C0E2 /* Pods_DoctorAppointmentBookingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAC5BA05F1DFF605511D7D5 /* Pods_DoctorAppointmentBookingAppTests.framework */; };
 		C21AF513280839550001A8C0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AF512280839550001A8C0 /* Error.swift */; };
 		C2238EEE281C10ED00571C08 /* PatientMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2238EED281C10ED00571C08 /* PatientMapViewController.swift */; };
 		C2238EF2281C188700571C08 /* MedicalCenterForMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2238EF1281C188700571C08 /* MedicalCenterForMap.swift */; };
@@ -79,11 +80,89 @@
 		C2C58C2527F9F10900B637C6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2427F9F10900B637C6 /* SignUpViewController.swift */; };
 		C2C58C2727F9F11500B637C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2627F9F11500B637C6 /* LoginViewController.swift */; };
 		C2C58C2927F9F12C00B637C6 /* DoctorPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2827F9F12C00B637C6 /* DoctorPageViewController.swift */; };
+		C2F30FA3284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F30FA2284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.swift */; };
+		C2F30FA9284F23FC009F81D7 /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2770C0E281A9C90006F4EBF /* FiltersViewModel.swift */; };
+		C2F30FAA284F33AD009F81D7 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CAE27FA08C400511C4B /* Doctor.swift */; };
+		C2F30FAB284F5213009F81D7 /* MedicalCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE9B281589F800019B14 /* MedicalCenter.swift */; };
+		C2F30FAC284F5224009F81D7 /* MedicalCenterForMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2238EF1281C188700571C08 /* MedicalCenterForMap.swift */; };
+		C2F30FAD284F5227009F81D7 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE77280BFDB300019B14 /* Patient.swift */; };
+		C2F30FAE284F522A009F81D7 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AF512280839550001A8C0 /* Error.swift */; };
+		C2F30FAF284F522C009F81D7 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B622804219900DBC642 /* Appointment.swift */; };
+		C2F30FB0284F5234009F81D7 /* SlotViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26CCF88281D8FDD00986E8E /* SlotViewCell.swift */; };
+		C2F30FB1284F5238009F81D7 /* MedicalCenterVerticalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26CCF79281D433100986E8E /* MedicalCenterVerticalViewCell.swift */; };
+		C2F30FB2284F523A009F81D7 /* DoctorVerticalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26CCF74281D1BBC00986E8E /* DoctorVerticalViewCell.swift */; };
+		C2F30FB3284F523E009F81D7 /* CategoryOfMCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C9281D120B00F5B3B7 /* CategoryOfMCViewCell.swift */; };
+		C2F30FB4284F5242009F81D7 /* AppointmentDoctorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290DA5928187430007C3CB8 /* AppointmentDoctorViewCell.swift */; };
+		C2F30FB5284F5245009F81D7 /* AppointmentPatientViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290DA5628182EF3007C3CB8 /* AppointmentPatientViewCell.swift */; };
+		C2F30FB6284F524A009F81D7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE9428143FB700019B14 /* CardView.swift */; };
+		C2F30FB7284F524D009F81D7 /* DoctorHorizontalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE8F2814123B00019B14 /* DoctorHorizontalViewCell.swift */; };
+		C2F30FB8284F5251009F81D7 /* CategoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DEA52815B04800019B14 /* CategoriesViewCell.swift */; };
+		C2F30FB9284F5255009F81D7 /* MedicalCenterHorizontalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DEA028159E7500019B14 /* MedicalCenterHorizontalViewCell.swift */; };
+		C2F30FBA284F5262009F81D7 /* DoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CB127FA097D00511C4B /* DoctorViewModel.swift */; };
+		C2F30FBB284F5265009F81D7 /* AppointmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B64280424D100DBC642 /* AppointmentViewModel.swift */; };
+		C2F30FBC284F5268009F81D7 /* PatientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE79280BFFE200019B14 /* PatientViewModel.swift */; };
+		C2F30FBD284F526B009F81D7 /* MedicalCenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE9D28158C2700019B14 /* MedicalCenterViewModel.swift */; };
+		C2F30FBE284F5271009F81D7 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101BE282FA83000F49819 /* CategoryViewModel.swift */; };
+		C2F30FBF284F5275009F81D7 /* ParkingLotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283E2C52835045000AB756B /* ParkingLotViewModel.swift */; };
+		C2F30FC0284F527F009F81D7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101BC282FA74500F49819 /* Category.swift */; };
+		C2F30FC1284F5284009F81D7 /* ParkingLot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283E2C12835034600AB756B /* ParkingLot.swift */; };
+		C2F30FC2284F5287009F81D7 /* ParkingLotForMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283E2C3283503D200AB756B /* ParkingLotForMap.swift */; };
+		C2F30FC3284F528B009F81D7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2427F9F10900B637C6 /* SignUpViewController.swift */; };
+		C2F30FC4284F528E009F81D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2627F9F11500B637C6 /* LoginViewController.swift */; };
+		C2F30FC5284F5291009F81D7 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B9222282BF4780094BF42 /* ResetPasswordViewController.swift */; };
+		C2F30FC6284F5293009F81D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C1427F9F08200B637C6 /* ViewController.swift */; };
+		C2F30FC7284F5297009F81D7 /* DoctorPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C2827F9F12C00B637C6 /* DoctorPageViewController.swift */; };
+		C2F30FC8284F529A009F81D7 /* DoctorAppointmentsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B5C2802B7E100DBC642 /* DoctorAppointmentsNavigationController.swift */; };
+		C2F30FC9284F529C009F81D7 /* DoctorAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B592802B6CA00DBC642 /* DoctorAppointmentsViewController.swift */; };
+		C2F30FCA284F52A0009F81D7 /* DoctorProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD6B5E2802D07900DBC642 /* DoctorProfileNavigationController.swift */; };
+		C2F30FCB284F52A2009F81D7 /* DoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D9CB327FA215A00511C4B /* DoctorProfileViewController.swift */; };
+		C2F30FCC284F52A5009F81D7 /* DoctorEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2770C0C281A7ACF006F4EBF /* DoctorEditProfileViewController.swift */; };
+		C2F30FCD284F52A8009F81D7 /* PatientPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE7C280C1FA100019B14 /* PatientPageViewController.swift */; };
+		C2F30FCE284F52AB009F81D7 /* PatientHomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE8B281409F700019B14 /* PatientHomeNavigationController.swift */; };
+		C2F30FCF284F52AD009F81D7 /* PatientHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE89281409DB00019B14 /* PatientHomeViewController.swift */; };
+		C2F30FD0284F52B0009F81D7 /* PatientSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2770C0428196870006F4EBF /* PatientSearchViewController.swift */; };
+		C2F30FD1284F52B2009F81D7 /* PatientAppointmentsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE84280C330200019B14 /* PatientAppointmentsNavigationController.swift */; };
+		C2F30FD2284F52B5009F81D7 /* PatientAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE82280C328400019B14 /* PatientAppointmentsViewController.swift */; };
+		C2F30FD3284F52B9009F81D7 /* PatientMapNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26CCF83281D6F5700986E8E /* PatientMapNavigationController.swift */; };
+		C2F30FD4284F52BB009F81D7 /* PatientMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2238EED281C10ED00571C08 /* PatientMapViewController.swift */; };
+		C2F30FD5284F52BE009F81D7 /* PatientProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE7E280C202700019B14 /* PatientProfileNavigationController.swift */; };
+		C2F30FD6284F52C1009F81D7 /* PatientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296DE80280C205700019B14 /* PatientProfileViewController.swift */; };
+		C2F30FD7284F52C3009F81D7 /* PatientEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2770C0A2819B8E6006F4EBF /* PatientEditProfileViewController.swift */; };
+		C2F30FD8284F52C6009F81D7 /* PatientDoctorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C5281C57A200F5B3B7 /* PatientDoctorDetailsViewController.swift */; };
+		C2F30FD9284F52C9009F81D7 /* PatientDoctorsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26CCF71281D1AE500986E8E /* PatientDoctorsListViewController.swift */; };
+		C2F30FDA284F52CB009F81D7 /* PatientBookAnAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26CCF85281D7D7B00986E8E /* PatientBookAnAppointmentViewController.swift */; };
+		C2F30FDB284F52CF009F81D7 /* PatientMedicalCenterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A345C7281C66A400F5B3B7 /* PatientMedicalCenterDetailsViewController.swift */; };
+		C2F30FDC284F52D2009F81D7 /* PatientMedicalCentersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26CCF76281D40FF00986E8E /* PatientMedicalCentersListViewController.swift */; };
+		C2F30FDD284F52DE009F81D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C1027F9F08200B637C6 /* AppDelegate.swift */; };
+		C2F30FDE284F52E2009F81D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C58C1227F9F08200B637C6 /* SceneDelegate.swift */; };
+		C2F30FDF284F530C009F81D7 /* WhiteLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101C128303C4200F49819 /* WhiteLabel.swift */; };
+		C2F30FE0284F530F009F81D7 /* DarkBlueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101C328303C8E00F49819 /* DarkBlueLabel.swift */; };
+		C2F30FE1284F5311009F81D7 /* BrownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101C528303CE500F49819 /* BrownLabel.swift */; };
+		C2F30FE2284F5315009F81D7 /* ButtonClassOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B9227282D2E9E0094BF42 /* ButtonClassOrange.swift */; };
+		C2F30FE3284F5318009F81D7 /* ButtonClassBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B9229282D31820094BF42 /* ButtonClassBlue.swift */; };
+		C2F30FE4284F531A009F81D7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101B8282E498200F49819 /* Colors.swift */; };
+		C2F30FE5284F531D009F81D7 /* TextFieldDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B9230282D52EF0094BF42 /* TextFieldDesign.swift */; };
+		C2F30FE6284F5320009F81D7 /* TableViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101BA282E525400F49819 /* TableViewDesign.swift */; };
+		C2F30FE7284F5322009F81D7 /* ViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101C7283040DE00F49819 /* ViewDesign.swift */; };
+		C2F30FE9284F5760009F81D7 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F30FE8284F5760009F81D7 /* Pin.swift */; };
+		C2F30FEA284F57F2009F81D7 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F30FE8284F5760009F81D7 /* Pin.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2F30FA4284F23B2009F81D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2C58C0527F9F08200B637C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2C58C0C27F9F08200B637C6;
+			remoteInfo = DoctorAppointmentBookingApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B85CBFA689930B4A66E9E9D /* Pods-DoctorAppointmentBookingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorAppointmentBookingApp.release.xcconfig"; path = "Target Support Files/Pods-DoctorAppointmentBookingApp/Pods-DoctorAppointmentBookingApp.release.xcconfig"; sourceTree = "<group>"; };
 		5188B86694E39644387694A8 /* Pods_DoctorAppointmentBookingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorAppointmentBookingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE99B953082717D47296F7F /* Pods-DoctorAppointmentBookingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorAppointmentBookingAppTests.debug.xcconfig"; path = "Target Support Files/Pods-DoctorAppointmentBookingAppTests/Pods-DoctorAppointmentBookingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		90458AE505625CC8A60DD7FE /* Pods-DoctorAppointmentBookingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorAppointmentBookingAppTests.release.xcconfig"; path = "Target Support Files/Pods-DoctorAppointmentBookingAppTests/Pods-DoctorAppointmentBookingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		950B60C20D251BEA216B9B0B /* Pods-DoctorAppointmentBookingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorAppointmentBookingApp.debug.xcconfig"; path = "Target Support Files/Pods-DoctorAppointmentBookingApp/Pods-DoctorAppointmentBookingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C21AF512280839550001A8C0 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		C2238EED281C10ED00571C08 /* PatientMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMapViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +238,10 @@
 		C2C58C2427F9F10900B637C6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C2C58C2627F9F11500B637C6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C2C58C2827F9F12C00B637C6 /* DoctorPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorPageViewController.swift; sourceTree = "<group>"; };
+		C2F30FA0284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoctorAppointmentBookingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F30FA2284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppointmentBookingAppTests.swift; sourceTree = "<group>"; };
+		C2F30FE8284F5760009F81D7 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		FCAC5BA05F1DFF605511D7D5 /* Pods_DoctorAppointmentBookingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorAppointmentBookingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +253,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2F30F9D284F23B2009F81D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72EF5E25039810A9E618C0E2 /* Pods_DoctorAppointmentBookingAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -178,6 +269,8 @@
 			children = (
 				950B60C20D251BEA216B9B0B /* Pods-DoctorAppointmentBookingApp.debug.xcconfig */,
 				0B85CBFA689930B4A66E9E9D /* Pods-DoctorAppointmentBookingApp.release.xcconfig */,
+				6EE99B953082717D47296F7F /* Pods-DoctorAppointmentBookingAppTests.debug.xcconfig */,
+				90458AE505625CC8A60DD7FE /* Pods-DoctorAppointmentBookingAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -186,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				5188B86694E39644387694A8 /* Pods_DoctorAppointmentBookingApp.framework */,
+				FCAC5BA05F1DFF605511D7D5 /* Pods_DoctorAppointmentBookingAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -303,6 +397,7 @@
 				C2A101BC282FA74500F49819 /* Category.swift */,
 				C283E2C12835034600AB756B /* ParkingLot.swift */,
 				C283E2C3283503D200AB756B /* ParkingLotForMap.swift */,
+				C2F30FE8284F5760009F81D7 /* Pin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -457,6 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				C2C58C0F27F9F08200B637C6 /* DoctorAppointmentBookingApp */,
+				C2F30FA1284F23B2009F81D7 /* DoctorAppointmentBookingAppTests */,
 				C2C58C0E27F9F08200B637C6 /* Products */,
 				14D4DEBA103DA50EA8BAAC3B /* Pods */,
 				2B3CEEEB688A6D17D410D155 /* Frameworks */,
@@ -467,6 +563,7 @@
 			isa = PBXGroup;
 			children = (
 				C2C58C0D27F9F08200B637C6 /* DoctorAppointmentBookingApp.app */,
+				C2F30FA0284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -504,6 +601,14 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		C2F30FA1284F23B2009F81D7 /* DoctorAppointmentBookingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2F30FA2284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.swift */,
+			);
+			path = DoctorAppointmentBookingAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -526,6 +631,26 @@
 			productReference = C2C58C0D27F9F08200B637C6 /* DoctorAppointmentBookingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C2F30F9F284F23B2009F81D7 /* DoctorAppointmentBookingAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2F30FA6284F23B2009F81D7 /* Build configuration list for PBXNativeTarget "DoctorAppointmentBookingAppTests" */;
+			buildPhases = (
+				64AC879981C4A59C76DAC3B0 /* [CP] Check Pods Manifest.lock */,
+				C2F30F9C284F23B2009F81D7 /* Sources */,
+				C2F30F9D284F23B2009F81D7 /* Frameworks */,
+				C2F30F9E284F23B2009F81D7 /* Resources */,
+				3959DBAF562769A8A040AA54 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2F30FA5284F23B2009F81D7 /* PBXTargetDependency */,
+			);
+			name = DoctorAppointmentBookingAppTests;
+			productName = DoctorAppointmentBookingAppTests;
+			productReference = C2F30FA0284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -533,11 +658,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					C2C58C0C27F9F08200B637C6 = {
 						CreatedOnToolsVersion = 13.3;
+					};
+					C2F30F9F284F23B2009F81D7 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = C2C58C0C27F9F08200B637C6;
 					};
 				};
 			};
@@ -555,6 +684,7 @@
 			projectRoot = "";
 			targets = (
 				C2C58C0C27F9F08200B637C6 /* DoctorAppointmentBookingApp */,
+				C2F30F9F284F23B2009F81D7 /* DoctorAppointmentBookingAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -572,6 +702,13 @@
 				C2C58C1A27F9F08400B637C6 /* Assets.xcassets in Resources */,
 				C26CCF8B281D8FDE00986E8E /* SlotViewCell.xib in Resources */,
 				C2C58C1827F9F08200B637C6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F30F9E284F23B2009F81D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +730,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoctorAppointmentBookingApp/Pods-DoctorAppointmentBookingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3959DBAF562769A8A040AA54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoctorAppointmentBookingAppTests/Pods-DoctorAppointmentBookingAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoctorAppointmentBookingAppTests/Pods-DoctorAppointmentBookingAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoctorAppointmentBookingAppTests/Pods-DoctorAppointmentBookingAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4821D4343BA1E8C5EE4406B3 /* [CP] Check Pods Manifest.lock */ = {
@@ -617,6 +771,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		64AC879981C4A59C76DAC3B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoctorAppointmentBookingAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -635,6 +811,7 @@
 				C29B9223282BF4780094BF42 /* ResetPasswordViewController.swift in Sources */,
 				C26CCF7A281D433100986E8E /* MedicalCenterVerticalViewCell.swift in Sources */,
 				C2A101BF282FA83000F49819 /* CategoryViewModel.swift in Sources */,
+				C2F30FE9284F5760009F81D7 /* Pin.swift in Sources */,
 				C2238EEE281C10ED00571C08 /* PatientMapViewController.swift in Sources */,
 				C26CCF77281D40FF00986E8E /* PatientMedicalCentersListViewController.swift in Sources */,
 				C296DE912814123B00019B14 /* DoctorHorizontalViewCell.swift in Sources */,
@@ -690,7 +867,87 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2F30F9C284F23B2009F81D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F30FE2284F5315009F81D7 /* ButtonClassOrange.swift in Sources */,
+				C2F30FD8284F52C6009F81D7 /* PatientDoctorDetailsViewController.swift in Sources */,
+				C2F30FE3284F5318009F81D7 /* ButtonClassBlue.swift in Sources */,
+				C2F30FC7284F5297009F81D7 /* DoctorPageViewController.swift in Sources */,
+				C2F30FD5284F52BE009F81D7 /* PatientProfileNavigationController.swift in Sources */,
+				C2F30FC1284F5284009F81D7 /* ParkingLot.swift in Sources */,
+				C2F30FDB284F52CF009F81D7 /* PatientMedicalCenterDetailsViewController.swift in Sources */,
+				C2F30FE5284F531D009F81D7 /* TextFieldDesign.swift in Sources */,
+				C2F30FB5284F5245009F81D7 /* AppointmentPatientViewCell.swift in Sources */,
+				C2F30FA9284F23FC009F81D7 /* FiltersViewModel.swift in Sources */,
+				C2F30FA3284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.swift in Sources */,
+				C2F30FCB284F52A2009F81D7 /* DoctorProfileViewController.swift in Sources */,
+				C2F30FBF284F5275009F81D7 /* ParkingLotViewModel.swift in Sources */,
+				C2F30FC4284F528E009F81D7 /* LoginViewController.swift in Sources */,
+				C2F30FBD284F526B009F81D7 /* MedicalCenterViewModel.swift in Sources */,
+				C2F30FB0284F5234009F81D7 /* SlotViewCell.swift in Sources */,
+				C2F30FB6284F524A009F81D7 /* CardView.swift in Sources */,
+				C2F30FC6284F5293009F81D7 /* ViewController.swift in Sources */,
+				C2F30FBE284F5271009F81D7 /* CategoryViewModel.swift in Sources */,
+				C2F30FDC284F52D2009F81D7 /* PatientMedicalCentersListViewController.swift in Sources */,
+				C2F30FD9284F52C9009F81D7 /* PatientDoctorsListViewController.swift in Sources */,
+				C2F30FAC284F5224009F81D7 /* MedicalCenterForMap.swift in Sources */,
+				C2F30FB4284F5242009F81D7 /* AppointmentDoctorViewCell.swift in Sources */,
+				C2F30FDA284F52CB009F81D7 /* PatientBookAnAppointmentViewController.swift in Sources */,
+				C2F30FE6284F5320009F81D7 /* TableViewDesign.swift in Sources */,
+				C2F30FBA284F5262009F81D7 /* DoctorViewModel.swift in Sources */,
+				C2F30FC9284F529C009F81D7 /* DoctorAppointmentsViewController.swift in Sources */,
+				C2F30FAF284F522C009F81D7 /* Appointment.swift in Sources */,
+				C2F30FCC284F52A5009F81D7 /* DoctorEditProfileViewController.swift in Sources */,
+				C2F30FB1284F5238009F81D7 /* MedicalCenterVerticalViewCell.swift in Sources */,
+				C2F30FD4284F52BB009F81D7 /* PatientMapViewController.swift in Sources */,
+				C2F30FB7284F524D009F81D7 /* DoctorHorizontalViewCell.swift in Sources */,
+				C2F30FE7284F5322009F81D7 /* ViewDesign.swift in Sources */,
+				C2F30FAB284F5213009F81D7 /* MedicalCenter.swift in Sources */,
+				C2F30FD2284F52B5009F81D7 /* PatientAppointmentsViewController.swift in Sources */,
+				C2F30FD6284F52C1009F81D7 /* PatientProfileViewController.swift in Sources */,
+				C2F30FE0284F530F009F81D7 /* DarkBlueLabel.swift in Sources */,
+				C2F30FCE284F52AB009F81D7 /* PatientHomeNavigationController.swift in Sources */,
+				C2F30FB8284F5251009F81D7 /* CategoriesViewCell.swift in Sources */,
+				C2F30FC0284F527F009F81D7 /* Category.swift in Sources */,
+				C2F30FC2284F5287009F81D7 /* ParkingLotForMap.swift in Sources */,
+				C2F30FCA284F52A0009F81D7 /* DoctorProfileNavigationController.swift in Sources */,
+				C2F30FDF284F530C009F81D7 /* WhiteLabel.swift in Sources */,
+				C2F30FB2284F523A009F81D7 /* DoctorVerticalViewCell.swift in Sources */,
+				C2F30FCD284F52A8009F81D7 /* PatientPageViewController.swift in Sources */,
+				C2F30FEA284F57F2009F81D7 /* Pin.swift in Sources */,
+				C2F30FE4284F531A009F81D7 /* Colors.swift in Sources */,
+				C2F30FD3284F52B9009F81D7 /* PatientMapNavigationController.swift in Sources */,
+				C2F30FC8284F529A009F81D7 /* DoctorAppointmentsNavigationController.swift in Sources */,
+				C2F30FDE284F52E2009F81D7 /* SceneDelegate.swift in Sources */,
+				C2F30FAA284F33AD009F81D7 /* Doctor.swift in Sources */,
+				C2F30FAE284F522A009F81D7 /* Error.swift in Sources */,
+				C2F30FC3284F528B009F81D7 /* SignUpViewController.swift in Sources */,
+				C2F30FBB284F5265009F81D7 /* AppointmentViewModel.swift in Sources */,
+				C2F30FD0284F52B0009F81D7 /* PatientSearchViewController.swift in Sources */,
+				C2F30FD1284F52B2009F81D7 /* PatientAppointmentsNavigationController.swift in Sources */,
+				C2F30FBC284F5268009F81D7 /* PatientViewModel.swift in Sources */,
+				C2F30FAD284F5227009F81D7 /* Patient.swift in Sources */,
+				C2F30FDD284F52DE009F81D7 /* AppDelegate.swift in Sources */,
+				C2F30FC5284F5291009F81D7 /* ResetPasswordViewController.swift in Sources */,
+				C2F30FD7284F52C3009F81D7 /* PatientEditProfileViewController.swift in Sources */,
+				C2F30FB3284F523E009F81D7 /* CategoryOfMCViewCell.swift in Sources */,
+				C2F30FB9284F5255009F81D7 /* MedicalCenterHorizontalViewCell.swift in Sources */,
+				C2F30FCF284F52AD009F81D7 /* PatientHomeViewController.swift in Sources */,
+				C2F30FE1284F5311009F81D7 /* BrownLabel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2F30FA5284F23B2009F81D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2C58C0C27F9F08200B637C6 /* DoctorAppointmentBookingApp */;
+			targetProxy = C2F30FA4284F23B2009F81D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C2C58C1627F9F08200B637C6 /* Main.storyboard */ = {
@@ -886,6 +1143,46 @@
 			};
 			name = Release;
 		};
+		C2F30FA7284F23B2009F81D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EE99B953082717D47296F7F /* Pods-DoctorAppointmentBookingAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H94T4SL56;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DoctorAppointmentBookingApp.DoctorAppointmentBookingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoctorAppointmentBookingApp.app/DoctorAppointmentBookingApp";
+			};
+			name = Debug;
+		};
+		C2F30FA8284F23B2009F81D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90458AE505625CC8A60DD7FE /* Pods-DoctorAppointmentBookingAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H94T4SL56;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DoctorAppointmentBookingApp.DoctorAppointmentBookingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoctorAppointmentBookingApp.app/DoctorAppointmentBookingApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -903,6 +1200,15 @@
 			buildConfigurations = (
 				C2C58C2227F9F08400B637C6 /* Debug */,
 				C2C58C2327F9F08400B637C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2F30FA6284F23B2009F81D7 /* Build configuration list for PBXNativeTarget "DoctorAppointmentBookingAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F30FA7284F23B2009F81D7 /* Debug */,
+				C2F30FA8284F23B2009F81D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

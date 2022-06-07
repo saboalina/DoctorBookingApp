@@ -141,7 +141,7 @@ class PatientSearchViewController: UIViewController {
 extension PatientSearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return doctors.count
+        return doctors.count > 2 ? 2 : self.doctors.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

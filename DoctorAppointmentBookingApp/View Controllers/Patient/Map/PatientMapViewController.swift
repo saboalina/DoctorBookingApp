@@ -44,7 +44,7 @@ class PatientMapViewController: UIViewController {
             DispatchQueue.main.async {
                 self.createParkingLotsMapList(parkingLots: self.parkingLots)
                 self.showParkingLotsOnMap()
-                self.verifyDistance()
+                //self.verifyDistance()
             }
         }
     }
@@ -157,7 +157,8 @@ class PatientMapViewController: UIViewController {
 
         let content = UNMutableNotificationContent()
         content.title = "Notification"
-        content.body = "You are close to the parking lot \(parkingLotForMap.title!) and there are 100 free spaces"
+        let freeSpaces = Int.random(in: 1..<100)
+        content.body = "You are close to the parking lot \(parkingLotForMap.title!) and there are \(freeSpaces) free spaces"
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = "yourIdentifier"
         content.userInfo = ["example": "information"]
@@ -233,21 +234,19 @@ extension PatientMapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "myAnnotation") as? MKPinAnnotationView
+        //var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "myAnnotation")
+        var annotationView = Pin.init(annotation: annotation, reuseIdentifier: "myAnnotation")
 
-        if annotationView == nil {
-
-            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myAnnotation")
-        } else {
-            annotationView?.annotation = annotation
-        }
+        
         if let annotation = annotation as? MedicalCenterForMap {
-            annotationView?.pinTintColor = Colors.blue
-            //annotationView. = setup
+            annotationView.pinTintColor = Colors.blue
+            annotationView.setLabel(text: annotation.title ?? "")
         } else if let annotation = annotation as? ParkingLotForMap {
-            annotationView?.pinTintColor = Colors.orange
+            annotationView.pinTintColor = Colors.orange
+            annotationView.setLabel(text: annotation.title ?? "")
         } else {
-            annotationView?.pinTintColor = Colors.darkBlue
+            annotationView.pinTintColor = Colors.darkBlue
+            annotationView.setLabel(text: "I'm here")
         }
         return annotationView
     }

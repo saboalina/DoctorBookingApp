@@ -1,16 +1,25 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '10.0'
+use_frameworks!
 
-target 'DoctorAppointmentBookingApp' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for DoctorAppointmentBookingApp
+def shared_pods
 
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
+  
+end
 
+target 'DoctorAppointmentBookingApp' do
+
+  shared_pods
+
+end
+
+target 'DoctorAppointmentBookingAppTests' do
+
+  shared_pods
+  
 end
