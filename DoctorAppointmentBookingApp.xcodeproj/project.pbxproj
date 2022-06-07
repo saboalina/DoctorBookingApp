@@ -146,10 +146,19 @@
 		C2F30FE7284F5322009F81D7 /* ViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101C7283040DE00F49819 /* ViewDesign.swift */; };
 		C2F30FE9284F5760009F81D7 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F30FE8284F5760009F81D7 /* Pin.swift */; };
 		C2F30FEA284F57F2009F81D7 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F30FE8284F5760009F81D7 /* Pin.swift */; };
+		C2F30FF2284F8288009F81D7 /* DoctorAppointmentBookingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F30FF1284F8288009F81D7 /* DoctorAppointmentBookingAppUITests.swift */; };
+		C2F30FF4284F8288009F81D7 /* DoctorAppointmentBookingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F30FF3284F8288009F81D7 /* DoctorAppointmentBookingAppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		C2F30FA4284F23B2009F81D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2C58C0527F9F08200B637C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2C58C0C27F9F08200B637C6;
+			remoteInfo = DoctorAppointmentBookingApp;
+		};
+		C2F30FF5284F8288009F81D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C2C58C0527F9F08200B637C6 /* Project object */;
 			proxyType = 1;
@@ -241,6 +250,9 @@
 		C2F30FA0284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoctorAppointmentBookingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F30FA2284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppointmentBookingAppTests.swift; sourceTree = "<group>"; };
 		C2F30FE8284F5760009F81D7 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		C2F30FEF284F8287009F81D7 /* DoctorAppointmentBookingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoctorAppointmentBookingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F30FF1284F8288009F81D7 /* DoctorAppointmentBookingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppointmentBookingAppUITests.swift; sourceTree = "<group>"; };
+		C2F30FF3284F8288009F81D7 /* DoctorAppointmentBookingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppointmentBookingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FCAC5BA05F1DFF605511D7D5 /* Pods_DoctorAppointmentBookingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorAppointmentBookingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -258,6 +270,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				72EF5E25039810A9E618C0E2 /* Pods_DoctorAppointmentBookingAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F30FEC284F8287009F81D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +572,7 @@
 			children = (
 				C2C58C0F27F9F08200B637C6 /* DoctorAppointmentBookingApp */,
 				C2F30FA1284F23B2009F81D7 /* DoctorAppointmentBookingAppTests */,
+				C2F30FF0284F8287009F81D7 /* DoctorAppointmentBookingAppUITests */,
 				C2C58C0E27F9F08200B637C6 /* Products */,
 				14D4DEBA103DA50EA8BAAC3B /* Pods */,
 				2B3CEEEB688A6D17D410D155 /* Frameworks */,
@@ -564,6 +584,7 @@
 			children = (
 				C2C58C0D27F9F08200B637C6 /* DoctorAppointmentBookingApp.app */,
 				C2F30FA0284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.xctest */,
+				C2F30FEF284F8287009F81D7 /* DoctorAppointmentBookingAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -609,6 +630,15 @@
 			path = DoctorAppointmentBookingAppTests;
 			sourceTree = "<group>";
 		};
+		C2F30FF0284F8287009F81D7 /* DoctorAppointmentBookingAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2F30FF1284F8288009F81D7 /* DoctorAppointmentBookingAppUITests.swift */,
+				C2F30FF3284F8288009F81D7 /* DoctorAppointmentBookingAppUITestsLaunchTests.swift */,
+			);
+			path = DoctorAppointmentBookingAppUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -651,6 +681,24 @@
 			productReference = C2F30FA0284F23B2009F81D7 /* DoctorAppointmentBookingAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C2F30FEE284F8287009F81D7 /* DoctorAppointmentBookingAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2F30FF9284F8288009F81D7 /* Build configuration list for PBXNativeTarget "DoctorAppointmentBookingAppUITests" */;
+			buildPhases = (
+				C2F30FEB284F8287009F81D7 /* Sources */,
+				C2F30FEC284F8287009F81D7 /* Frameworks */,
+				C2F30FED284F8287009F81D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2F30FF6284F8288009F81D7 /* PBXTargetDependency */,
+			);
+			name = DoctorAppointmentBookingAppUITests;
+			productName = DoctorAppointmentBookingAppUITests;
+			productReference = C2F30FEF284F8287009F81D7 /* DoctorAppointmentBookingAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -665,6 +713,10 @@
 						CreatedOnToolsVersion = 13.3;
 					};
 					C2F30F9F284F23B2009F81D7 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = C2C58C0C27F9F08200B637C6;
+					};
+					C2F30FEE284F8287009F81D7 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = C2C58C0C27F9F08200B637C6;
 					};
@@ -685,6 +737,7 @@
 			targets = (
 				C2C58C0C27F9F08200B637C6 /* DoctorAppointmentBookingApp */,
 				C2F30F9F284F23B2009F81D7 /* DoctorAppointmentBookingAppTests */,
+				C2F30FEE284F8287009F81D7 /* DoctorAppointmentBookingAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -706,6 +759,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C2F30F9E284F23B2009F81D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F30FED284F8287009F81D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -939,6 +999,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2F30FEB284F8287009F81D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F30FF2284F8288009F81D7 /* DoctorAppointmentBookingAppUITests.swift in Sources */,
+				C2F30FF4284F8288009F81D7 /* DoctorAppointmentBookingAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -946,6 +1015,11 @@
 			isa = PBXTargetDependency;
 			target = C2C58C0C27F9F08200B637C6 /* DoctorAppointmentBookingApp */;
 			targetProxy = C2F30FA4284F23B2009F81D7 /* PBXContainerItemProxy */;
+		};
+		C2F30FF6284F8288009F81D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2C58C0C27F9F08200B637C6 /* DoctorAppointmentBookingApp */;
+			targetProxy = C2F30FF5284F8288009F81D7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1183,6 +1257,42 @@
 			};
 			name = Release;
 		};
+		C2F30FF7284F8288009F81D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H94T4SL56;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DoctorAppointmentBookingApp.DoctorAppointmentBookingAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DoctorAppointmentBookingApp;
+			};
+			name = Debug;
+		};
+		C2F30FF8284F8288009F81D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H94T4SL56;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DoctorAppointmentBookingApp.DoctorAppointmentBookingAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DoctorAppointmentBookingApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1209,6 +1319,15 @@
 			buildConfigurations = (
 				C2F30FA7284F23B2009F81D7 /* Debug */,
 				C2F30FA8284F23B2009F81D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2F30FF9284F8288009F81D7 /* Build configuration list for PBXNativeTarget "DoctorAppointmentBookingAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F30FF7284F8288009F81D7 /* Debug */,
+				C2F30FF8284F8288009F81D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
