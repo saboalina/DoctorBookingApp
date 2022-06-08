@@ -115,7 +115,8 @@ extension PatientMedicalCenterDetailsViewController: UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let service = services[indexPath.row]
-        let doctorsList = filterViewModel.getDoctorsByServiceWorkingAt(service: service, medicalCenterName: medicalCenter.name)
+        let medicalCenterName = "\(medicalCenter.name) Medical Center"
+        let doctorsList = filterViewModel.getDoctorsByServiceWorkingAt(service: service, medicalCenterName: medicalCenterName)
         performSegue(withIdentifier: "fromMedicalDetailsToDoctorsList", sender: doctorsList)
     }
     

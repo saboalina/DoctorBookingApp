@@ -76,7 +76,7 @@ class PatientDoctorDetailsViewController: UIViewController {
 //        patients.textColor = Colors.darkBlue
 //        experience.textColor = Colors.darkBlue
 //        consulanceFee.textColor = Colors.darkBlue
-//        servicesAtTextView.textColor = Colors.darkBlue
+        servicesAtLabel.textColor = Colors.darkBlue
                 
         monLabel.textColor = Colors.white
         tueLabel.textColor = Colors.white

@@ -55,7 +55,7 @@ class PatientMapViewController: UIViewController {
         
     private let locationManager = CLLocationManager()
     private var currentLocation: CLLocationCoordinate2D?
-    var zoomIndex = 2000
+    var zoomIndex = 1000
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -234,8 +234,7 @@ extension PatientMapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        //var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "myAnnotation")
-        var annotationView = Pin.init(annotation: annotation, reuseIdentifier: "myAnnotation")
+        let annotationView = Pin.init(annotation: annotation, reuseIdentifier: "myAnnotation")
 
         
         if let annotation = annotation as? MedicalCenterForMap {

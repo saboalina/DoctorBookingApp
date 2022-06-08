@@ -46,42 +46,10 @@
             filePath = "DoctorAppointmentBookingApp/View Controllers/Patient/Medical Center Related/PatientMedicalCenterDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "05BA1155-8A38-4E6A-A689-5D4FCBF1CF2C - ab6b8b30ec3a544e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DoctorAppointmentBookingApp.PatientMedicalCenterDetailsViewController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
-                  moduleName = "DoctorAppointmentBookingApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alinasabobrandus/Site/DoctorAppointmentBookingApp/DoctorAppointmentBookingApp/View%20Controllers/Patient/Medical%20Center%20Related/PatientMedicalCenterDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "140"
-                  endingLineNumber = "140"
-                  offsetFromSymbolStart = "393">
-               </Location>
-               <Location
-                  uuid = "05BA1155-8A38-4E6A-A689-5D4FCBF1CF2C - e43fd13233b7672e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DoctorAppointmentBookingAppTests.PatientMedicalCenterDetailsViewController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
-                  moduleName = "DoctorAppointmentBookingAppTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alinasabobrandus/Site/DoctorAppointmentBookingApp/DoctorAppointmentBookingApp/View%20Controllers/Patient/Medical%20Center%20Related/PatientMedicalCenterDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "140"
-                  endingLineNumber = "140"
-                  offsetFromSymbolStart = "393">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -98,38 +66,6 @@
             endingLineNumber = "80"
             landmarkName = "updateDoctor(doctorId:name:phoneNumber:service:worksAt:consultancyFee:mon:tue:wed:thu:fri:sat:sun:handler:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "724E6840-5660-4132-8101-A7DF94982264 - 64e1f2d3e8def5d8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DoctorAppointmentBookingApp.DoctorViewModel.updateDoctor(doctorId: Swift.String, name: Swift.String, phoneNumber: Swift.String, service: Swift.String, worksAt: Swift.String, consultancyFee: Swift.String, mon: Swift.String, tue: Swift.String, wed: Swift.String, thu: Swift.String, fri: Swift.String, sat: Swift.String, sun: Swift.String, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "DoctorAppointmentBookingApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alinasabobrandus/Site/DoctorAppointmentBookingApp/DoctorAppointmentBookingApp/View%20Model/DoctorViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "692">
-               </Location>
-               <Location
-                  uuid = "724E6840-5660-4132-8101-A7DF94982264 - f5abbdbbaae780b8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DoctorAppointmentBookingAppTests.DoctorViewModel.updateDoctor(doctorId: Swift.String, name: Swift.String, phoneNumber: Swift.String, service: Swift.String, worksAt: Swift.String, consultancyFee: Swift.String, mon: Swift.String, tue: Swift.String, wed: Swift.String, thu: Swift.String, fri: Swift.String, sat: Swift.String, sun: Swift.String, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "DoctorAppointmentBookingAppTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alinasabobrandus/Site/DoctorAppointmentBookingApp/DoctorAppointmentBookingApp/View%20Model/DoctorViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "692">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -146,38 +82,6 @@
             endingLineNumber = "90"
             landmarkName = "saveButtonTapped(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A8EE3ED5-BA4E-4F40-A702-9F7F1CB76234 - 13d24ae43a377843"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in DoctorAppointmentBookingApp.DoctorEditProfileViewController.saveButtonTapped(Any) -&gt; ()"
-                  moduleName = "DoctorAppointmentBookingApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alinasabobrandus/Site/DoctorAppointmentBookingApp/DoctorAppointmentBookingApp/View%20Controllers/Doctor/Profile/DoctorEditProfileViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "97">
-               </Location>
-               <Location
-                  uuid = "A8EE3ED5-BA4E-4F40-A702-9F7F1CB76234 - 388aa244c8c1ee9a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in DoctorAppointmentBookingAppTests.DoctorEditProfileViewController.saveButtonTapped(Any) -&gt; ()"
-                  moduleName = "DoctorAppointmentBookingAppTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alinasabobrandus/Site/DoctorAppointmentBookingApp/DoctorAppointmentBookingApp/View%20Controllers/Doctor/Profile/DoctorEditProfileViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "97">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -194,102 +98,38 @@
             endingLineNumber = "88"
             landmarkName = "checkAvailabilityButtonTapped(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1F3AEA95-E124-4627-8E96-BD947B819076 - 263ec9692c5f2205"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DoctorAppointmentBookingApp.PatientSearchViewController.checkAvailabilityButtonTapped(Any) -&gt; ()"
-                  moduleName = "DoctorAppointmentBookingApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alinasabobrandus/Site/DoctorAppointmentBookingApp/DoctorAppointmentBookingApp/View%20Controllers/Patient/Home/PatientSearchViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "813">
-               </Location>
-               <Location
-                  uuid = "1F3AEA95-E124-4627-8E96-BD947B819076 - 59b1f04cf5904604"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DoctorAppointmentBookingAppTests.PatientSearchViewController.checkAvailabilityButtonTapped(Any) -&gt; ()"
-                  moduleName = "DoctorAppointmentBookingAppTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alinasabobrandus/Site/DoctorAppointmentBookingApp/DoctorAppointmentBookingApp/View%20Controllers/Patient/Home/PatientSearchViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "813">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AE015356-6FA3-418C-8763-8CCC2A4F44B3"
+            uuid = "6A7F6666-783D-4C37-B1FC-66E586E3989C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DoctorAppointmentBookingAppUITests/DoctorAppointmentBookingAppUITests.swift"
+            filePath = "DoctorAppointmentBookingApp/View Controllers/Patient/Medical Center Related/PatientMedicalCenterDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "testExample()"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "49BF8073-4E3A-4060-AF1C-E431CFD4C5B2"
+            uuid = "6FF17BB5-BB4C-4A25-B012-61A81F317D66"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoctorAppointmentBookingApp/View Model/FiltersViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "getAvailableDoctors(startDate:endDate:)"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "getAvailableMedicalCenters(startDate:endDate:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "49BF8073-4E3A-4060-AF1C-E431CFD4C5B2 - 73a4906b2feda712"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DoctorAppointmentBookingApp.FiltersViewModel.getAvailableDoctors(startDate: Foundation.Date, endDate: Foundation.Date) -&gt; Swift.Array&lt;DoctorAppointmentBookingApp.Doctor&gt;"
-                  moduleName = "DoctorAppointmentBookingApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alinasabobrandus/Site/DoctorAppointmentBookingApp/DoctorAppointmentBookingApp/View%20Model/FiltersViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "417">
-               </Location>
-               <Location
-                  uuid = "49BF8073-4E3A-4060-AF1C-E431CFD4C5B2 - 190aa153c0ac586c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DoctorAppointmentBookingAppTests.FiltersViewModel.getAvailableDoctors(startDate: Foundation.Date, endDate: Foundation.Date) -&gt; Swift.Array&lt;DoctorAppointmentBookingAppTests.Doctor&gt;"
-                  moduleName = "DoctorAppointmentBookingAppTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alinasabobrandus/Site/DoctorAppointmentBookingApp/DoctorAppointmentBookingApp/View%20Model/FiltersViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "417">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

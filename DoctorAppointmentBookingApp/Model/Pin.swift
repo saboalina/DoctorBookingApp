@@ -13,14 +13,14 @@ class Pin: MKPinAnnotationView
     
     func setLabel(text: String) {
         
-        let selectedLabel:UILabel = UILabel.init(frame:CGRect(x: 0, y: 0, width: 100, height: 25))
+        let selectedLabel:UILabel = UILabel.init(frame:CGRect(x: 0, y: 0, width: 120, height: 25))
         
         selectedLabel.text = text
         selectedLabel.textAlignment = .center
         selectedLabel.font = UIFont.init(name: "HelveticaBold", size: 7)
-        selectedLabel.backgroundColor = UIColor.white
-        selectedLabel.layer.borderColor = UIColor.gray.cgColor
-        selectedLabel.layer.borderWidth = 1
+//        selectedLabel.backgroundColor = UIColor.white
+//        selectedLabel.layer.borderColor = UIColor.gray.cgColor
+//        selectedLabel.layer.borderWidth = 1
         selectedLabel.layer.cornerRadius = 5
         selectedLabel.layer.masksToBounds = true
 

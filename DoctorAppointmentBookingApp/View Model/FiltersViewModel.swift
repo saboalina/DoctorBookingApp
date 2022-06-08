@@ -355,7 +355,7 @@ class FiltersViewModel {
     func getDoctorsByServiceWorkingAt(service: String, medicalCenterName: String) -> [Doctor] {
         var result: [Doctor] = []
         for doctor in doctors {
-            let worksAt = doctor.worksAt.components(separatedBy: ",")
+            let worksAt = doctor.worksAt
             if worksAt.contains(medicalCenterName) {
                 if doctor.service == service {
                     result.append(doctor)
